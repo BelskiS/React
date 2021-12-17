@@ -1,4 +1,9 @@
 import React from 'react';
+import Filial from './Filial/filial';
+import Logo from './Logo/logo';
+
+import Garage from './Garage/garage';
+import Basket from './Basket/basket';
 
 function Header() {
     return (
@@ -6,16 +11,7 @@ function Header() {
             <div className="site_header__up">
                 <div className="site_container">
                     <div className="site_header__up__item item_with_adress_popup">
-                        <div id="W247BranchChangeConttbIj2z">
-                            <div className="site_header__up_link site_header__adress_popup">
-                                <div className="btn_adress_popup">
-                                    <span className="site_header__up_link_ico icon-ion-location-sharp"></span>
-                                    <span className="site_link site_link_with_borderb site_header__adress_popup__title">
-                                        Россия, Москва, Нагорный пр-д, 12 корпус 3 </span>
-                                </div>
-                            </div>
-
-                        </div>
+                        <Filial></Filial>
 
                         <span className="site_header__up_link wrap_header_tel">
                             <a href="tel:+74992882015" className="site_link header_tel branch_tel"><span
@@ -29,8 +25,6 @@ function Header() {
                                 <span className="header_link_help__title">Помощь клиенту</span>
                             </a>
                         </span>
-
-
                     </div>
                     <div className="site_header__up__item wrap_for_fixed_header_login_basket">
                         <div className="for_fixed_header_login_basket">
@@ -42,7 +36,7 @@ function Header() {
                                             data-toggle="dropdown">
                                             <span className="site_header__up__ico color_ico icon-ion-enter-outline"></span>
                                             Вход </button>
-                                        <div className="dropdown-menu">
+                                        {/* <div className="dropdown-menu">
                                             <form name="system_auth_form6zOYVN" method="post" target="_top" action="/?login=yes"
                                                 className="auth-form">
                                                 <input type="hidden" name="backurl" value="/" />
@@ -74,7 +68,7 @@ function Header() {
                                                         className="site_link site_link_with_borderb">Регистрация</a>
                                                 </div>
                                             </form>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>
@@ -86,13 +80,13 @@ function Header() {
             <div className="site_header__down">
                 <div className="site_container">
                     <div className="site_header__down__item_up">
-                        <a className="link_logo" href="/">
-                            <img src="/bitrix/templates/e-comexpert_v2/img/Logo.svg" alt="Logo" />
-                        </a>
-
+                        <Logo name="Logo"></Logo>
+                        <Logo name="Logo">
+                            <img src="/Logo1.svg" alt="" />
+                        </Logo>
                         <div className="header_search serach_selected_head">
                             <div className="main_search search_selected_head">
-                                <div className="wrap_selectpicker_site select_header_search set_val">
+                                {/* <div className="wrap_selectpicker_site select_header_search set_val">
                                     <div className="dropdown bootstrap-select bs3">
                                         <select name="" className="selectpicker"
                                             tabindex="-98">
@@ -114,7 +108,7 @@ function Header() {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
 
                                 <div className="wrap_form_header_search hs_val_vin " style={{display: "block"}}>
                                     <form className="form_main_search sag_search_form" action="/">
@@ -126,7 +120,7 @@ function Header() {
                                     </form>
                                 </div>
 
-                                <div className="wrap_form_header_search hs_val_name" style={{display: "none"}}>
+                                {/* <div className="wrap_form_header_search hs_val_name" style={{display: "none"}}>
                                     <div id="title-search" className="header_wrap_title_search">
                                         <form action="/search/index.php" className="form_main_search sag_search_form_name">
                                             <div className="site_field">
@@ -138,7 +132,7 @@ function Header() {
                                         </form>
                                         <div className="title-search-result"></div>
                                     </div>
-                                </div>
+                                </div> */}
 
                                 <a className="mob_viz btn_site link_modal_mob_header_search" href="#modal_mob_search"
                                     data-toggle="modal"><span className="btn_search__ico icon-ion-search"></span></a>
@@ -146,32 +140,9 @@ function Header() {
                         </div>
                         <div className="header_basket_garage_btn">
                             <div className="for_fixed__garage_help">
+                                <Garage></Garage>
 
-
-                                <div id="w247_garage_new111" className="wrap_garage site_dopdown_btn">
-                                    <div id="w247_garage_box_new111" className="dropdown noclose">
-
-
-                                        <button className="btn dropdown-toggle btn_garage auto_in_garage" type="button"
-                                            data-toggle="dropdown">
-                                            <span className="btn_garage_ico color_ico icon-ion-car-sport-sharp"></span>
-                                            <span className="garage_number_auto">2</span>
-                                            Мой гараж </button>
-
-                                        <div className="dropdown-menu select_garage"></div>
-                                    </div>
-                                    <div className="close_garage"><span className="icon-ion-close"></span></div>
-                                    <div className="mob_fon_main_garage"></div>
-                                </div>
-
-                                <div id="bx_basketFKauiI" className="wrap_link_header_basket bx-basket bx-opener">
-                                    <a href="/auto/cart/" className="site_link link_header_basket in_basket">
-                                        <span className="basket_number_product basket-count-update   hide">0</span>
-
-                                        <span className="site_header__up__ico color_ico icon-ion-cart"></span>
-                                        Корзина
-                                    </a>
-                                </div>
+                                <Basket></Basket>
                             </div>
                         </div>
                     </div>

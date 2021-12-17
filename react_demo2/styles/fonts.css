@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../public/static/fonts/Lato/Lato-Regular.eot") format("embedded-opentype"), url("../public/static/fonts/Lato/Lato-Regular.woff") format("woff"), url("../public/static/fonts/Lato/Lato-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: normal;
+  src: url("../public/static/fonts/Lato/Lato-Italic.eot") format("embedded-opentype"), url("../public/static/fonts/Lato/Lato-Italic.woff") format("woff"), url("../public/static/fonts/Lato/Lato-Italic.ttf") format("truetype"); }
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../public/static/fonts/Lato/Lato-Bold.eot") format("embedded-opentype"), url("../public/static/fonts/Lato/Lato-Bold.woff") format("woff"), url("../public/static/fonts/Lato/Lato-Bold.ttf") format("truetype"); }
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../public/static/fonts/Lato/Lato-Semibold.eot") format("embedded-opentype"), url("../public/static/fonts/Lato/Lato-Semibold.woff") format("woff"), url("../public/static/fonts/lato/Lato-Semibold.ttf") format("truetype"); }

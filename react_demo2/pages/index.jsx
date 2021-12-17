@@ -3,26 +3,11 @@ import Head from "../components/head";
 import Header from "../components/header";
 import Link from "next/link";
 
-const text = {
-    textOne: "Первая часть текста",
-    textTwo: "продолжение первой части текста"
-};
-
-function fullText(text) {
-    if(text) {
-        return `${text.textOne} ${text.textTwo}`
-    } else {
-        return `ну то ли текст то ли не текст`
-    }
-    
-};
-
 function HomePage() {
     return (
         <div className="site_wrap_content">
             <Head></Head>
-            
-            <div>{fullText(text)}</div>
+           
             <Header></Header>
             <section class="sec_main advantage_main">
                 <div class="site_container">
