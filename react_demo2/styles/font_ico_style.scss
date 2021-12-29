@@ -1,15 +1,4 @@
-@font-face {
-  font-family: 'iconewwssync';
-
-  src:  url('../public/static/fonts/iconewwssync.eot');
-  src:  url('../public/static/fonts/iconewwssync.eot') format('embedded-opentype'),
-    url('../public/static/fonts/iconewwssync.ttf') format('truetype'),
-    url('../public/static/fonts/iconewwssync.woff') format('woff'),
-    url('../public/static/fonts/iconewwssync.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
+@import "fonts";
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */

@@ -1,0 +1,46 @@
+@import '../../../styles/option.scss';
+
+.content {
+    background: transparent;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 134px;
+}
+
+.item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.up {
+    padding-top: 25px;
+    padding-bottom: 19px;
+}
+.search {
+    display: flex;
+    margin-right: auto;
+}
+.selected_search {
+    position: relative;
+    width: 750px;
+}
+.basket_garage {
+    display: flex;
+    align-items: center;
+}
+
+.link_service {
+    display: flex;
+    align-items: center;
+    width: 250px;
+    padding: 0 20px 0 15px;
+    line-height: 18px;
+}
+.link_service__ico {
+    font-size: 18px;
+    margin-right: 10px;
+}

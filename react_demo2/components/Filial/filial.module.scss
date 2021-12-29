@@ -1,0 +1,15 @@
+@import '../../styles/option.scss';
+
+.adress_popup {
+    position: relative;
+    cursor: pointer;
+}
+.btn {
+    display: flex;
+    align-items: center;
+    & span {
+        &:before {
+            color: $Base_Accent;
+        }
+    }
+}

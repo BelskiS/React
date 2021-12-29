@@ -1,0 +1,48 @@
+@import '../../../styles/option.scss';
+
+.content {
+    background: $Ultra_Light_Shade;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 45px;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+}
+.link_ico {
+    &:before {
+        font-size: 16px;
+        margin-right: 7px;
+    }
+}
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
+}
+.adress_popup {
+    position: relative;
+    min-height: 25px;
+}
+.phone {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: $fw_Header5;
+    color: $Base_Tint;
+    margin-right: 13px;
+    &:hover {
+        color: $Base_Tint;
+    }
+}
+
+@media only screen and (max-width : 1359px) {
+    .phone {
+        font-weight: $fw_Header6;
+    }  
+}

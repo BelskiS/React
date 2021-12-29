@@ -1,0 +1,75 @@
+@import "../../styles/option.scss";
+
+.wrap {
+    position: relative;
+    margin-left: 25px;
+}
+.link_header {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.number_product {
+    background: $Base_Accent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 9px;
+    font-weight: $fw_Button_Link;
+    position: absolute;
+    top: -3px;
+    left: 14px;
+    min-width: 14px;
+    width: auto;
+    height: 14px;
+    line-height: normal;
+    color: $White;
+}
+.header_ico {
+    max-width: 28px;
+    margin-right: 10px;
+    &:before {
+        font-size: 24px;
+        margin-right: 7px;
+    }
+}
+.wrap_header_dropdown {
+    position: absolute;
+    // overflow: visible;
+    // visibility: hidden;
+    top: 100%;
+    right: 0;
+    padding-top: 13px;
+    padding-bottom: 0;
+    // opacity: 0;
+    // z-index: 0;
+    // transition: all $animate_site;
+// visibility: visible;
+// opacity: 1;
+z-index: 110;
+}
+.header_dropdown {
+    background: $White;
+    border-radius: $border_radius_main;
+    padding: 25px 15px;
+    width: 525px;
+    min-height: 195px;
+    font-weight: $fw_Body_Text;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.15);
+}
+
+.my-node-enter {
+    opacity: 0;
+}
+.my-node-enter-active {
+    opacity: 1;
+    transition: opacity 200ms;
+}
+.my-node-exit {
+    opacity: 1;
+}
+.my-node-exit-active {
+    opacity: 0;
+    transition: opacity 200ms;
+}

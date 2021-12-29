@@ -1,0 +1,269 @@
+@import '../../styles/option.scss';
+
+.login {
+    display: flex;
+    align-items: center;
+    &:after {
+        display: none;
+    }
+}
+.login_dropdown[data-hlogin='login'] {
+    border: none;
+    width: 300px;
+    padding: 25px 15px;
+}
+
+
+
+/*header*/
+// .site_header {
+//     & .site_header__up {
+//         background: $Ultra_Light_Shade;
+        
+//     }
+// }
+
+// .site_header__up {
+//     color: #eee;
+// }
+
+// .wrap_header_tel.site_header__up_link .site_header__up_link_ico:before,
+// .header_login_user.site_dopdown_btn .dropdown-menu .site_personalarea li a:before {
+//     color: $Base_Shade;
+// }
+// .header_login_user.site_dopdown_btn .dropdown-menu .site_personalarea li a:before {
+//     font-weight: $fw_font_ico;
+// }
+// .wrap_header_tel .header_tel {
+//     font-weight: $fw_Header5;
+//     color: $Base_Tint;
+// }
+
+
+// .site_header__down.header_fixed {
+//     background: $Ultra_Light_Shade;
+// }
+
+// /*header_adress_popup*/
+//     .item_with_adress_popup .adress_popup_first,
+//     .site_header__adress_popup .header_adress_popup,
+//     .adress_popup_main__item .adress_popup_main__map {
+//         border-radius: $border_radius_main;
+//     }
+//     .item_with_adress_popup .adress_popup_first,
+//     .site_header__adress_popup .header_adress_popup {
+//         background: $White;
+//     }
+//     .item_with_adress_popup .adress_popup_first .site_header__up_link_ico:before,
+//     .site_header__adress_popup.site_header__up_link .site_header__up_link_ico:before {
+//         color: $Base_Accent;
+//     }
+//     .adress_popup_main__body__phone .adress_popup_main__text {
+//         color: $Base_Tint;
+//     }
+//     .adress_popup_main__body__phone a:hover .adress_popup_main__text {
+//         color: $Dark_Tint;
+//     }
+//     .adress_popup_main__body__address .adress_popup_main__ico:before,
+//     .adress_popup_main__body__phone .adress_popup_main__ico:before,
+//     .adress_popup_main__body__time .adress_popup_main__ico:before {
+//         color: $Base_Shade;
+//     }
+//     .adress_popup_first .adress_popup_first__close span:before {
+//         color: $Ultra_Light_Shade;
+//     }
+//     .other_adress .other_adress__title {
+//         border-color: $Light_Gray;
+//     }
+//     .other_adress__collapse .other_adress__collapse_choice {
+//         border-color: $Gray;
+//     }
+// /*END header_adress_popup*/
+
+// /*header_search*/
+
+//     /*select_header_search*/
+
+        
+
+//         div.title-search-result .wrap_title-search-result {
+//             background: transparent;
+//             border-color: $Gray;
+//             border-radius: $border_radius_main;
+//         }
+//         table.title-search-result td.title-search-item .title-search-item__td {
+//             transition: background-color $animate_site;
+//         }
+//         table.title-search-result tr.title-search-selected a,
+//         table.title-search-result tr.title-search-selected td {
+//             background-color: $Light_Gray;
+//         }
+//         table.title-search-result td .title-search-item__title {
+//             color: $Ultra_Light_Tint;
+//         }
+//     /*END select_header_search*/
+
+//     /*modal_mob_header_search*/
+//         .modal_mob_header_search .modal-body .form_main_search button.btn_site span:before {
+//             color: $Light_Shade;
+//             transition: color $animate_site;
+//         }
+//         .modal_mob_header_search .modal-body .form_main_search button.btn_site:hover span:before {
+//             color: $Base_Shade;
+//         }
+//         .modal_mob_header_search .modal-content {
+//             border-radius: $border_radius_main;
+//         }
+//     /*END modal_mob_header_search*/
+// /*END header_search*/
+
+// /*main_menu*/
+//     .main_menu__item .title_main_menu {
+//         color: $Base_Tint;
+//         font-weight: $fw_Header6;
+//         transition: color $animate_site;
+//     }
+//     .main_menu__item .title_main_menu:focus,
+//     .main_menu__item .title_main_menu:hover,
+//     .main_menu__item .title_main_menu:hover .title_main_menu_ico:before,
+//     .main_menu__item .title_main_menu:focus .title_main_menu_ico:before,
+//     .site_dopdown_btn.main_menu .dropdown-menu ul.main_menu__collapse_ul li > a:hover {
+//         color: $Base_Second;
+//     }
+//     .site_dopdown_btn.main_menu .dropdown-menu .main_menu__item .main_menu__collapse_ul li a {
+//         font-weight: $fw_Small_Link;
+//     }
+
+
+
+
+
+//     .site_dopdown_btn.main_menu .dropdown-menu {
+//         border-radius: $border_radius_main;
+//         transition: all $animate_site;
+//     }
+//     .site_dopdown_btn.main_menu .dropdown-menu ul li:hover {
+//         background: transparent;
+//     }
+//     .site_dopdown_btn.main_menu .dropdown-menu ul.main_menu__collapse_ul li > a,
+//     .main_menu__item .title_main_menu .title_main_menu_ico:before {
+//         color: $Light_Tint;
+//     }
+//     .main_menu__item .title_main_menu .title_main_menu_ico:before {
+//         transition: color $animate_site;
+//     }
+//     .site_dopdown_btn.main_menu .dropdown-menu .main_menu__item .main_menu__collapse_ul li .main_menu_all_link:hover {
+//         color: $Dark_Tint;
+//     }
+
+//     .close_menu span:before {
+//         color: $White;
+//     }
+//     .main_menu .mob_title_menu,
+//     .site_dopdown_btn.main_menu .dropdown-menu .wrap_main_menu_drop__item {
+//         border-color: $Light_Gray;
+//     }
+//     .mob_header_menu .site_header__up_link .site_header__up_link_ico:before {
+//         color: $Base_Shade;
+//     }
+//     .site_dopdown_btn .dropdown-menu .mob_footer_menu li a {
+//         font-weight: $fw_Header6;
+//     }
+// /*END main_menu*/
+
+// /*garage*/
+
+//     .garage_main__item__title_auto_link,
+//     .wrap_garage.site_dopdown_btn .garage_main .garage_main__item .garage_main__item__title_auto {
+//         color: $Base_Tint;
+//         transition: color $animate_site;
+//     }
+//     .wrap_garage.site_dopdown_btn .garage_main .garage_main__item .garage_main__item__title_auto {
+//         font-weight: $fw_Large_Text_Bold;
+//     }
+
+//     .garage_number_auto {
+//         background: $Base_Accent;
+//         font-weight: $fw_Numeral;
+//         color: $White;
+//     }
+//     .add_auto_modal .selection_auto {
+//         background: $Dark_Shade;
+//         border-radius: $border_radius_main; 
+//     }
+
+//     .wrap_garage .garage_none_auto .ico_btn_add_auto:before {
+//         color: $White;
+//     }
+//     .wrap_garage.site_dopdown_btn .dropdown-menu {
+//         transition: visibility $animate_site, opacity $animate_site;
+//     }
+//     .wrap_garage.site_dopdown_btn .dropdown-menu .title_garage,
+//     .wrap_garage .custom_dropdown .dropdown_content .title_garage {
+//         border-bottom: 1px solid $Light_Gray;
+//         font-weight: $fw_Header5;
+//         color: $Base_Tint;
+//     }
+//     .wrap_garage.site_dopdown_btn .dropdown-menu .footer_garage,
+//     .wrap_garage .custom_dropdown .dropdown_content .footer_garage {
+//         border-top: 1px solid $Light_Gray;
+//     }
+//     .wrap_garage.site_dopdown_btn .dropdown-menu .garage_main__item__edit_close .link_ico_none_text span:before,
+//     .wrap_garage .custom_dropdown .dropdown_content .garage_main__item__edit_close .link_ico_none_text span:before {
+//         color: $Base_Shade;
+//         transition: color $animate_site;
+//     }
+//     .wrap_garage.site_dopdown_btn .dropdown-menu .garage_main__item__edit_close .link_ico_none_text:hover span:before,
+//     .wrap_garage .custom_dropdown .dropdown_content .garage_main__item__edit_close .link_ico_none_text:hover span:before {
+//         color: $Light_Shade;
+//     }
+//     .add_auto_modal .selection_auto__title,
+//     .add_auto_modal .selection_auto__garage .selection_auto__garage__link_ico:before {
+//         color: $Ultra_Light_Shade;
+//     }
+//     .close_garage span:before {
+//         color: $White;
+//     }
+
+//     .select_garage .wrap_garage_vin .select-modification,
+//     .wrap_garage .garage_none_auto .garage_none_auto__text,
+//     .add_auto_modal .selection_auto__wrap_select .btn_select_auto {
+//         font-weight: $fw_Body_Text;
+//     }
+//     .garage_main__item__title_auto_link {
+//         font-weight: $fw_Large_Text;
+//     }
+//     .add_auto_modal .selection_auto__title {
+//         font-weight: $fw_Header5;
+//     }
+
+
+//     .none_selected_vin {
+//         background: $Ultra_Light_Shade;
+//         border-radius: $border_radius_main;
+//         color: $Base_Shade;
+//     }
+//     .none_selected_vin .none_selected_vin__ico:before {
+//         color: $Light_Shade;
+//     }
+// /*END garage*/
+
+// /*header_basket*/
+
+
+//     .header_basket_preview__vendor_code .vendor_code__name {
+//         font-weight: $fw_Link;
+//     }
+//     .header_basket_preview__quantity_price .header_basket_preview__price {
+//         font-weight: $fw_Link;
+//     }
+// /*END header_basket*/
+// /*END header*/
+
+// @media only screen and (max-width : 1359px) { 
+// 	/*header*/
+//         .wrap_header_tel .header_tel {
+//             font-weight: $fw_Header6;	
+//         }
+//     /*END header*/
+// }

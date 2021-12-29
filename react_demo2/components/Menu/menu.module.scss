@@ -1,0 +1,65 @@
+@import "../../styles/option.scss";
+
+.wrap {
+    display: flex;
+    align-items: center;
+}
+button {
+    &.main_btn {
+        &[data-menu="main_menu"] {
+            background: $Light_Gray;
+            border-radius: $border_radius_main;
+            display: flex;
+            align-items: center;
+            width: 180px;
+            margin-right: 20px;
+            height: $height_field_btn;
+            padding: 0 15px;
+            color: $Base_Tint;
+            transition: background $animate_site, color $animate_site;
+            &:after {
+                display: none;
+            }
+            &:hover,
+            &[aria-expanded="true"] {
+                background: $Base_Accent;
+                color: $White;
+                & span {
+                    &.main_btn_ico {
+                        &:before {
+                            color: $White;
+                        }
+                    }
+                }
+            }
+        }
+        & span {
+            &.main_btn_ico {
+                &:before {
+                    font-size: 18px;
+                    margin-right: 10px;
+                    color: $Base_Shade;
+                    transition: color $animate_site;
+                }
+            }
+        }
+    }
+}
+.garage_menu {
+    &[data-menu="dropdown"] {
+        border: none;
+        width: 1300px;
+        left: 0;
+        margin-top: 5px;
+        padding: 40px 60px;
+        box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.15);
+    }
+}
+
+.header_menu {
+    display: flex;
+    margin: 0 -10px;
+    & li {
+        margin: 0 10px;
+    }
+}

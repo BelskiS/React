@@ -1,14 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Link from "next/link";
+import { CSSTransition } from 'react-transition-group';
+import style from './basket.module.scss';
 
 function Basket() {
+    const [hover, setHover] = useState(false);
+    
     return (
-        <div className="wrap_link_header_basket bx-basket bx-opener">
-            <a href="/auto/cart/" className="site_link link_header_basket in_basket">
-                <span className="basket_number_product basket-count-update" style={{display: "none"}}>0</span>
+        <div 
+            className={style.wrap}
+            onMouseEnter={() => setHover(true)}
+            onMouseLeave={() => setHover(false)}
+        >
+            <Link href="/auto/cart/">
+                <a className={`site_link ${style.link_header}`}>
+                    <span className={`${style.number_product} basket-count-update`}>
+                        0
+                    </span>
 
-                <span className="site_header__up__ico color_ico icon-ion-cart"></span>
-                Корзина
-            </a>
+                    <span className={`${style.header_ico} color_ico icon-ion-cart`}></span>
+                    Корзина
+                </a>
+            </Link>
+
+            <CSSTransition 
+                in={hover}
+                timeout={200}
+                unmountOnExit
+            >
+                <div className={`${style.wrap_header_dropdown}`}>
+                    <div className={style.header_dropdown}>
+                        месо для корзины
+                    </div>
+                </div>
+            </CSSTransition>
         </div>
     );
 };
