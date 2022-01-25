@@ -3,7 +3,7 @@ import Link from "next/link";
 import { CSSTransition } from 'react-transition-group';
 import style from './basket.module.scss';
 
-function Basket() {
+function Basket(props) {
     const [hover, setHover] = useState(false);
     
     return (
@@ -23,17 +23,19 @@ function Basket() {
                 </a>
             </Link>
 
-            <CSSTransition 
-                in={hover}
-                timeout={200}
-                unmountOnExit
-            >
-                <div className={`${style.wrap_header_dropdown}`}>
-                    <div className={style.header_dropdown}>
-                        месо для корзины
+            {!props.isHeadMobShow ?
+                <CSSTransition 
+                    in={hover}
+                    timeout={200}
+                    unmountOnExit
+                >
+                    <div className={`${style.wrap_header_dropdown}`}>
+                        <div className={style.header_dropdown}>
+                            место для корзины
+                        </div>
                     </div>
-                </div>
-            </CSSTransition>
+                </CSSTransition>
+            : ""}
         </div>
     );
 };

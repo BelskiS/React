@@ -25,6 +25,13 @@ input {
         appearance: none !important;
     }
 }
+div[data-fixhead="fixhead"] {
+    & input.input,
+    & input.input:focus {
+        font-size: 14px;
+        height: $height_field_btn;
+    }
+}
 button {
     &.btn_search[type='submit'] {
         background: transparent;
@@ -39,25 +46,67 @@ button {
         height: $selected_auto_height;
         padding: 0;
 
-        & span {
-            &.btn_search_ico {
-                &:before {
-                    font-size: 24px;
-                    transition: color $animate_site;
-                    color: $Base_Shade;
-                    transition: color $animate_site;
-                }
-            }
+        & span.btn_search_ico:before {
+            font-size: 24px;
+            transition: color $animate_site;
+            color: $Base_Shade;
+            transition: color $animate_site;
         }
 
         &:hover {
-            & span {
-                &.btn_search_ico {
-                    &:before {
-                        color: $Light_Shade;
-                    }
-                }
+            & span.btn_search_ico:before {
+                color: $Light_Shade;
             }
         }
     }
+}
+
+div[data-fixhead="fixhead"] {
+    & button.btn_search[type='submit'] {
+        height: $height_field_btn;
+    }
+}
+
+@media only screen and (max-width : 1359px) {
+    .wrap_select {
+        width: 198px;
+    }
+    input {
+        &.input,
+        &.input:focus {
+            font-size: 14px;
+            padding-left: 213px;
+        }
+    }
+    button.btn_search[type='submit'] {
+        width: 50px;
+    }
+    div[data-fixhead="fixhead"] {
+        & button.btn_search[type='submit'] {
+            width: 40px;
+        }
+    }
+}
+
+@media only screen and (max-width : 999px) {
+    .wrap_select {
+        width: 198px;
+    }
+    input {
+        &.input,
+        &.input:focus {
+            padding-right: 50px;
+        }
+    }
+    div[data-fixhead="fixhead"] {
+        & .wrap_select {
+            width: 182px;
+        }
+        & input.input,
+        & input.input:focus {
+            padding-left: 197px;
+            padding-right: 40px;
+        }
+    }
+
 }

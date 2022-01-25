@@ -8,7 +8,7 @@ function Filial() {
         <div className={`${styleHeaderUp.link} ${style.adress_popup}`}>
             <div className={style.btn}>
                 <span className={`${styleHeaderUp.link_ico} icon-ion-location-sharp`}></span>
-                <span className="site_link site_link_with_borderb site_header__adress_popup__title">
+                <span className={`site_link site_link_with_borderb ${style.header_title}`}>
                     Россия, Москва, Нагорный пр-д, 12 корпус 3 </span>
             </div>
         </div>

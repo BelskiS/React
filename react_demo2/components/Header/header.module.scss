@@ -1,19 +1,8 @@
 @import '../../styles/option.scss';
 
-.login {
-    display: flex;
-    align-items: center;
-    &:after {
-        display: none;
-    }
+.site_head {
+    height: 45px;
 }
-.login_dropdown[data-hlogin='login'] {
-    border: none;
-    width: 300px;
-    padding: 25px 15px;
-}
-
-
 
 /*header*/
 // .site_header {
@@ -39,10 +28,6 @@
 //     color: $Base_Tint;
 // }
 
-
-// .site_header__down.header_fixed {
-//     background: $Ultra_Light_Shade;
-// }
 
 // /*header_adress_popup*/
 //     .item_with_adress_popup .adress_popup_first,

@@ -44,6 +44,23 @@ button {
         }
     }
 }
+div[data-fixhead="fixhead"] {
+    & .header {
+        width: auto;
+        margin-right: 24px;
+        margin-left: 30px;
+    }
+    & button.btn[data-garage="garage"] {
+        width: 0;
+        font-size: 0;
+        padding-right: 0;
+        padding-left: 28px;
+        &:after {
+            display: none;
+        }
+    }
+}
+
 .btn_ico {
     position: absolute;
     top: 50%;
@@ -80,5 +97,50 @@ button {
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
         border-bottom: 10px solid #fff;
+    }
+}
+div[data-fixhead="fixhead"] {
+    .garage_menu {
+        &[data-garage="dropdown"] {
+            right: -52px;
+        }
+        &:before {
+            right: 58px;
+        }
+    }
+}
+
+@media only screen and (max-width : 1359px) {
+    .header {
+        width: auto;
+        margin-right: 24px;
+     }
+    button {
+        &.btn[data-garage="garage"] {
+            width: 0;
+            font-size: 0;
+            padding-right: 0;
+            padding-left: 28px;
+            &:after {
+                display: none;
+            }
+        }
+    }
+
+    .garage_menu {
+        &[data-garage="dropdown"] {
+            right: -52px;
+        }
+        &:before {
+            right: 58px;
+        }
+    }
+}
+
+@media only screen and (max-width : 999px) {
+    div[data-fixhead="fixhead"] {
+        & .header {
+            margin-left: 24px;
+        }
     }
 }

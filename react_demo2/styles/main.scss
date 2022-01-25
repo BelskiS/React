@@ -740,7 +740,7 @@ a.btn_site {
 		}
 
 		& .select_site__value-container {
-			padding-left: 15px;
+			padding-left: 13px;
 			padding-right: 0;
 			& .select_site__single-value {
 				font-size: 16px;
@@ -795,6 +795,7 @@ a.btn_site {
 			}
 		}
 
+
 		& .select_site__indicators {
 			display: flex;
 			& .select_site__indicator-separator {
@@ -803,6 +804,23 @@ a.btn_site {
 				height: 43px;
 				margin-top: 2px;
 				margin-bottom: 4px;
+			}
+		}
+	}
+	div[data-fixhead="fixhead"] {
+		.header_select {
+			& .select_site__control {
+				height: $height_field_btn;
+				-webkit-transition: height 0ms;
+				transition: height 0ms;
+				& .select_site__single-value {
+					font-size: 14px;
+				}
+				& .select_site__indicators {
+					& .select_site__indicator-separator {
+						height: auto;
+					}
+				}
 			}
 		}
 	}
@@ -1486,11 +1504,14 @@ body.modal-open .modal_site.in {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 320px;
+	// height: 320px;
+	height: auto;
 	color: #fff;
 }
 .advantage_main_item {
+	background: #eee;
 	display: flex;
+	flex-wrap: wrap;
 }
 .advantage_main_item .advantage_main_item__text {
 	max-width: 515px;
@@ -2266,3 +2287,50 @@ body.modal-open .modal_site.in {
 	font-size: 40px;
 }
 /*END footer*/
+
+@media only screen and (max-width : 1359px) {
+	.site_container {
+		width: 970px;
+	}
+	.link_header_request_call {
+		display: none;
+	}
+	.header_link_help {
+		& .header_link_help__title {
+			font-size: 13px;
+		}
+	}
+
+	/*select_site*/
+		.header_select {
+			& .select_site__control {
+				& .select_site__single-value {
+					font-size: 14px;
+				}
+			}
+		}
+	/*END select_site*/
+}
+
+@media only screen and (max-width : 999px) {
+	.site_container {
+		max-width: 768px;
+		width: 100%;
+	}
+	div[data-fixhead="fixhead"] {
+		& .header_select .select_site__control {
+			& .select_site__single-value {
+				font-size: 13px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width : 767px) {
+	.mob_body_overflow {
+		position: fixed;
+		overflow: hidden;
+		width: 100%;
+		height: 100vh;
+	}
+}
