@@ -36,7 +36,7 @@ function HeaderUp(props) {
                     <div className="fix_login">
                         <Dropdown className='site_dopdown_btn' align={{ lg: 'end' }}>
                             <Dropdown.Toggle variant="success" id="headerLogin" className={`${style.login} site_link btn_none_backgr`} data-login="head_login">
-                                <span class={`${style.link_ico} color_ico icon-ion-enter-outline`}></span>Вход
+                                <span className={`${style.link_ico} color_ico icon-ion-enter-outline`}></span>Вход
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu className={`${style.login_dropdown} dropdown_animate`} data-hlogin='login'>

@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 
 import Dropdown from 'react-bootstrap/Dropdown';
 
+import linkItem from '../../public/constData/linkItem';
+import linkItemCatalog from '../../public/constData/linkitemcatalog';
+import MenuItem from './menuItem';
+import MenuIemCatalog from './menuItemCatalog';
+
 import style from './menu.module.scss';
 
 function Menu(props) {
@@ -33,7 +38,12 @@ function Menu(props) {
 
                 <Dropdown.Menu className={`${style.garage_menu} dropdown_animate`} data-menu='dropdown' >
                     <div className="">место для меню каталога</div>
-                    {show ? "активня" : "неактивная"}
+
+                    <MenuIemCatalog linkItemCatalog={linkItemCatalog} />
+
+                    {props.isHeadMobShow ? 
+                        <MenuItem linkItem={linkItem} />
+                    : ""}
                 </Dropdown.Menu>
             </Dropdown>
 
@@ -49,12 +59,7 @@ function Menu(props) {
 
             {!props.fixhead ?
                 <ul className={`ul_reset_style ${style.header_site}`}>
-                    <li><a href="/about/" className={`site_link site_link_hover_other`}>О компании</a></li>
-                    <li><a href="/payment-and-delivery/" className={`site_link site_link_hover_other`}>Доставка и
-                            оплата</a></li>
-                    <li><a href="/news/" className={`site_link site_link_hover_other`}>Новости</a></li>
-                    <li><a href="/actions/" className={`site_link site_link_hover_other`}>Акции</a></li>
-                    <li><a href="/contacts/" className={`site_link site_link_hover_other`}>Контакты</a></li>
+                    <MenuItem linkItem={linkItem} />
                 </ul>
                 : ""
             }

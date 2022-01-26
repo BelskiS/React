@@ -15,6 +15,7 @@ function HeaderSearch() {
         <>
             <div className={style.wrap_select}>
                 <Select 
+                    instanceId="headerSearchSelect"
                     className={`header_select wrap_select_site`} 
                     classNamePrefix="select_site"
                     defaultValue={options[0]}
@@ -29,7 +30,7 @@ function HeaderSearch() {
                     type="text" 
                     placeholder="Поиск по VIN, артикулу" />
             </form>
-            <button type="submit" class={`btn_site ${style.btn_search}`}>
+            <button type="submit" className={`btn_site ${style.btn_search}`}>
                 <span className={`${style.btn_search_ico} icon-ion-search`}></span>
             </button>
         </>

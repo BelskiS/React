@@ -82,6 +82,16 @@ div[data-fixhead="fixhead"] {
     }
 }
 
+.item {
+    width: 25%;
+}
+.item_block {
+    padding-bottom: 18px;
+    &:last-child {
+        padding-bottom: 0;
+    }
+}
+
 @media only screen and (max-width : 1359px) {
     .header_site {
         font-size: 13px;
@@ -157,6 +167,9 @@ div[data-fixhead="fixhead"] {
             top: 5px;
             cursor: pointer;
             z-index: 1020;
+            & span:before {
+                font-size: 30px;
+            }
         }
     }
     .mob_fon {
