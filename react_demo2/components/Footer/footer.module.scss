@@ -3,3 +3,47 @@
 .wrap_main {
     background: $Ultra_Light_Shade; 
 }
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    margin: 0 -10px;
+}
+
+.copy {
+    border-top: 1px solid $Gray;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 12px;
+    font-weight: $fw_Header5;
+    padding: 12px 0;
+    color: $Ultra_Light_Tint;
+    & .copy_item {
+        margin: 5px auto 5px 0;
+        padding-right: 10px;
+    }
+
+    & .company_development {
+        position: relative;
+        font-weight: $fw_Header5;
+        color: $Ultra_Light_Tint;
+        padding-left: 23px;
+        margin: 5px 0;
+        &:hover {
+            color: $Dark_Tint;
+        }
+        & .company_development_ico {
+            background: url('../../public/company_development_ico.svg');
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 16px;
+            height: 16px;
+        }
+        & .company_development__text {
+            line-height: 18px;
+        }
+    }
+}
