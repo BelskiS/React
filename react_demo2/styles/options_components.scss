@@ -2406,39 +2406,6 @@ a.btn_site.btn_site_white:hover {
 	// 	color: $DarkGray;
 	// }
 
-	/*header_search*/
-		.btn_site.link_modal_mob_header_search {
-			background: $Base_Accent;
-			transition: background $animate_site;
-		}
-		.btn_site.link_modal_mob_header_search:hover {
-			background: $Dark_Accent;
-		}
-		.btn_site.link_modal_mob_header_search .btn_search__ico:before,
-		.btn_site.link_modal_mob_header_search:hover .btn_search__ico:before {
-			color: $White;
-		}
-	/*END header_search*/
-
-	/*main_menu*/
-		.site_dopdown_btn.main_menu .dropdown-menu {
-			border-radius: $border_radius_default;
-			transition: none;
-		}
-
-		.main_menu .mob_title_menu {
-			font-weight: $fw_Header6;
-		}
-		.main_menu__item .title_main_menu {
-			font-weight: $fw_Link;
-		}
-	/*END main_menu*/
-
-	/*garage*/
-		.wrap_garage.site_dopdown_btn .dropdown-menu {
-			transition: none;
-		}
-	/*END garage*/
 
 	/*tabs_site*/
 		.tabs_site .nav-tabs > li.active > a,

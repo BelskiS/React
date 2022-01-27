@@ -82,6 +82,9 @@ div[data-fixhead="fixhead"] {
     }
 }
 
+.wrap_drop {
+    display: flex;
+}
 .item {
     width: 25%;
 }
@@ -90,7 +93,69 @@ div[data-fixhead="fixhead"] {
     &:last-child {
         padding-bottom: 0;
     }
+
+    & ul.collapse_ul {
+        margin-left: 31px;
+        padding-top: 11px;
+        & li:hover {
+            background: none;
+        }
+        & li {
+            & a {
+                font-size: 13px;
+                font-weight: $fw_Link;
+                color: $Light_Tint;
+            }
+        }
+        & .main_link {
+            font-size: 13px;
+            padding: 7px 0; 
+            &:hover {
+                color: $Base_Accent;
+            }
+        }
+        & .main_all_link {
+            display: inline-block;
+            margin-top: 11px;
+            font-weight: $fw_Link;
+            padding: 0;
+            &:hover {
+                color: $Dark_Tint;
+            }
+        }
+    }
 }
+.main_title {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    font-size: 15px;
+    color: $Base_Tint;
+    font-weight: $fw_Button_Link;
+    padding-left: 31px;
+    line-height: 18px;
+    min-height: 26px;
+    transition: color $animate_site;
+    & .main_title_ico {
+        position: absolute;
+        top: 0;
+        left: 0;
+        &:before {
+            display: flex;
+            font-size: 24px;
+            color: $Light_Tint;
+            transition: color $animate_site;
+        }
+    }
+
+    &:hover {
+        color: $Base_Accent;
+        & .main_title_ico:before {
+            color: $Base_Accent;
+        }
+    }
+}
+
 
 @media only screen and (max-width : 1359px) {
     .header_site {
@@ -99,6 +164,22 @@ div[data-fixhead="fixhead"] {
     .garage_menu {
         &[data-menu="dropdown"] {
             width: 940px;
+        }
+    }
+
+    .wrap_drop {
+        flex-wrap: wrap;
+    }
+    .item {
+        width: 33.33333333%;
+        &:nth-child(4) {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 20px;
+            & .item_block {
+                width: 33.33333333%;
+            }
         }
     }
 }
@@ -187,6 +268,91 @@ div[data-fixhead="fixhead"] {
             bottom: 0;
             opacity: 1;
             z-index: 1015;
+        }
+    }
+
+    .wrap_drop {
+        border-bottom: 1px solid $Light_Gray;
+        padding-top: 20px;
+        padding-bottom: 5px;
+    }
+    .item {
+        width: 100%;
+        &:nth-child(4) {
+            padding-top: 0;
+            & .item_block {
+                width: 100%;
+            }
+        }
+    }
+    .item_block {
+        padding-bottom: 16px;
+        &:last-child {
+            padding-bottom: 16px;
+        }
+    }
+    .mob_header {
+        & .mob_header_adress {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+        & .mob_header__ico {
+            &:before {
+                font-size: 16px;
+                margin-right: 7px;
+                color: $Base_Shade;
+            }
+        }
+        & .mob_header_adress__text {
+            font-size: 13px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        & .mob_header__help {
+            display: flex;
+            align-items: center;
+            & .mob_header__help_text {
+                font-size: 14px;   
+            }
+        }
+    }
+    .mob_title {
+        border-top: 1px solid $Light_Gray;
+        font-size: 15px;
+        font-weight: $fw_Header6;
+        margin-top: 15px;
+        padding-top: 20px;
+    }
+
+
+    .main_title {
+        font-size: 14px;
+        font-weight: $fw_Link;
+    }
+    .mob_footer {
+        padding: 20px 0;
+        & ul.mob_footer_ul {
+            & li:hover {
+                background: none;
+            }
+            & li {
+                font-size: 14px;
+                margin-bottom: 25px;
+                & a {
+                    display: inline-block;
+                    font-size: 15px;
+                    font-weight: $fw_Header6;
+                    padding: 0;
+    
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
         }
     }
 }

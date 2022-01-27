@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import Dropdown from 'react-bootstrap/Dropdown';
+import Link from 'next/link';
 
 import linkItem from '../../public/constData/linkItem';
 import linkItemCatalog from '../../public/constData/linkitemcatalog';
@@ -37,12 +38,44 @@ function Menu(props) {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu className={`${style.garage_menu} dropdown_animate`} data-menu='dropdown' >
-                    <div className="">место для меню каталога</div>
+                    {props.isHeadMobShow ?
+                        <> 
+                            <div className={style.mob_header}>
+                                <div className={style.mob_header_item}>
+                                    <Link href="/contacts/">
+                                        <a className={style.mob_header_adress}>
+                                            <span className={`${style.mob_header__ico} icon-ion-location-sharp`}></span>
+                                            <span className={`site_link site_link_with_borderb
+                                                ${style.mob_header__text} ${style.mob_header_adress__text}`}>
+                                                    Россия, Москва, Нагорный пр-д, 12 корпус 3
+                                            </span>
+                                        </a>
+                                    </Link>
+                                </div>
 
-                    <MenuIemCatalog linkItemCatalog={linkItemCatalog} />
+                                <a className={`site_link ${style.mob_header__help}`} href="#help" data-toggle="modal">
+                                    <span className={`${style.mob_header__ico} icon-ion-help-circle`}></span>
+                                    <span className={style.mob_header__help_text}>Помощь</span>
+                                </a>
+                            </div>
+
+                            <div className={style.mob_title}>Каталог товаров</div>
+                        </>
+                    : ""}
+
+                    <div className={style.wrap_drop}>
+                        <MenuIemCatalog 
+                            linkItemCatalog={linkItemCatalog} 
+                            mobmenu={props.isHeadMobShow ? true : false}
+                        />
+                    </div>
 
                     {props.isHeadMobShow ? 
-                        <MenuItem linkItem={linkItem} />
+                        <div className={style.mob_footer}>
+                            <ul className={`ul_reset_style ${style.mob_footer_ul}`}>
+                                <MenuItem linkItem={linkItem} />
+                            </ul>
+                        </div>
                     : ""}
                 </Dropdown.Menu>
             </Dropdown>

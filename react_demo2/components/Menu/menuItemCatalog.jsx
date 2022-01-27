@@ -11,24 +11,26 @@ function MenuIemCatalog(props) {
                 {item.itemLevelOne.map((itemLevelOne) => 
                     <div className={style.item_block} key={itemLevelOne.title}>
                         <Link href={itemLevelOne.url}>
-                            <a className="">
-                                <span className={itemLevelOne.ico}></span>
-                                <span className="">{itemLevelOne.title}</span>
+                            <a className={style.main_title}>
+                                <span className={`${style.main_title_ico} ${itemLevelOne.ico}`}></span>
+                                <span>{itemLevelOne.title}</span>
                             </a>
                         </Link>
-                        <ul className="main_menu__collapse_ul">
-                            {itemLevelOne.itemSubLevel.map((itemSubLevel) => 
-                                <li key={itemSubLevel.title}>
-                                    <Link href={itemSubLevel.url}>
-                                        <a className={` ${itemSubLevel.allLink ? 
-                                            "site_link_two site_link_with_borderb main_menu_all_link" 
-                                            : "site_link"}`}>
-                                                {itemSubLevel.title}
-                                        </a>
-                                    </Link>
-                                </li>
-                            )}
-                        </ul>
+                        {itemLevelOne.itemSubLevel && !props.mobmenu ? 
+                            <ul className={style.collapse_ul}>
+                                {itemLevelOne.itemSubLevel.map((itemSubLevel) => 
+                                    <li key={itemSubLevel.title}>
+                                        <Link href={itemSubLevel.url}>
+                                            <a className={` ${itemSubLevel.allLink ? 
+                                                `site_link_two site_link_with_borderb ${style.main_all_link}` 
+                                                : `site_link ${style.main_link}`}`}>
+                                                    {itemSubLevel.title}
+                                            </a>
+                                        </Link>
+                                    </li>
+                                )}
+                            </ul>
+                        : ""}
                     </div>
                 )}
             </div>
