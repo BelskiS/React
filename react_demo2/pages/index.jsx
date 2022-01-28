@@ -47,6 +47,112 @@ function HomePage() {
                     </div>
                 </section>
 
+                <section className="sec_main advantage_main">
+                    <div className="site_container">
+                        <div className="wrap_advantage_main_item">
+                            <div className="advantage_main_item">
+                                <div className="advantage_main_item__text">
+                                    <div className="advantage_main_item__title title_h2">
+                                        Сеть магазинов и автосервисов в Москве и Московской области                    </div>
+                                    <div className="advantage_main_item__text_descr">
+                                        Широкии ассортимент автотоваров. Автомасла для любых автомобилеи, вся продукция для прохождения технического обслуживания автомобиля и услуги экспресс-сервиса, позволяющие «на месте» воспользоваться приобретенными товарами.                    </div>
+                                </div>
+
+                                <div className="advantage_main_item__descr">
+
+
+                                    <div className="advantage_main_item__descr__item  advantage_main_year">
+                                        14 лет на рынке автозапчастей</div>
+
+
+
+
+                                    <div className="advantage_main_item__descr__item  advantage_main_shop">
+                                        10 магазинов и автосервисов</div>
+
+
+
+
+                                    <div className="advantage_main_item__descr__item  advantage_main_product">
+                                        15 тыс. товаров в ассортименте</div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="sec_main advantage_main">
+                    <div className="site_container">
+                        <div className="wrap_advantage_main_item">
+                            <div className="advantage_main_item">
+                                <div className="advantage_main_item__text">
+                                    <div className="advantage_main_item__title title_h2">
+                                        Сеть магазинов и автосервисов в Москве и Московской области                    </div>
+                                    <div className="advantage_main_item__text_descr">
+                                        Широкии ассортимент автотоваров. Автомасла для любых автомобилеи, вся продукция для прохождения технического обслуживания автомобиля и услуги экспресс-сервиса, позволяющие «на месте» воспользоваться приобретенными товарами.                    </div>
+                                </div>
+
+                                <div className="advantage_main_item__descr">
+
+
+                                    <div className="advantage_main_item__descr__item  advantage_main_year">
+                                        14 лет на рынке автозапчастей</div>
+
+
+
+
+                                    <div className="advantage_main_item__descr__item  advantage_main_shop">
+                                        10 магазинов и автосервисов</div>
+
+
+
+
+                                    <div className="advantage_main_item__descr__item  advantage_main_product">
+                                        15 тыс. товаров в ассортименте</div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section className="sec_main advantage_main">
+                    <div className="site_container">
+                        <div className="wrap_advantage_main_item">
+                            <div className="advantage_main_item">
+                                <div className="advantage_main_item__text">
+                                    <div className="advantage_main_item__title title_h2">
+                                        Сеть магазинов и автосервисов в Москве и Московской области                    </div>
+                                    <div className="advantage_main_item__text_descr">
+                                        Широкии ассортимент автотоваров. Автомасла для любых автомобилеи, вся продукция для прохождения технического обслуживания автомобиля и услуги экспресс-сервиса, позволяющие «на месте» воспользоваться приобретенными товарами.                    </div>
+                                </div>
+
+                                <div className="advantage_main_item__descr">
+
+
+                                    <div className="advantage_main_item__descr__item  advantage_main_year">
+                                        14 лет на рынке автозапчастей</div>
+
+
+
+
+                                    <div className="advantage_main_item__descr__item  advantage_main_shop">
+                                        10 магазинов и автосервисов</div>
+
+
+
+
+                                    <div className="advantage_main_item__descr__item  advantage_main_product">
+                                        15 тыс. товаров в ассортименте</div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 {/* <section className="main_page_selected_auto">
                     <div className="site_container">
 

@@ -64,12 +64,16 @@ function Header() {
     }
 
     useEffect(() => {
+        handleScroll();
         ["load", "resize", "scroll"].forEach(function (e) {
             window.addEventListener(e, handleScroll);
+            return() => window.removeEventListener(e, handleScroll);
         });
 
+        handleWidthCont();
         ["load", "resize"].forEach(function (e) {
             window.addEventListener(e, handleWidthCont);
+            return() => window.removeEventListener(e, handleWidthCont);
         });
     }, []);
 
