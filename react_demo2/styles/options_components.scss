@@ -734,43 +734,6 @@ a.btn_site.btn_site_white:hover {
 		}
 	/*END slider__catalog*/
 
-	/*main_categories*/
-		.main_categories {
-			background: $Accent_GrayRed;
-		}
-		.main_categories__content .main_categories__item {
-			background: $White;
-			border-color: $Light_Gray;
-			border-radius: $border_radius_main;
-			transition: all $animate_site;
-		}
-		.main_categories__content a.main_categories__item:hover {
-			border-color: $Ultra_Light_Accent;
-			box-shadow: $box_shadow_item_hover;
-		}
-		.main_categories__item__title {
-			font-weight: $fw_Header5;
-		}
-		.main_categories__content .mci__origin_c .main_categories__item__title {
-			font-weight: $fw_Header4;
-		}
-		.main_categories__content .main_categories__item .main_categories__item__title,
-		.main_categories__content a.main_categories__item:hover .main_categories__item__title {
-			color: $Base_Tint;
-		}
-		.main_categories__content a.main_categories__item.mci__all_link_catalog {
-			background: $Dark_Shade;
-		}
-		.main_categories__content .main_categories__item.mci__all_link_catalog .main_categories__item__title,
-		.main_categories__content a.main_categories__item.mci__all_link_catalog:hover .main_categories__item__title {
-			color: $White;
-		}
-		.main_categories__content a.main_categories__item.mci__all_link_catalog,
-		.main_categories__content a.main_categories__item.mci__all_link_catalog:hover {
-			border-color: $Light_Gray;
-		}
-	/*END main_categories*/
-
 	/*slider__stock*/
 		.slider__stock .item a {
 			border-radius: $border_radius_main;
@@ -2213,27 +2176,6 @@ a.btn_site.btn_site_white:hover {
 /*END filters_catalog*/
 
 @media only screen and (max-width : 1359px) {
-	/*main_categories*/
-		.main_categories__item.mci__origin_c .mci__origin_c_link_in {
-			background: $Base_Accent;
-			height: $height_field_btn;
-			color: $White;
-			font-weight: $fw_Button_Link;
-			transition: all $animate_site;
-		}
-		.main_categories__item.mci__origin_c .mci__origin_c_link_in:hover {
-			background: $Dark_Accent;
-		}
-		.main_categories__item.mci__origin_c .mci__origin_c_link_in,
-		.main_categories__item.mci__origin_c .mci__origin_c_link_in:focus,
-		.main_categories__item.mci__origin_c .mci__origin_c_link_in:hover {
-			color: $White;
-		}
-		.main_categories__item.mci__origin_c .mci__origin_c_link_in:after {
-			font-weight: $fw_font_ico;
-		}
-	/*END main_categories*/
-
 	/*search_result*/
 		/*filter*/
 			.for_mob_sidebar_search {
@@ -2360,33 +2302,6 @@ a.btn_site.btn_site_white:hover {
 	/*END request_selection__page*/
 
 	/*main_content*/
-		/*main_categories*/
-			.main_categories__item__title {
-				font-weight: $fw_Header6;
-			}
-			.main_categories__content .mci__origin_c .main_categories__item__title {
-				font-weight: $fw_Header5;
-			}
-			.main_categories__content a.main_categories__item.mci__all_link_catalog .main_categories__item__title {
-				font-weight: $fw_Body_Text;
-			}
-
-			/*ws_catalog*/
-				/*ws_catalog_page*/
-					.ws_catalog_page__item__col .ws_catalog__body .ws_catalog__body__title {
-						font-weight: $fw_Header6;
-					}
-
-					.sub_ws_catalog .sub_ws_catalog__title {
-						font-weight: $fw_Header5;
-					}
-					.sub_ws_catalog .sub_ws_catalog_col__title {
-						font-weight: $fw_Header6;
-					}
-				/*END ws_catalog_page*/
-			/*END ws_catalog*/
-		/*END main_categories*/
-
 		/*second_main_page_selected_auto*/
 			.second_main_page_selected_auto__col {
 				font-weight: $fw_Button_Link;
