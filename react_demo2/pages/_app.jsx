@@ -9,20 +9,18 @@ import "../styles/options_components.scss";
 export default function MyApp({ Component, pageProps }) {
     //Постоянно смотрим за разрешением 
 	const useDeviceSize = () => {
-
 		const [widthDevice, setWidthDevice] = useState(0)
 
-		const handleWindowResize = () => {
+		const handleWindowSize = () => {
 			setWidthDevice(window.innerWidth);
 		}
 
 		useEffect(() => {
-			handleWindowResize();
-			window.addEventListener('resize', handleWindowResize);
-			return () => window.removeEventListener('resize', handleWindowResize);
+			handleWindowSize();
+			window.addEventListener('resize', handleWindowSize);
+			return () => window.removeEventListener('resize', handleWindowSize);		
 		}, []);
-		return widthDevice
-
+		return widthDevice;
 	}
 	const widthDevice = useDeviceSize();
 

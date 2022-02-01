@@ -711,21 +711,6 @@ a.btn_site.btn_site_white:hover {
 /*END label_product_tag*/
 
 /*main_content*/
-	/*advantage_main*/
-		.wrap_advantage_main_item {
-			color: $White;
-		}
-		.advantage_main_item .advantage_main_item__descr .advantage_main_item__descr__item {
-			background: $White;
-			border-radius: $border_radius_default $border_radius_main $border_radius_main $border_radius_default;
-			color: $Dark_Shade;
-			font-weight: $fw_Large_Text_Bold;
-		}
-		.advantage_main_item .advantage_main_item__descr .advantage_main_item__descr__item:after {
-			background: $Base_Accent;
-		}
-	/*END advantage_main*/
-
 	/*slider__catalog*/
 		.slider__catalog .item a {
 			transition: all $animate_site;
@@ -748,26 +733,6 @@ a.btn_site.btn_site_white:hover {
 			color: $Light_Shade;
 		}
 	/*END slider__catalog*/
-
-	/*main_page_selected_auto*/
-		.main_block_link_selected_auto {
-			background: $Light_Gray;
-		}
-		.main_link_selected_auto .selected_auto__ico:before {
-			color: $Base_Shade;
-		}
-		.main_link_selected_auto .main_link_selected_auto__item {
-			background: $White;
-			border: $field_border;
-			border-radius: $border_radius_main;
-			height: $selected_auto_height;
-			color: $Base_Tint;
-			font-weight: $fw_Body_Text;
-		}
-		.main_link_selected_auto .btn_site {
-			height: $selected_auto_height;
-		}
-	/*END main_page_selected_auto*/
 
 	/*main_categories*/
 		.main_categories {
@@ -967,53 +932,6 @@ a.btn_site.btn_site_white:hover {
 		}
 	/*END detail_branch*/
 /*END main_content*/
-
-/*footer*/
-	.wrap_main_footer {
-		background: $Ultra_Light_Shade;
-	}
-	.main_footer .ul_footer_contact .link_footer,
-	.main_footer .ul_footer_contact .link_footer:hover,
-	.main_footer .ul_footer_contact .link_footer:focus {
-		color: $Base_Tint;
-	}
-	.wrap_main_footer .main_footer .main_footer__item.footer__item_four .ul_reset_style {
-		border-color: $Accent_GrayBlue;
-	}
-	.wrap_main_footer .main_footer .main_footer__item .footer_title_soc {
-		font-weight: $fw_Header6;
-	}
-	.wrap_main_footer .main_footer .main_footer__item .ul_footer_contact .footer_contact_text {
-		font-weight: $fw_Small_Link;
-	}
-	.wrap_main_footer .main_footer .main_footer__item .footer_contact_text_tel {
-		font-weight: $fw_Header5;
-	}
-
-	.wrap_main_footer .main_footer__copyright {
-		border-color: $Gray;
-	}
-	.wrap_main_footer .main_footer__copyright,
-	.wrap_main_footer .main_footer__copyright .link_company_development {
-		font-weight: $fw_Header5;
-	}
-	.wrap_main_footer .main_footer__copyright,
-	.wrap_main_footer .main_footer__copyright .site_link,
-	.wrap_main_footer .main_footer__copyright .site_link:focus {
-		color: $Ultra_Light_Tint;
-	}
-	.wrap_main_footer .main_footer__copyright .site_link:hover {
-		color: $Dark_Tint;
-	}
-
-	.scroll_up_site .scroll_up_site__ico:before {
-		color: $Gray;
-		transition: all $animate_site;
-	}
-	.scroll_up_site:hover .scroll_up_site__ico:before {
-		color: $Base_Shade;
-	}
-/*END footer*/
 
 /*contacts.css*/
 	.wrap_contact_title_page {

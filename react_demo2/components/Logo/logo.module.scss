@@ -4,9 +4,6 @@
 	min-width: 230px;
 	margin-right: 30px;
 }
-// .site_header__down.header_fixed .link_logo {
-// 	display: none;
-// }
 
 .foot {
 	display: inline-block;
@@ -21,21 +18,9 @@
     }
 }
 
-@media only screen and (max-width : 999px) {
-    // .main_footer .main_footer__item.footer__item_one .main_footer__wrap_item .footer_logo {
-    //     margin-left: auto;
-    // }
-}
-
 @media only screen and (max-width : 767px) {
     .head {
         width: 190px;
         min-width: 190px;
     }
-
-    // .main_footer .main_footer__item.footer__item_one .main_footer__wrap_item .footer_logo {
-    //     margin-top: 10px;
-    //     margin-bottom: 10px;
-    //     margin-left: 0;
-    // }
 }

@@ -13,7 +13,9 @@ function LinkPhone(props) {
                 ${!props.classNameIco ? '' : props.classNameIco}
                 ${props.icoName}
             `}></span>
-            {props.tel}
+            <span>
+                {props.tel}
+            </span>
         </a>
     );
 }
