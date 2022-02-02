@@ -5,6 +5,8 @@ import Footer from "../components/Footer/footer";
 import AdvantageMain from '../components/Main/AdvantageMain/advantage';
 import MainLinkGarage from '../components/Garage/mainLinkGarage';
 import CategoriesMain from '../components/Main/CategoriesMain/categories';
+import HelpMain from '../components/Main/HelpMain/helpMain';
+import AdvantageMainPlus from '../components/Main/AdvantageMainPlus/advantageMainPlus';
 
 import linkCategories from '../public/constData/linkCategories';
 import Link from "next/link";
@@ -22,6 +24,17 @@ function HomePage({widthDevice}) {
                 <MainLinkGarage widthDevice={widthDevice} />
                 
                 <CategoriesMain linkCategories={linkCategories} widthDevice={widthDevice} />
+
+                <div className="sec_main main_slider_stock">
+                    <div className="site_container">
+                        <div className="title_h3">Скидки и акции</div>
+                    место для слайдера скидок и акций
+                    </div>
+                </div>
+
+                <HelpMain widthDevice={widthDevice} />
+
+                <AdvantageMainPlus />
 
             </div>
 

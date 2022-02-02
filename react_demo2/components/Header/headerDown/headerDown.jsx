@@ -6,6 +6,7 @@ import HeaderSearch from './headerSearch/headerSearch';
 import Garage from '../../Garage/garage';
 import Basket from '../../Basket/basket';
 import Menu from '../../Menu/menu';
+import BtnSite from '../../BtnSite/btnSite';
 
 import style from './headerDown.module.scss';
 
@@ -41,12 +42,14 @@ function HeaderDown(props) {
                     <Menu isHeadMobShow={props.isHeadMobShow} fixhead={(props.isShow || props.isHeadMobShow) ? true : false} />
 
                     {!props.isShow ?
-                        <Link href="/request_for_selection/">
-                            <a className={`btn_site btn_site_border btn_site_white ${style.link_service}`}>
-                                <span className={`${style.link_service__ico} color_ico icon-ion-create-outline`}></span>
-                                <span>Запрос на подбор запчастей</span>
-                            </a>
-                        </Link>
+                        <BtnSite 
+                            btn_link
+                            href="/request_for_selection/"
+                            className={`btn_site_border btn_site_white ${style.link_service}`}
+                            classNameIco={`${style.link_service__ico} color_ico`}
+                            icoName="icon-ion-create-outline"
+                            text="Запрос на подбор запчастей"
+                        />
                     : ""}
                 </div>
             </div>

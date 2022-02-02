@@ -1582,162 +1582,6 @@ body.modal-open .modal_site.in {
 }
 /*END slider__stock*/
 
-/*second_main_page_selected_auto*/
-.second_main_page_selected_auto {
-	padding-top: 50px;
-	margin-bottom: 20px;
-}
-.second_main_page_selected_auto__item {
-	padding: 30px;
-}
-.second_main_page_selected_auto__item_col {
-	display: flex;
-	flex-wrap: wrap;
-	height: 268px;
-	overflow: hidden;
-	margin: 22px -10px 17px;
-}
-.second_main_page_selected_auto__item_col.active {
-	height: auto;
-}
-.second_main_page_selected_auto__col {
-	border: 1px solid;
-	position: relative;
-	font-size: 16px;
-	display: none;
-	align-items: center;
-	width: calc(20% - 20px);
-	margin: 8px 10px;
-	padding: 0 40px 0 20px;
-	white-space: nowrap;
-	overflow: hidden;
-}
-.second_main_page_selected_auto__col:hover {
-	box-shadow: 0 4px 8px rgba(213,205,209,.8);
-}
-.second_main_page_selected_auto__col.popular_auto,
-.second_main_page_selected_auto__item_col.active .second_main_page_selected_auto__col {
-	display: flex;
-}
-.second_main_page_selected_auto__col .selected_auto__col__text {
-	overflow: hidden;
-}
-.second_main_page_selected_auto__col .selected_auto__col__ico {
-	position: absolute;
-	top: 50%;
-	right: 15px;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
-.second_main_page_selected_auto__col .selected_auto__col__ico:before {
-	font-size: 20px;
-}
-.second_main_page_selected_auto__item .second_link_all_auto {
-	position: relative;
-	padding-right: 23px;
-	cursor: pointer;
-}
-.second_main_page_selected_auto__item .second_link_all_auto .viz,
-.second_main_page_selected_auto__item .second_link_all_auto.active .inviz {
-	display: inline-block;
-}
-.second_main_page_selected_auto__item .second_link_all_auto .inviz,
-.second_main_page_selected_auto__item .second_link_all_auto.active .viz {
-	display: none;
-}
-.second_main_page_selected_auto__item .second_link_all_auto:before {
-	content: "\e922";
-	font-family: 'iconewwssync' !important;
-	font-size: 16px;
-	position: absolute;
-	top: 50%;
-	right: 0;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
-.second_main_page_selected_auto__item .second_link_all_auto.active:before {
-	content: "\e925";
-}
-/*END second_main_page_selected_auto*/
-
-/*main_help_block*/
-.wrap_main_help_block {
-	padding-top: 50px;
-}
-.wrap_main_help_block .main_help_block {
-	/* background: url('../img/help_fon.png'); */
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 430px;
-}
-.wrap_main_help_block .main_help_block .main_help_block__item {
-	max-width: 842px;
-	text-align: center;
-}
-.main_help_block__item .main_help_block__item__title {
-	text-transform: uppercase;
-	margin-bottom: 15px;
-}
-.main_help_block__item .main_help_block__item__descr {
-	font-size: 21px;
-	line-height: 27px;
-	margin-bottom: 40px;
-}
-.main_help_block__item .btn_site.link_service {
-	display: flex;
-	text-transform: uppercase;
-	width: 300px;
-	height: 50px;
-	margin: 0 auto;
-}
-/*END main_help_block*/
-
-/*advantage_main__plus*/
-.advantage_main__plus {
-	margin-top: 40px;
-}
-.advantage_main__plus__descr {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	height: 68px;
-	padding: 5px 40px;
-	margin: 0 -8px;
-}
-.advantage_main__plus__descr .advantage_main__plus__item {
-	position: relative;
-	min-width: 223px;
-	margin: 0 8px;
-	padding-left: 47px;
-	line-height: 20px;
-}
-.advantage_main__plus__descr .advantage_main__plus__item:before {
-	content: "";
-	background-repeat: no-repeat;
-	background-size: contain;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 32px;
-	height: 32px;
-}
-.advantage_main__plus__descr .advantage_main__plus__item.plus__one:before {
-	/* background-image: url('../img/advantage_main__plus/icolor-stock.svg'); */
-}
-.advantage_main__plus__descr .advantage_main__plus__item.plus__two:before {
-	/* background-image: url('../img/advantage_main__plus/icolor-certification1.svg'); */
-}
-.advantage_main__plus__descr .advantage_main__plus__item.plus__three:before {
-	/* background-image: url('../img/advantage_main__plus/icolor-tools1.svg'); */
-}
-.advantage_main__plus__descr .advantage_main__plus__item.plus__four:before {
-	/* background-image: url('../img/advantage_main__plus/icolor-rouble.svg'); */
-}
-/*END advantage_main__plus*/
-
 /*main_info_items*/
 .wrap_main_info_items {
 	padding-top: 30px;
@@ -1867,6 +1711,41 @@ body.modal-open .modal_site.in {
 }
 
 @media only screen and (max-width : 767px) {
+	h1,
+	.title_h1 {
+		font-weight: $fw_Header3;
+		font-size: 26px;
+		line-height: 31px;
+	}
+	h2,h3,
+	.title_h2,
+	.title_page,
+	.title_h3,
+	.modal_site .modal-dialog .modal-content .modal-title {
+		font-size: 21px;
+		font-weight: $fw_Header4;
+		line-height: 27px;
+	}
+	h4,
+	.title_h4 {
+		font-weight: $fw_Header6;
+		font-size: 15px;
+		line-height: 18px;
+	}
+	h5,h6,
+	.title_h5,
+	.title_h6 {
+		font-size: 14px;
+		line-height: 18px;
+	}
+	h5,
+	.title_h5 {
+		font-weight: $fw_Link;
+	}
+	h6,
+	.title_h6 {
+		font-weight: $fw_Button_Link;
+	}
 	.mob_body_overflow {
 		position: fixed;
 		overflow: hidden;

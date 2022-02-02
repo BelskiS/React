@@ -740,43 +740,6 @@ a.btn_site.btn_site_white:hover {
 		}
 	/*END slider__stock*/
 
-	/*second_main_page_selected_auto*/
-		.second_main_page_selected_auto__item {
-			background: $Light_Gray;
-		}
-		.second_main_page_selected_auto__col {
-			background: $White;
-			border-color: $Light_Gray;
-			border-radius: $border_radius_main;
-			height: $selected_auto_height;
-			font-weight: $fw_Large_Text_Bold;
-			transition: all $animate_site;
-		}
-		.second_main_page_selected_auto__col,
-		.second_main_page_selected_auto__col:hover {
-			color: $Base_Tint;
-		}
-		.second_main_page_selected_auto__col:hover {
-			border-color: $Ultra_Light_Accent;
-		}
-		.second_main_page_selected_auto__col .selected_auto__col__ico:before {
-			color: $DarkGray;
-		}
-		.second_main_page_selected_auto__item .second_link_all_auto:before {
-			font-weight: $fw_font_ico;
-			color: $Base_Shade;
-		}
-	/*END second_main_page_selected_auto*/
-
-	/*main_help_block*/
-		.wrap_main_help_block .main_help_block {
-			color: $White;
-		}
-		.main_help_block__item .main_help_block__item__descr {
-			font-weight: $fw_Header4;
-		}
-	/*END main_help_block*/
-	
 	/*main_news*/
 		.main_news .main_news__item .main_news__item__time {
 			background: $Ultra_Light_Shade;
@@ -2206,31 +2169,6 @@ a.btn_site.btn_site_white:hover {
 	/*END pages_selected_auto*/
 }
 @media only screen and (max-width : 767px) {
-	h1,
-	.title_h1 {
-		font-weight: $fw_Header3;
-	}
-	h2,
-	.title_h2,
-	.title_page {
-		font-weight: $fw_Header4;
-	}
-	h3,
-	.title_h3 {
-		font-weight: $fw_Header4;
-	}
-	h4,
-	.title_h4 {
-		font-weight: $fw_Header6;
-	}
-	h5,
-	.title_h5 {
-		font-weight: $fw_Link;
-	}
-	h6,
-	.title_h6 {
-		font-weight: $fw_Button_Link;
-	}
 
 	/*modal*/
 		.modal_site .modal-dialog .modal-content .modal-title {
@@ -2302,18 +2240,6 @@ a.btn_site.btn_site_white:hover {
 	/*END request_selection__page*/
 
 	/*main_content*/
-		/*second_main_page_selected_auto*/
-			.second_main_page_selected_auto__col {
-				font-weight: $fw_Button_Link;
-			}
-		/*END second_main_page_selected_auto*/
-
-		/*main_help_block*/
-			.main_help_block__item .main_help_block__item__descr {
-				font-weight: $fw_Header6;
-			}
-		/*END main_help_block*/
-
 		/*main_chain_stores*/
 			.main_chain_stores__contact .main_chain_stores__contact__title {
 				font-weight: $fw_Header6;

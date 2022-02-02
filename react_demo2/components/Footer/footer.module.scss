@@ -35,6 +35,17 @@
         }
     }
 }
+.main {
+    & .item {
+        & ul {
+            & li {
+                & a:hover {
+                    color: $Dark_Tint;
+                }
+            }
+        }
+    }
+}
 .contact {
     & a {
         display: flex;

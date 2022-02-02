@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import BtnSite from '../BtnSite/btnSite';
+
 import style from './searchOriginCatalog.module.scss';
 
 function SearchOrigionCatalog() {
@@ -48,7 +50,12 @@ function SearchOrigionCatalog() {
                     </div>
                 }
 
-                <button className={`btn_site ${style.form_btn}`} type="submit">Найти</button>
+                <BtnSite 
+                    href="/request_for_selection/"
+                    className={style.form_btn}
+                    text="Найти"
+                    type="submit"
+                />
             </form>
         </div>
     );
