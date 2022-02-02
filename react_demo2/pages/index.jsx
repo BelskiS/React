@@ -36,6 +36,34 @@ function HomePage({widthDevice}) {
 
                 <AdvantageMainPlus />
 
+                <div className="sec_main wrap_main_news">
+                    <div className="site_container">
+                        <div className="title_h3">Наши новости</div>
+                    место для секции наши новости
+                    </div>
+                </div>
+
+                <div className="sec_main main_slider__brand">
+                    <div className="site_container">
+                        <div className="title_h3">Наши партнеры</div>
+                    место для слайдера наши партнеры
+                    </div>
+                </div>
+
+                <div className="sec_main main_comments">
+                    <div className="site_container">
+                        <div className="title_h3">Отзывы</div>
+                    место для слайдера отзывы
+                    </div>
+                </div>
+
+                <div className="main_chain_stores">
+                    <div className="site_container">
+                        <div className="title_h3">Контакты сети магазинов “e-comAutoparts”</div>
+                    место для секции филиалов
+                    </div>
+                </div>
+
             </div>
 
             <Footer />
