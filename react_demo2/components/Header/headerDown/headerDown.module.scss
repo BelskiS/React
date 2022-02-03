@@ -1,0 +1,130 @@
+@import '../../../styles/option.scss';
+
+.content {
+    background: transparent;
+    &[data-fixhead="fixhead"] {
+        background: $Ultra_Light_Shade;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 134px;
+    &[data-fixhead="fixhead"] {
+        height: 60px;
+    }
+}
+.item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &[data-fixhead="fixhead"] {
+        display: none;
+    }
+}
+
+.up {
+    padding-top: 25px;
+    padding-bottom: 19px;
+    &[data-fixhead="fixhead"] {
+        display: flex;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+.search {
+    display: flex;
+    margin-right: auto;
+}
+.selected_search {
+    position: relative;
+    width: 750px;
+}
+.basket_garage {
+    display: flex;
+    align-items: center;
+}
+
+.link_service {
+    display: flex;
+    align-items: center;
+    width: 250px;
+    padding: 0 20px 0 15px;
+    line-height: 18px;
+}
+.link_service__ico {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+@media only screen and (max-width : 1359px) {
+    .search {
+        width: calc(100% - 321px);
+        margin-right: 24px;
+    }
+    .selected_search {
+        width: 100%;
+    }
+    .link_service {
+        display: none;
+    }
+    div[data-fixhead="fixhead"] {
+        & .search {
+            width: auto;
+            margin-right: auto;
+        }
+        & .selected_search {
+            width: 490px;
+        }
+    }
+}
+
+@media only screen and (max-width : 999px) {
+    div[data-fixhead="fixhead"] {
+        & .selected_search {
+            width: 400px;
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+    .content {
+        position: relative;
+        padding-top: 12px;
+    }
+    .container {
+        height: auto;
+    }
+    .up {
+        width: calc(100% - 30px);
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 16px;
+    }
+    .down {
+        width: 30px;
+        order: -1;
+    }
+    .basket_garage {
+        position: absolute;
+        top: -37px;
+        right: 15px;
+    }
+    .search {
+        width: auto;
+        margin-right: 0;
+    }
+    .mob_btn_search {
+        display: flex;
+        width: 30px;
+        height: 30px;
+        padding: 0;
+    }
+}

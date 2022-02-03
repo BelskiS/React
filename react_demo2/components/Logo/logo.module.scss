@@ -1,0 +1,26 @@
+.head {
+	display: block;
+	width: 230px;
+	min-width: 230px;
+	margin-right: 30px;
+}
+
+.foot {
+	display: inline-block;
+	width: 200px;
+}
+
+@media only screen and (max-width : 1359px) {
+    .head {
+        width: 197px;
+        min-width: 197px;
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width : 767px) {
+    .head {
+        width: 190px;
+        min-width: 190px;
+    }
+}

@@ -1,0 +1,106 @@
+/*colors*/
+	$Dark_Shade: #414350;
+	$Base_Shade: #5B5F74;
+	$Light_Shade: #858AA2;
+	$Ultra_Light_Shade: #F1F2F3;
+
+	$Dark_Tint: #111;
+	$Base_Tint: #3F3F3F;
+	$Light_Tint: #5A5A5A;
+	$Ultra_Light_Tint: #888888;
+
+	$Dark_Accent: #D22E2E;
+	$Base_Accent: #E84D4D;
+	$Light_Accent: #FE7B7B;
+	$Ultra_Light_Accent: #FFC7BB;
+
+	/*for two color link*/
+	$Dark_Second: #D22E2E;
+	$Base_Second: #E84D4D;
+	$Search_Label: #D4F2E0;
+
+	$Success: #29BC62;
+	$Success_Light: #DFF5E7;
+	$Success_Text: #27874C;
+	$Normal: #44AEFF; 
+	$Attention: #FFD788;
+	$Error: #FF6230;
+
+	$Message: #F0B65F;
+	$Message_Light: #FFFAE9;
+
+	$Stock: #489F6A;
+	$Best_Price: #C24600;
+	$Discount: #D98200;
+	$New: #3F8FAB;
+	$Hit: #D22E2E;
+	$Stock_Light: #D4F2E0;
+	$Best_Price_Light: #F3DACC;
+	$Discount_Light: #FFE8C5;
+	$New_Light: #D0F0FB;
+	$Hit_Light: #FFC7BB;
+
+
+	$Black: #000;
+	$White: #fff;
+	$DarkGray: #888888;
+	$Gray: #C1C1C1;
+	$Light_Gray: #F0F0F0;
+	$Accent_GrayPink: #D5CDD1;
+	$Accent_GrayRed: #F2F0F1;
+	$Accent_GrayBlue: #D0D6D9;
+/*END colors*/
+
+/*font_weight*/
+	$fw_Header0: bold;
+	$fw_Header1: bold;
+	$fw_Header2: bold;
+	$fw_Header3: bold;
+	$fw_Header4: bold;
+	$fw_Header5: 600;
+	$fw_Header6: bold;
+
+	$fw_Large_Text: normal;
+	$fw_Body_Text: normal;
+	$fw_Small_Text: normal;
+	$fw_CAPTION: normal;
+
+	$fw_Large_Text_Bold: bold;
+
+	$fw_Link: 600;
+	$fw_Button_Link: bold;
+	$fw_Small_Button_Link: bold;
+	$fw_Crumbs_Link: 600;
+	$fw_Small_Link: 600;
+
+	$fw_Numeral: bold;
+	$fw_Quote: normal;
+	$fw_List: normal;
+
+	
+	$fw_font_ico: normal;
+/*END font_weight*/
+
+/*height_field и btn*/
+$height_field_btn: 40px;
+
+/*.selection_auto__wrap_select .wrap_selectpicker_site .bootstrap-select > button.dropdown-toggle*/
+$height_selected_auto: 55px;
+
+/*selected_auto_height*/
+$selected_auto_height: 50px;
+
+/*field_border*/
+$field_border: 1px solid #C1C1C1;
+
+$field_border_error: 1px solid #FF6230;
+
+/*border_radius_main*/
+$border_radius_main: 8px;
+$border_radius_default: 0;
+
+/*box_shadow_item*/
+$box_shadow_item: 0px 0px 25px rgba(0, 0, 0, 0.1);
+$box_shadow_item_hover: 0px 4px 20px rgba(213, 205, 209, 0.8);
+
+$animate_site: 0.2s ease-in-out;

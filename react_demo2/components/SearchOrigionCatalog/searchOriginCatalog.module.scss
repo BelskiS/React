@@ -1,0 +1,46 @@
+@import "../../styles/option.scss";
+
+.content {
+    width: 100%;
+    padding-top: 30px;
+    & .content_radio {
+        display: flex;
+        font-size: 13px;
+        padding-bottom: 10px;
+        & .content_radio_item {
+            &:first-child {
+                margin-right: 30px;
+            }
+        }
+        & .content_radio_btn {
+            top: 0;
+        }
+    }
+    & .form {
+        position: relative;
+        display: flex;
+        & input[name="vin"],
+        & .form_double_input {
+            width: calc(100% - 140px);
+        }
+        & .form_double_input {
+            display: flex;
+            align-items: center;
+            & .code_body {
+                width: 110px;
+            }
+            & .number_body {
+                width: calc(100% - 122px);
+            }
+            & span {
+                width: 12px;
+                min-width: 12px;
+                text-align: center; 
+            }
+        }
+        & .form_btn {
+            width: 130px;
+            margin-left: 10px; 
+        }
+    }
+}

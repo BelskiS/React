@@ -1,0 +1,112 @@
+@import "../../../../styles/option.scss";
+
+.wrap_select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 215px;
+    z-index: 1;
+}
+.site_field {
+    width: 100%;
+    margin-bottom: 0;
+}
+input {
+    &.input,
+    &.input:focus {
+        border-radius: $border_radius_main;
+        border-color: $Light_Shade;
+        font-size: 16px;
+        height: $selected_auto_height;
+        padding-right: 60px;
+        padding-left: 230px;
+        -webkit-appearance: none !important;
+        -moz-appearance: none !important;
+        appearance: none !important;
+    }
+}
+div[data-fixhead="fixhead"] {
+    & input.input,
+    & input.input:focus {
+        font-size: 14px;
+        height: $height_field_btn;
+    }
+}
+button {
+    &.btn_search[type='submit'] {
+        background: transparent;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        width: 54px;
+        height: $selected_auto_height;
+        padding: 0;
+
+        & span.btn_search_ico:before {
+            font-size: 24px;
+            transition: color $animate_site;
+            color: $Base_Shade;
+            transition: color $animate_site;
+        }
+
+        &:hover {
+            & span.btn_search_ico:before {
+                color: $Light_Shade;
+            }
+        }
+    }
+}
+
+div[data-fixhead="fixhead"] {
+    & button.btn_search[type='submit'] {
+        height: $height_field_btn;
+    }
+}
+
+@media only screen and (max-width : 1359px) {
+    .wrap_select {
+        width: 198px;
+    }
+    input {
+        &.input,
+        &.input:focus {
+            font-size: 14px;
+            padding-left: 213px;
+        }
+    }
+    button.btn_search[type='submit'] {
+        width: 50px;
+    }
+    div[data-fixhead="fixhead"] {
+        & button.btn_search[type='submit'] {
+            width: 40px;
+        }
+    }
+}
+
+@media only screen and (max-width : 999px) {
+    .wrap_select {
+        width: 198px;
+    }
+    input {
+        &.input,
+        &.input:focus {
+            padding-right: 50px;
+        }
+    }
+    div[data-fixhead="fixhead"] {
+        & .wrap_select {
+            width: 182px;
+        }
+        & input.input,
+        & input.input:focus {
+            padding-left: 197px;
+            padding-right: 40px;
+        }
+    }
+
+}

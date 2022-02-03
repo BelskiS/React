@@ -1,0 +1,78 @@
+@import "../../../styles/option.scss";
+
+.wrap_section {
+    padding-top: 50px;
+    & .section {
+        background: url('../../../public/help_fon.png');
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 430px;
+        color: $White;
+        & .section_item {
+            max-width: 842px;
+            text-align: center;
+            & .section_item__title {
+                text-transform: uppercase;
+                margin-bottom: 15px;
+            }
+            & .section_item__descr {
+                font-size: 21px;
+                font-weight: $fw_Header4;
+                line-height: 27px;
+                margin-bottom: 40px;
+            }
+
+            & .section_btn {
+                display: flex;
+                align-items: center;
+                text-transform: uppercase;
+                width: 300px;
+                height: $selected_auto_height;
+                line-height: 18px;
+                margin: 0 auto;
+                padding: 0 20px 0 15px;
+                & .section_btn__ico:before {
+                    font-size: 18px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 999px) {
+    .wrap_section {
+        & .section {
+            & .section_item {
+                max-width: 636px;
+                & .section_item__title {
+                    font-size: 32px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+    .wrap_section {
+        padding-top: 50px;
+        & .section_container {
+            padding: 0;
+        }
+        & .section {
+            height: 370px;
+            & .section_item {
+                padding: 0 10px;
+                & .section_item__title {
+                    font-size: 21px;
+                }
+                & .section_item__descr {
+                    font-size: 15px;
+                    font-weight: $fw_Header6;
+                    line-height: 18px;
+                }
+            }
+        }
+    }
+}

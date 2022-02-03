@@ -1,0 +1,306 @@
+@import "../../styles/option.scss";
+
+.header {
+   width: 140px;
+   text-align: right;
+}
+button {
+    &.btn[data-garage="garage"] {
+        position: relative;
+        padding-right: 20px;
+        padding-left: 38px;
+        max-width: 140px;
+        width: auto;
+        height: 30px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: $Light_Tint;
+        transition: color $animate_site;
+        &:after {
+            content: "\e922";
+            font-family: 'iconewwssync' !important;
+            font-size: 16px;
+            font-weight: $fw_font_ico;
+            border: none;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+        &[aria-expanded="true"] {
+            &:after {
+                content: "\e925";
+            }
+        }
+        &:hover {
+            color: $Dark_Tint;
+            &:after {
+                color: $Dark_Tint;
+            }
+        }
+    }
+}
+div[data-fixhead="fixhead"] {
+    & .header {
+        width: auto;
+        margin-right: 24px;
+        margin-left: 30px;
+    }
+    & button.btn[data-garage="garage"] {
+        width: 0;
+        font-size: 0;
+        padding-right: 0;
+        padding-left: 28px;
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.btn_ico {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    max-width: 28px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    &:before {
+        font-size: 24px;
+        margin-right: 7px;
+    }
+}
+
+.garage_menu {
+    &[data-garage="dropdown"] {
+        background: #fff;
+        border: none;
+        display: block;
+        width: 650px;
+        left: auto;
+        right: -120px;
+        margin-top: 10px;
+        padding: 0 30px 20px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15); 
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        top: -9px;
+        right: 120px;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #fff;
+    }
+}
+div[data-fixhead="fixhead"] {
+    .garage_menu {
+        &[data-garage="dropdown"] {
+            right: -52px;
+        }
+        &:before {
+            right: 58px;
+        }
+    }
+}
+
+.main_page_selected_auto {
+    padding-top: 25px;
+    & .main_page_selected_auto__content {
+        background: $Light_Gray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & .main_page_selected_auto__content_item {
+            max-width: 1005px;
+            padding: 20px 0;
+            & .main_page_selected_auto__content_title {
+                font-size: 16px;
+                padding-left: 95px;
+            }
+
+            & .main_link_selected_auto {
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+                & .main_link_selected_auto__ico {
+                    margin-right: 30px;
+                    &:before {
+                        font-size: 60px;
+                        color: $Base_Shade;
+                    }
+                }
+
+                & .main_link_selected_auto__wrap_item {
+                    display: flex;
+                    & span {
+                        text-transform: uppercase;
+                    }
+                    & .main_link_selected_auto__item {
+                        background: $White;
+                        border: $field_border;
+                        border-radius: $border_radius_main;
+                        display: flex;
+                        align-items: center;
+                        width: 230px;
+                        height: $selected_auto_height;
+                        color: $Base_Tint;
+                        font-weight: $fw_Body_Text;
+                        margin-right: 15px;
+                        padding: 0 15px;
+                        & span {
+                            width: 100%;
+                            white-space: nowrap;
+                            overflow: hidden;
+                        }
+                    }
+                }
+
+                & .main_link_selected_auto__btn {
+                    height: $selected_auto_height;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 1359px) {
+    .header {
+        width: auto;
+        margin-right: 24px;
+     }
+    button {
+        &.btn[data-garage="garage"] {
+            width: 0;
+            font-size: 0;
+            padding-right: 0;
+            padding-left: 28px;
+            &:after {
+                display: none;
+            }
+        }
+    }
+
+    .garage_menu {
+        &[data-garage="dropdown"] {
+            right: -52px;
+        }
+        &:before {
+            right: 58px;
+        }
+    }
+
+    .main_page_selected_auto {
+        & .main_page_selected_auto__content {
+            & .main_page_selected_auto__content_item {
+                & .main_page_selected_auto__content_title {
+                    padding-left: 75px;
+                }
+                & .main_link_selected_auto {
+                    & .main_link_selected_auto__ico {
+                        margin-right: 15px;
+                    }
+    
+                    & .main_link_selected_auto__wrap_item {
+                        & .main_link_selected_auto__item {
+                            width: 200px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@media only screen and (max-width : 999px) {
+    div[data-fixhead="fixhead"] {
+        & .header {
+            margin-left: 24px;
+        }
+    }
+
+    .main_page_selected_auto {
+        & .main_page_selected_auto__content {
+            & .main_page_selected_auto__content_item {
+                & .main_page_selected_auto__content_title {
+                    padding-left: 0;
+                }
+                & .main_link_selected_auto {    
+                    & .main_link_selected_auto__wrap_item {
+                        & .main_link_selected_auto__item {
+                            width: 206px;
+                        }
+                    }
+                    
+                    & .main_link_selected_auto__btn {
+                        width: 30%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+    .main_page_selected_auto {
+        & .main_page_selected_auto__content {
+            padding: 0 15px;
+            & .main_page_selected_auto__content_item {
+                width: 100%;
+                & .main_link_selected_auto {    
+                    & .main_link_selected_auto__wrap_item {
+                        width: calc(100% - 75px);
+                        & .main_link_selected_auto__item {
+                            max-width: none;
+                            width: calc(35% - 15px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 520px) {
+    .main_page_selected_auto {
+        & .main_page_selected_auto__content {
+            & .main_page_selected_auto__content_item {
+                & .main_link_selected_auto {
+                    margin-top: 25px;  
+                    & .main_link_selected_auto__wrap_item {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 440px) {
+    .main_page_selected_auto {
+        & .main_page_selected_auto__content {
+            & .main_page_selected_auto__content_item {
+                & .main_link_selected_auto {
+                    margin-top: 25px;  
+                    & .main_link_selected_auto__wrap_item {
+                        width: 100%;
+                        & .main_link_selected_auto__item {
+                            width: calc(60% - 15px);
+                        }
+                    }
+
+                    & .main_link_selected_auto__btn {
+                        width: 40%;
+                    }
+                }
+            }
+        }
+    }
+}

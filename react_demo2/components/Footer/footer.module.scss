@@ -1,0 +1,233 @@
+@import "../../styles/option.scss";
+
+.wrap_main {
+    background: $Ultra_Light_Shade; 
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    margin: 0 -10px;
+}
+.item {
+    margin: 10px;
+    & ul {
+        & li {
+            margin-bottom: 18px;
+            line-height: 17px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            & a {
+                font-size: 13px;
+            }
+        }
+        & .phone {
+            & span:last-child {
+                font-size: 18px;
+                font-weight: $fw_Header5;
+            }
+        }
+        & .link_ico:before {
+            font-size: 16px;
+            margin-right: 7px;
+        }
+    }
+}
+.main {
+    & .item {
+        & ul {
+            & li {
+                & a:hover {
+                    color: $Dark_Tint;
+                }
+            }
+        }
+    }
+}
+.contact {
+    & a {
+        display: flex;
+    }
+    & .contact_item {
+        display: flex;
+        font-size: 14px;
+    }
+    & .contact_item_text {
+        font-weight: $fw_Small_Link;
+        max-width: 280px;
+    }
+    & .contact_item_link,
+    & .contact_item_link:hover {
+        color: $Base_Tint;
+    }
+    & .work_time {
+        display: flex;
+        margin-bottom: 0;
+    }
+}
+
+
+.soc_title {
+    font-size: 15px;
+    font-weight: $fw_Header6;
+    padding-bottom: 20px;
+}
+.soc {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+    width: 152px;
+    & a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        & .soc_ico:before {
+            font-size: 24px;
+        }
+    }
+}
+
+.copy {
+    border-top: 1px solid $Gray;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 12px;
+    font-weight: $fw_Header5;
+    padding: 12px 0;
+    color: $Ultra_Light_Tint;
+    & .copy_item {
+        margin: 5px auto 5px 0;
+        padding-right: 10px;
+    }
+
+    & .company_development {
+        position: relative;
+        font-weight: $fw_Header5;
+        color: $Ultra_Light_Tint;
+        padding-left: 23px;
+        margin: 5px 0;
+        &:hover {
+            color: $Dark_Tint;
+        }
+        & .company_development_ico {
+            background: url('../../public/company_development_ico.svg');
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 16px;
+            height: 16px;
+        }
+        & .company_development__text {
+            line-height: 18px;
+        }
+    }
+}
+
+@media only screen and (max-width : 1359px) {
+    .wrap_contact {
+        margin-left: auto;
+    }
+}
+
+@media only screen and (max-width : 999px) {
+    .main {
+        flex-wrap: wrap;
+    }
+    .item_one {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 20px;
+        order: 1;
+        & .soc_title {
+            margin-right: 40px;
+            padding-bottom: 0; 
+        }
+        & .soc {
+            margin-right: 40px;
+            margin-bottom: 0; 
+            & + a {
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+    .main {
+        padding-bottom: 20px;
+    }
+    .item_one {
+        margin-top: 10px;
+        & .soc {
+            margin-right: auto;
+            width: 162px;
+            padding-right: 10px;
+            & + a {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                margin-left: 0;
+            }
+        }
+        & .soc_title,
+        & .soc {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+    .wrap_contact {
+        margin-left: 10px;
+    }
+    .item_three {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .item {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0;
+        & ul {
+            width: 100%;
+            max-width: 250px;
+            & li {
+                &:last-child {
+                    margin-bottom: 18px;
+                }
+            }
+        }
+        & .contact {
+            border-top: 1px solid  $Accent_GrayBlue;
+            border-bottom: 1px solid $Accent_GrayBlue;
+            padding: 20px 0;
+            & li {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .item_one {
+        max-width: 250px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin: 10px auto 0;
+        & .soc {
+            margin-bottom: 25px;
+        }
+    }
+    .copy {
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+}
