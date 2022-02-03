@@ -1,6 +1,6 @@
 import React from 'react';
 
-import advantageMainPlus from '../../../public/constData/advantageMainPlus';
+import advantageMainPlus from '@public/constData/advantageMainPlus';
 
 import style from './advantageMainPlus.module.scss';
 

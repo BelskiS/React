@@ -1,12 +1,11 @@
 import React, { useEffect, useRef } from 'react';
-import Link from "next/link";
 
-import Logo from '../../Logo/logo';
+import Logo from '@components/Logo/logo';
 import HeaderSearch from './headerSearch/headerSearch';
-import Garage from '../../Garage/garage';
-import Basket from '../../Basket/basket';
-import Menu from '../../Menu/menu';
-import BtnSite from '../../BtnSite/btnSite';
+import Garage from '@components/Garage/garage';
+import Basket from '@components/Basket/basket';
+import Menu from '@components/Menu/menu';
+import BtnSite from '@components/BtnSite/btnSite';
 
 import style from './headerDown.module.scss';
 

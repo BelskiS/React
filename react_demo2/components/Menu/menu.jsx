@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Link from 'next/link';
 
-import linkItem from '../../public/constData/linkItem';
-import linkItemCatalog from '../../public/constData/linkitemcatalog';
+import linkItem from '@public/constData/linkItem';
+import linkItemCatalog from '@public/constData/linkitemcatalog';
 import MenuItem from './menuItem';
 import MenuIemCatalog from './menuItemCatalog';
 

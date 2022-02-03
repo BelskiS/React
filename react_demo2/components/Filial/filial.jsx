@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styleHeaderUp from '../Header/headerUp/headerUp.module.scss';
+import styleHeaderUp from '@components/Header/headerUp/headerUp.module.scss';
 import style from './filial.module.scss';
 
 function Filial() {

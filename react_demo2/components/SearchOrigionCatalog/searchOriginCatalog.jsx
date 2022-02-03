@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import BtnSite from '../BtnSite/btnSite';
+import BtnSite from '@components/BtnSite/btnSite';
 
 import style from './searchOriginCatalog.module.scss';
 

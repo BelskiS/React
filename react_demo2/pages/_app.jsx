@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 
-import "../styles/font_ico_style.scss";
+import "@styles/font_ico_style.scss";
 
-import "../styles/main.scss";
-import "../styles/options_components.scss";
+import "@styles/main.scss";
+import "@styles/options_components.scss";
 
 
 export default function MyApp({ Component, pageProps }) {

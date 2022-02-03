@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import SearchOrigionCatalog from '../../SearchOrigionCatalog/searchOriginCatalog';
+import SearchOrigionCatalog from '@components/SearchOrigionCatalog/searchOriginCatalog';
 import Link from 'next/link';
 import style from './categories.module.scss';
 
