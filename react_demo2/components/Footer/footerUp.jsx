@@ -1,12 +1,12 @@
 import React from 'react';
 
-import Logo from '../Logo/logo';
+import Logo from '@components/Logo/logo';
 import Link from 'next/link';
-import LinkPhone from '../LinkPhone/link';
-import LinkIco from '../LinkIco/linkico';
-import linksoc from '../../public/constData/linksoc';
-import linkfooter from '../../public/constData/linkfooter';
-import MenuItem from '../Menu/menuItem';
+import LinkPhone from '@components/LinkPhone/link';
+import LinkIco from '@components/LinkIco/linkico';
+import linksoc from '@public/constData/linksoc';
+import linkfooter from '@public/constData/linkfooter';
+import MenuItem from '@components/Menu/menuItem';
 import style from './footer.module.scss';
 
 function FooterUp(props) {

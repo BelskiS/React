@@ -1,29 +1,29 @@
 import React from "react";
-import Head from "../components/head";
-import Header from "../components/Header/header";
-import Footer from "../components/Footer/footer";
-import AdvantageMain from '../components/Main/AdvantageMain/advantage';
-import MainLinkGarage from '../components/Garage/mainLinkGarage';
-import CategoriesMain from '../components/Main/CategoriesMain/categories';
-import HelpMain from '../components/Main/HelpMain/helpMain';
-import AdvantageMainPlus from '../components/Main/AdvantageMainPlus/advantageMainPlus';
 
-import linkCategories from '../public/constData/linkCategories';
-import Link from "next/link";
+import Head from "@components/head";
+import Header from "@components/Header/header";
+import Footer from "@components/Footer/footer";
+
+import AdvantageMain from "@components/Main/AdvantageMain/advantage";
+import MainLinkGarage from "@components/Garage/mainLinkGarage";
+import Categories from "@components/Main/CategoriesMain/categories";
+import HelpMain from "@components/Main/HelpMain/helpMain";
+import AdvantageMainPlus from "@components/Main/AdvantageMainPlus/advantageMainPlus";
+import linkCategories from '@public/constData/linkCategories';
 
 function HomePage({widthDevice}) {
     return (
         <>
-            <Head></Head>
+            <Head />
             
-            <Header widthDevice={widthDevice}></Header>
+            <Header widthDevice={widthDevice} />
 
             <div className="site_wrap_content">
                 <AdvantageMain widthDevice={widthDevice} />
 
                 <MainLinkGarage widthDevice={widthDevice} />
-                
-                <CategoriesMain linkCategories={linkCategories} widthDevice={widthDevice} />
+
+                <Categories linkCategories={linkCategories} widthDevice={widthDevice} />
 
                 <div className="sec_main main_slider_stock">
                     <div className="site_container">

@@ -1,6 +1,6 @@
 import React from 'react';
-import Filial from '../../Filial/filial';
-import LinkPhone from '../../LinkPhone/link';
+import Filial from '@components/Filial/filial';
+import LinkPhone from '@components/LinkPhone/link';
 import Dropdown from 'react-bootstrap/Dropdown';
 
 import style from './headerUp.module.scss';

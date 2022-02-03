@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Select from 'react-select';
-import Input from '../../../Input/input';
+import Input from '@components/Input/input';
 
 import style from './headerSearch.module.scss'
 
