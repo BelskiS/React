@@ -9,7 +9,7 @@ import "@styles/options_components.scss";
 export default function MyApp({ Component, pageProps }) {
     //Постоянно смотрим за разрешением 
 	const useDeviceSize = () => {
-		const [widthDevice, setWidthDevice] = useState(1360);
+		const [widthDevice, setWidthDevice] = useState(0);
 
 		const handleWindowSize = () => {
 			setWidthDevice(window.innerWidth);
@@ -20,9 +20,12 @@ export default function MyApp({ Component, pageProps }) {
 			window.addEventListener('resize', handleWindowSize);
 			return () => window.removeEventListener('resize', handleWindowSize);		
 		}, []);
+		console.log(widthDevice)
 		return widthDevice;
 	}
+	
 	const widthDevice = useDeviceSize();
+	console.log(widthDevice)
 
     return (
         <Component 
