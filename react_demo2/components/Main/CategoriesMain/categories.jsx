@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 import SearchOrigionCatalog from '@components/SearchOrigionCatalog/searchOriginCatalog';
 import Link from 'next/link';
+import Image from 'next/image';
+
 import style from './categories.module.scss';
 
 function Categories(props) {
@@ -17,7 +19,11 @@ function Categories(props) {
                         <Link href={item.url} key={item.id}>
                             <a className={style.main_item} data-categories={item.class}>
                                 <span className={style.main_item__img}>
-                                    <img src={item.img} alt="" />
+                                    <Image 
+                                        src={item.img}
+                                        alt=""
+                                        layout="fill"
+                                    />
                                 </span>
                                 <span className={style.main_item__title}>{item.title}</span>
                             </a>
