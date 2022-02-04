@@ -2,7 +2,8 @@
 
 .main {
     & .wrap_main_item {
-        background: url('../../../public/static/advantage_main/font_advantage_main.png');
+        background-image: url('../../../public/static/advantage_main/font_advantage_main.png');
+        background-image: -webkit-image-set(url('../../../public/static/advantage_main/font_advantage_main.webp'));
         position: relative;
         display: flex;
         align-items: center;

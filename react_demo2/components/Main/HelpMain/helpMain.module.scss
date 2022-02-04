@@ -3,7 +3,8 @@
 .wrap_section {
     padding-top: 50px;
     & .section {
-        background: url('../../../public/help_fon.png');
+        background-image: url('../../../public/help_fon.png');
+        background-image: -webkit-image-set(url('../../../public/help_fon.webp'));
         display: flex;
         align-items: center;
         justify-content: center;
