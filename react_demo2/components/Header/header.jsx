@@ -21,13 +21,9 @@ function Header({widthDevice}) {
     const forfixHeaderLinkRef = useRef();
     const forStaticHeaderLinkRef = useRef();
     
-    console.log(isHeadMobShow);
-    
-    // const isheadmodshow = widthDevice <= 767;
-    // if(isheadmodshow !== isHeadMobShow) setIsHeadMobShow(isheadmodshow);
-    // console.log(isheadmodshow);
-    // console.log(isheadmodshow !== isHeadMobShow);
-    // debugger;
+    const isheadmodshow = widthDevice <= 767;
+    if(isheadmodshow !== isHeadMobShow) setIsHeadMobShow(isheadmodshow);
+
     const handleScroll = () => {
         siteContentPosRef.current = document.querySelector('.site_wrap_content');
         let posSiteContent = siteContentPosRef.current.offsetTop;
@@ -62,28 +58,14 @@ function Header({widthDevice}) {
         }
     };
 
-    const handleWidthCont = () => {
-        if(window.innerWidth <= 767) {
-            setIsHeadMobShow(true);
-        } else {
-            setIsHeadMobShow(false);
-        }
-    }
-
     useEffect(() => {
         handleScroll();
         ["load", "resize", "scroll"].forEach(function (e) {
             window.addEventListener(e, handleScroll);
             return() => window.removeEventListener(e, handleScroll);
         });
-
-        handleWidthCont();
-        ["load", "resize"].forEach(function (e) {
-            window.addEventListener(e, handleWidthCont);
-            return() => window.removeEventListener(e, handleWidthCont);
-        });
     }, []);
-// debugger;
+
 
     return (
         <header className={`site_header ${isShow ? style.site_head : ''}`}>
