@@ -20,12 +20,9 @@ export default function MyApp({ Component, pageProps }) {
 			window.addEventListener('resize', handleWindowSize);
 			return () => window.removeEventListener('resize', handleWindowSize);		
 		}, []);
-		console.log(widthDevice)
 		return widthDevice;
 	}
-	
 	const widthDevice = useDeviceSize();
-	console.log(widthDevice)
 
     return (
         <Component 
