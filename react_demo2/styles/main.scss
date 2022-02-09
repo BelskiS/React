@@ -1473,23 +1473,38 @@ body.modal-open .modal_site.in {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding-top: 160px;
+	padding-top: 64px;
 	margin-bottom: 30px;
+	& .page_404__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		max-width: 620px;
+		text-align: center;
+		& svg {
+			max-width: 620px;
+			max-height: 320px;
+		}
+
+		& .title_404 {
+			font-size: 26px;
+			font-weight: $fw_Header3;
+			color: $Base_Tint;
+			margin: 60px 0 40px;
+		}
+
+		& .btn_site {
+			width: 220px;
+		}
+	}
 }
-.page_404 .page_404__item {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	max-width: 620px;
-	text-align: center;
-}
-.page_404 .page_404__item .title_404 {
-	font-size: 26px;
-	margin: 60px 0 40px;
-}
-.page_404 .page_404__item .btn_site {
-	width: 220px;
+
+@media only screen and (max-width : 1359px) {
+	.page_404 {
+		padding-top: 0;
+		margin-bottom: 0;
+	}
 }
 /*END page_404*/
 

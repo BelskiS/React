@@ -23,7 +23,7 @@ function BtnSite(props) {
                 </button>
             : 
                 <Link href={props.href}>
-                    <a className={`btn_site ${props.className}`}>
+                    <a className={`btn_site ${props.className ? props.className : ""}`}>
                         {props.icoName ? 
                             <span className={`
                                 ${!props.classNameIco ? '' : props.classNameIco}
