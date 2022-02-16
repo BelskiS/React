@@ -16,7 +16,7 @@ function NewsMain({ newsData }) {
         };
         const dateRuFormat = new Date(date).toLocaleString("ru", options);
 
-        return dateRuFormat.split(' ').slice(1,3).join(' ').toString();
+        return dateRuFormat.split(' ').slice(1,3).join(' ');
     }
 
     return (
@@ -34,7 +34,7 @@ function NewsMain({ newsData }) {
                                 </div>
                                 <div className={style.main_time_monthyear}>
                                     {
-                                        getDateMonth(item.ACTIVE_FROM.split(' ')[0].split('.').reverse().join(','))
+                                        getDateMonth(item.ACTIVE_FROM.split(' ')[0].split('.').reverse().join(', '))
                                     }
                                 </div>
                             </div>
