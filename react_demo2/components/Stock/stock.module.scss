@@ -1,0 +1,54 @@
+@import "../../styles/option.scss";
+
+.main_slider {
+    & .slider {
+        & .slider_item {
+            box-shadow: none;
+            & a {
+                background-repeat: no-repeat;
+                background-position: center left;
+                background-size: cover;
+                border-radius: $border_radius_main;
+                display: flex;
+                height: 350px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 1359px) {
+    .main_slider {
+        & .slider {
+            & .slider_item {
+                & a {
+                    height: 300px;
+                }
+            }
+        }
+    }  
+}
+
+@media only screen and (max-width : 999px) {
+    .main_slider {
+        & .slider {
+            & .slider_item {
+                & a {
+                    height: 250px;
+                }
+            }
+        }
+    }  
+}
+
+@media only screen and (max-width : 767px) {
+    .main_slider {
+        padding-top: 20px;
+        & .slider {
+            & .slider_item {
+                & a {
+                    height: 200px;
+                }
+            }
+        }
+    }  
+}

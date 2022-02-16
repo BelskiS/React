@@ -434,29 +434,6 @@ a.btn_site.btn_site_white:hover {
 	}
 /*END ico_help_vin and ico_nonehtml_help*/
 
-/*slider_site*/
-	.slider_site.owl-carousel .owl-nav > button {
-		background: $Light_Gray;
-		transition: background $animate_site;
-	}
-	.slider_site.owl-carousel .owl-nav > button:hover {
-		background: $Base_Accent;
-	}
-	.slider_site.owl-carousel .owl-nav > button .ico_slider_arrow:before {
-		color: $DarkGray;
-		transition: color $animate_site;
-	}
-	.slider_site.owl-carousel .owl-nav > button:hover .ico_slider_arrow:before {
-		color: $White;
-	}
-	.slider_site .owl-dots .owl-dot span {
-		background: $Accent_GrayPink;
-	}
-	.slider_site .owl-dots .owl-dot.active span {
-		background: $Base_Accent;
-	}
-/*END slider_site*/
-
 /*site_breadcrumbs*/
 	.wrap_site_breadcrumbs .site_breadcrumbs {
 		font-weight: $fw_Crumbs_Link;
@@ -726,28 +703,6 @@ a.btn_site.btn_site_white:hover {
 			color: $Light_Shade;
 		}
 	/*END slider__catalog*/
-
-	/*slider__stock*/
-		.slider__stock .item a {
-			border-radius: $border_radius_main;
-		}
-	/*END slider__stock*/
-
-	/*main_news*/
-		.main_news .main_news__item .main_news__item__time {
-			background: $Ultra_Light_Shade;
-			border-radius: $border_radius_main;
-		}
-		.main_news__item__time .time_day {
-			color: $Dark_Second;
-		}
-		.main_news__item__time .time_day {
-			font-weight: $fw_Header0;
-		}
-		.main_news__item__time .time__monthyear {
-			font-weight: $fw_Large_Text_Bold;
-		}
-	/*END main_news*/
 
 	/*main_slider__brand*/
 		.main_slider__brand .slider__main_brand .item {

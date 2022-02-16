@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Buffer } from 'buffer';
 import Head from "@components/head";
 
 import AdvantageMain from "@components/Main/AdvantageMain/advantage";
@@ -8,8 +8,40 @@ import Categories from "@components/Main/CategoriesMain/categories";
 import HelpMain from "@components/Main/HelpMain/helpMain";
 import AdvantageMainPlus from "@components/Main/AdvantageMainPlus/advantageMainPlus";
 import linkCategories from '@public/constData/linkCategories';
+import NewsMain from "@components/News/newsMain";
+import StockMain from "@components/Stock/stockMain";
 
-function HomePage({widthDevice}) {
+export async function getStaticProps() {
+ 
+    const user = process.env.API_USER;
+    const password = process.env.API_PASS;
+    const usedPas = `${user}:${password}`;
+
+    const option = {
+        "headers": {
+            'Content-Type': 'application/json',
+            'Authorization': 'Basic ' + Buffer.from(usedPas).toString('base64')
+        }
+    }
+
+    const res = await fetch("http://nalivaika.docker.e-comexpert.ru/rest.php?f=Custom_GetList&out=json&arg[arOrder][0][CODE]=SORT&arg[arOrder][0][VALUE]=ASC&arg[arFilter][0][CODE]=IBLOCK_ID&arg[arFilter][0][VALUE]=31&arg[arGroupBy][0][CODE]=&arg[arGroupBy][0][VALUE]=&arg[arNavStartParams][0][CODE]=&arg[arNavStartParams][0][VALUE]=&arg[arSelectFields][0][CODE]=&arg[arSelectFields][0][VALUE]=&arg[include_properties]=", option);
+    
+    const data = await res.json();
+
+    const res_stock = await fetch("http://nalivaika.docker.e-comexpert.ru/rest.php?f=Custom_GetList&out=json&arg[arOrder][0][CODE]=SORT&arg[arOrder][0][VALUE]=ASC&arg[arFilter][0][CODE]=IBLOCK_ID&arg[arFilter][0][VALUE]=32&arg[arGroupBy][0][CODE]=&arg[arGroupBy][0][VALUE]=&arg[arNavStartParams][0][CODE]=&arg[arNavStartParams][0][VALUE]=&arg[arSelectFields][0][CODE]=&arg[arSelectFields][0][VALUE]=&arg[include_properties]=", option);
+    
+    const data_stock = await res_stock.json();
+
+    return {
+        props: { 
+            newsData: data,
+            stockData: data_stock
+        }
+    }
+}
+
+
+function HomePage({widthDevice, newsData, stockData}) {
     return (
         <>
             <Head />
@@ -20,23 +52,13 @@ function HomePage({widthDevice}) {
 
             <Categories linkCategories={linkCategories} widthDevice={widthDevice} />
 
-            <div className="sec_main main_slider_stock">
-                <div className="site_container">
-                    <div className="title_h3">Скидки и акции</div>
-                место для слайдера скидок и акций
-                </div>
-            </div>
+            <StockMain stockData={stockData} />
 
             <HelpMain widthDevice={widthDevice} />
 
             <AdvantageMainPlus />
 
-            <div className="sec_main wrap_main_news">
-                <div className="site_container">
-                    <div className="title_h3">Наши новости</div>
-                место для секции наши новости
-                </div>
-            </div>
+            <NewsMain newsData={newsData} />
 
             <div className="sec_main main_slider__brand">
                 <div className="site_container">
