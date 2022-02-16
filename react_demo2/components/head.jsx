@@ -16,6 +16,8 @@ function Head(props) {
             <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+            <meta property="og:title" content={props.title || defaultTitleSite} />
+            <meta property="og:description" content={props.description || defaultDescriptionSite} />
             <meta property="og:url" content={props.url || dafaultUrlSite} />
 
             <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png" />

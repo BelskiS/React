@@ -1,12 +1,18 @@
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router'
 
 import "@styles/font_ico_style.scss";
 
 import "@styles/main.scss";
 import "@styles/options_components.scss";
 
+import Layout from '@components/Layouts/layout';
+import InnerLayout from '@components/Layouts/InnerLayout';
+
 
 export default function MyApp({ Component, pageProps }) {
+	const router = useRouter();
+
     //Постоянно смотрим за разрешением 
 	const useDeviceSize = () => {
 		const [widthDevice, setWidthDevice] = useState(0);
@@ -25,9 +31,23 @@ export default function MyApp({ Component, pageProps }) {
 	const widthDevice = useDeviceSize();
 
     return (
-        <Component 
-            {...pageProps}
-            widthDevice={ widthDevice }
-        />
+		<Layout
+			widthDevice={ widthDevice }
+		>
+			{router.pathname == "/" ? 
+				<Component 
+					{...pageProps}
+					widthDevice={ widthDevice }
+				/>
+			: 
+				<InnerLayout>
+					<Component 
+						{...pageProps}
+						widthDevice={ widthDevice }
+					/>
+				</InnerLayout>
+			}
+
+		</Layout>
      )
 }
