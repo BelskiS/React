@@ -16,7 +16,8 @@ function NewsMain({ newsData }) {
         };
         const dateRuFormat = new Date(date).toLocaleString("ru", options);
 
-        return dateRuFormat.split(' ').slice(1,3).join(' ');
+        // return dateRuFormat.split(' ').slice(1,3).join(' ');
+        return "февраля 2022"
     }
 
     return (
