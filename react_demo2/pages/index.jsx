@@ -1,5 +1,5 @@
 import React from "react";
-import { Buffer } from 'buffer';
+
 import Head from "@components/head";
 
 import AdvantageMain from "@components/Main/AdvantageMain/advantage";
