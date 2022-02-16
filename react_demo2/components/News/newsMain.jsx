@@ -14,10 +14,9 @@ function NewsMain({ newsData }) {
             day: 'numeric',
             timezone: 'UTC'
         };
-        const dateRuFormat = new Date(date).toLocaleString("ru", options);
-
-        // return dateRuFormat.split(' ').slice(1,3).join(' ');
-        return "февраля 2022"
+        const dateRuFormat = new Date(date * 1000).toLocaleString("ru-RU", options);
+        
+        return dateRuFormat.split(' ').slice(1,3).join(' ');
     }
 
     return (
@@ -35,7 +34,7 @@ function NewsMain({ newsData }) {
                                 </div>
                                 <div className={style.main_time_monthyear}>
                                     {
-                                        getDateMonth(item.ACTIVE_FROM.split(' ')[0].split('.').reverse().join(', '))
+                                        getDateMonth(parseInt(item.DATE_CREATE_UNIX))
                                     }
                                 </div>
                             </div>
