@@ -34,7 +34,7 @@ function NewsMain({ newsData }) {
                                 </div>
                                 <div className={style.main_time_monthyear}>
                                     {
-                                        getDateMonth(parseInt(item.DATE_CREATE_UNIX))
+                                        getDateMonth(parseInt(item.ACTIVE_FROM_UNIX))
                                     }
                                 </div>
                             </div>
