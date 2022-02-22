@@ -25,7 +25,9 @@ function StockMain({stockData}) {
                     {stockData.slice(0,3).map(item => 
                         <SwiperSlide className={style.slider_item} key={item.ID}>
                             <Link href="/actions/">
-                                <a style={{ backgroundImage: 'url(' + item.DETAIL_PICTURE + ')' }}></a>
+                                <a style={{ backgroundImage: 'url(' + 
+                                    `${item.DETAIL_PICTURE ? item.DETAIL_PICTURE : ''}`
+                                + ')' }}></a>
                             </Link>
                         </SwiperSlide>
                     )}
