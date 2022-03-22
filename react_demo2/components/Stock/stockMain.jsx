@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/css";
 import "swiper/css/pagination";
+import Image from 'next/image';
+
 import { Pagination } from "swiper";
 
 import style from './stock.module.scss';
@@ -25,9 +27,17 @@ function StockMain({stockData}) {
                     {stockData.slice(0,3).map(item => 
                         <SwiperSlide className={style.slider_item} key={item.ID}>
                             <Link href="/actions/">
-                                <a style={{ backgroundImage: 'url(' + 
-                                    `${item.DETAIL_PICTURE ? item.DETAIL_PICTURE : ''}`
-                                + ')' }}></a>
+                                <a>
+                                    {item.DETAIL_PICTURE ?
+                                        <Image 
+                                            src={item.DETAIL_PICTURE}
+                                            className={style.slider_img}
+                                            alt=""
+                                            width={1300}
+                                            height={300}
+                                        />
+                                    : ''}
+                                </a>
                             </Link>
                         </SwiperSlide>
                     )}

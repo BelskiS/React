@@ -11,6 +11,10 @@
                 border-radius: $border_radius_main;
                 display: flex;
                 height: 350px;
+                & .slider_img {
+                    object-fit: cover;
+                    object-position: left 50%;
+                }
             }
         }
     }
