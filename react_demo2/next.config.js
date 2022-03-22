@@ -1,3 +1,5 @@
 module.exports = {
-    /* config options here */
+    images: {
+      domains: ['nalivaika.docker.e-comexpert.ru'],
+    },
 }
