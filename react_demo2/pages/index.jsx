@@ -24,11 +24,11 @@ export async function getStaticProps() {
         }
     }
 
-    const res = await fetch("http://nalivaika.docker.e-comexpert.ru/rest.php?f=Custom_GetList&out=json&arg[arOrder][0][CODE]=SORT&arg[arOrder][0][VALUE]=ASC&arg[arFilter][0][CODE]=IBLOCK_ID&arg[arFilter][0][VALUE]=31&arg[arGroupBy][0][CODE]=&arg[arGroupBy][0][VALUE]=&arg[arNavStartParams][0][CODE]=&arg[arNavStartParams][0][VALUE]=&arg[arSelectFields][0][CODE]=&arg[arSelectFields][0][VALUE]=&arg[include_properties]=", option);
+    const res = await fetch("https://nalivaika.docker.e-comexpert.ru/rest.php?f=Custom_GetList&out=json&arg[arOrder][0][CODE]=SORT&arg[arOrder][0][VALUE]=ASC&arg[arFilter][0][CODE]=IBLOCK_ID&arg[arFilter][0][VALUE]=31&arg[arGroupBy][0][CODE]=&arg[arGroupBy][0][VALUE]=&arg[arNavStartParams][0][CODE]=&arg[arNavStartParams][0][VALUE]=&arg[arSelectFields][0][CODE]=&arg[arSelectFields][0][VALUE]=&arg[include_properties]=", option);
     
     const data = await res.json();
 
-    const res_stock = await fetch("http://nalivaika.docker.e-comexpert.ru/rest.php?f=Custom_GetList&out=json&arg[arOrder][0][CODE]=SORT&arg[arOrder][0][VALUE]=ASC&arg[arFilter][0][CODE]=IBLOCK_ID&arg[arFilter][0][VALUE]=32&arg[arGroupBy][0][CODE]=&arg[arGroupBy][0][VALUE]=&arg[arNavStartParams][0][CODE]=&arg[arNavStartParams][0][VALUE]=&arg[arSelectFields][0][CODE]=&arg[arSelectFields][0][VALUE]=&arg[include_properties]=", option);
+    const res_stock = await fetch("https://nalivaika.docker.e-comexpert.ru/rest.php?f=Custom_GetList&out=json&arg[arOrder][0][CODE]=SORT&arg[arOrder][0][VALUE]=ASC&arg[arFilter][0][CODE]=IBLOCK_ID&arg[arFilter][0][VALUE]=32&arg[arGroupBy][0][CODE]=&arg[arGroupBy][0][VALUE]=&arg[arNavStartParams][0][CODE]=&arg[arNavStartParams][0][VALUE]=&arg[arSelectFields][0][CODE]=&arg[arSelectFields][0][VALUE]=&arg[include_properties]=", option);
     
     const data_stock = await res_stock.json();
 
