@@ -306,22 +306,22 @@ body.none_scroll {
 .site_link_arrowr {
 	margin-right: 22px;
 }
-.site_link_arrowl span,
-.site_link_arrowr span {
+.site_link_arrowl span.arrow_ico,
+.site_link_arrowr span.arrow_ico {
 	position: absolute;
 	top: 50%;
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
-.site_link_arrowl span {
+.site_link_arrowl span.arrow_ico {
 	left: -22px;
 }
-.site_link_arrowr span {
+.site_link_arrowr span.arrow_ico {
 	right: -22px;
 }
-.site_link_arrowl span:before,
-.site_link_arrowr span:before {
+.site_link_arrowl span.arrow_ico:before,
+.site_link_arrowr span.arrow_ico:before {
 	font-size: 16px;
 	display: flex;
 	width: 25px;

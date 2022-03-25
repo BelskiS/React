@@ -50,7 +50,8 @@ a,
 }
 
 a, .site_link, .ico_hover:before, .site_link_two,
-.site_link_arrowr span:before, .site_link_arrowl span:before {
+.site_link_arrowr span.arrow_ico:before,
+.site_link_arrowl span.arrow_ico:before {
 	transition: color $animate_site;
 }
 
@@ -77,21 +78,21 @@ a:hover,
 }
 
 .site_link_two,
-.site_link_two.site_link_arrowr span:before,
+.site_link_two.site_link_arrowr span.arrow_ico:before,
 .site_link_two:focus,
-.site_link_two.site_link_arrowr:focus span:before {
+.site_link_two.site_link_arrowr:focus span.arrow_ico:before {
 	color: $Base_Second;
 }
 .site_link_two:hover,
-.site_link_two.site_link_arrowr:hover span:before {
+.site_link_two.site_link_arrowr:hover span.arrow_ico:before {
 	color: $Dark_Second;
 }
 .site_link.site_link_hover_other:hover {
 	color: $Base_Second;
 }
 
-.site_link_arrowl span:before,
-.site_link_arrowr span:before {
+.site_link_arrowl span.arrow_ico:before,
+.site_link_arrowr span.arrow_ico:before {
 	color: $Light_Tint;
 }
 
@@ -513,17 +514,8 @@ a.btn_site.btn_site_white:hover {
 /*END login_page*/
 
 /*discounts_sale__items*/
-	.discounts_sale__items__item .discounts_sale__item__descr .title_h4.site_link {
-		color: $Light_Tint;
-		transition: color $animate_site;
-	}
-	.discounts_sale__items__item .discounts_sale__item__descr .title_h4.site_link:hover {
-		color: $Base_Second;
-	}
-	.discounts_sale__items__item .discounts_sale__item__img,
-	.discounts_sale__items__item .discounts_sale__item__img a {
-		border-radius: $border_radius_main;
-	}
+
+
 
 	.detail_discounts_sale__title .validity_time {
 		color: $Dark_Second;
@@ -532,18 +524,6 @@ a.btn_site.btn_site_white:hover {
 		border-radius: $border_radius_main;
 	}
 
-	.validity_title {
-		font-weight: $fw_Large_Text;
-	}
-	.validity_time {
-		font-weight: $fw_Button_Link;
-	}
-
-	/*news*/
-		.news_page .news_time {
-			color: $Light_Tint;
-		}
-	/*END news*/
 
 	/*news_detail*/
 		.detail_discounts_sale__title .wrap_text__title {
@@ -2201,13 +2181,6 @@ a.btn_site.btn_site_white:hover {
 		/*END main_chain_stores*/
 	/*END main_content*/
 
-
-	/*discounts_sale__items*/
-		.validity_title {
-			font-weight: $fw_Body_Text;
-		}
-
-	/*END discounts_sale__items*/
 
 
 	/*contacts.css*/
