@@ -5,7 +5,7 @@ import style from './news.module.scss';
 
 function NewsList({ newsData }) {
     return (
-        <NewsStocksList />
+        <NewsStocksList dataNewsStock={newsData} />
     );
 }
 

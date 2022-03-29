@@ -1,0 +1,59 @@
+@import "../../styles/option.scss";
+
+/*site_breadcrumbs*/
+.wrap_site_breadcrumbs .site_breadcrumbs {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	font-size: 12px;
+	padding-top: 30px;
+	padding-bottom: 50px;
+}
+.wrap_site_breadcrumbs .site_breadcrumbs a {
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin-right: 26px;
+}
+.wrap_site_breadcrumbs .site_breadcrumbs .site_breadcrumbs__item {
+	display: flex;
+}
+.wrap_site_breadcrumbs .site_breadcrumbs .breadcrumbs__main_ico {
+	font-size: 0;
+}
+.wrap_site_breadcrumbs .site_breadcrumbs .breadcrumbs__main_ico:before {
+	font-size: 16px;
+}
+.wrap_site_breadcrumbs .site_breadcrumbs a:after {
+	content: "\e924";
+	font-family: 'iconewwssync' !important;
+	font-size: 16px;
+	position: absolute;
+	top: 50%;
+	right: -20px;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+/*END site_breadcrumbs*/
+
+/*site_breadcrumbs*/
+.wrap_site_breadcrumbs .site_breadcrumbs {
+    font-weight: $fw_Crumbs_Link;
+}
+.wrap_site_breadcrumbs .site_breadcrumbs .breadcrumbs__main_ico:before {
+    color: $Light_Tint;
+}
+.wrap_site_breadcrumbs .site_breadcrumbs a:after {
+    font-weight: $fw_font_ico;
+    color: $DarkGray;
+}
+.wrap_site_breadcrumbs .site_breadcrumbs a span {
+    color: $Light_Tint;
+    transition: color $animate_site;
+}
+.wrap_site_breadcrumbs .site_breadcrumbs a:hover span,
+.wrap_site_breadcrumbs .site_breadcrumbs span {
+    color: $Dark_Tint;
+}
+/*END site_breadcrumbs*/

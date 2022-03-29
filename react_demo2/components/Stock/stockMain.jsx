@@ -26,7 +26,7 @@ function StockMain({stockData}) {
                 >
                     {stockData.slice(0,3).map(item => 
                         <SwiperSlide className={style.slider_item} key={item.ID}>
-                            <Link href="/actions/">
+                            <Link href={`/${item.LIST_PAGE_URL.split('/').slice(1,2).join()}/`}>
                                 <a>
                                     {item.DETAIL_PICTURE ?
                                         <Image 

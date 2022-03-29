@@ -435,27 +435,6 @@ a.btn_site.btn_site_white:hover {
 	}
 /*END ico_help_vin and ico_nonehtml_help*/
 
-/*site_breadcrumbs*/
-	.wrap_site_breadcrumbs .site_breadcrumbs {
-		font-weight: $fw_Crumbs_Link;
-	}
-	.wrap_site_breadcrumbs .site_breadcrumbs .breadcrumbs__main_ico:before {
-		color: $Light_Tint;
-	}
-	.wrap_site_breadcrumbs .site_breadcrumbs a:after {
-		font-weight: $fw_font_ico;
-		color: $DarkGray;
-	}
-	.wrap_site_breadcrumbs .site_breadcrumbs a span {
-		color: $Light_Tint;
-		transition: color $animate_site;
-	}
-	.wrap_site_breadcrumbs .site_breadcrumbs a:hover span,
-	.wrap_site_breadcrumbs .site_breadcrumbs span {
-		color: $Dark_Tint;
-	}
-/*END site_breadcrumbs*/
-
 /*site_page*/
 	.page_descr_with_border {
 		border-color: $Light_Gray;

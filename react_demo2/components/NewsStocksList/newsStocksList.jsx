@@ -5,60 +5,102 @@ import LinkIco from '@components/LinkIco/linkico';
 import Image from 'next/image';
 import style from './newsStocksList.module.scss';
 
-function NewsStocksList({stockList}) {
+function NewsStocksList({ dataNewsStock, stockList}) {
+    dataNewsStock.sort((a, b) => b.ID - a.ID );
+
     return (
-        <div className={style.items}>
-            <div className={style.item}>
-        
-                <div className={`
-                    ${style.item_img}
-                    ${stockList ? style.item_img_stock : style.item_img_news }
-                `}>
-                    <Link href="/news/222/">
-                        <a>
-                            <Image 
-                                src="https://nalivaika.docker.e-comexpert.ru/bitrix/templates/e-comexpert_v2/img/none_img.png"
-                                alt=""
-                                layout="fill"
-                                objectFit="contain"
-                            />
-                        </a>
-                    </Link>
-                </div>
-                <div className={style.item_descr}>
-                    <Link href="/news/222/">
-                        <a className="title_h4 site_link" data-newssale="title">Ford Vs Ferrari</a>
-                    </Link>
-                    
-                    
-                    {stockList ?
-                        <div className={style.validity}>
-                            <span className={style.validity_title}>Срок действия:</span>
-                            <span className={style.validity_time}>12.09.2019</span>
+        <>
+            {dataNewsStock.map(item =>
+                <div className={style.items} key={item.ID}>
+                    <div className={style.item}>
+                
+                        <div className={`
+                            ${style.item_img}
+                            ${stockList ? style.item_img_stock : style.item_img_news }
+                        `}>
+                            <Link href={`/${item.LIST_PAGE_URL.split('/').slice(1,2).join()}/${item.ID}`}>
+                                <a>
+                                    <Image 
+                                        src={item.PREVIEW_PICTURE}
+                                        alt=""
+                                        layout="fill"
+                                        objectFit="contain"
+                                    />
+                                </a>
+                            </Link>
                         </div>
-                    : "" }
+                        <div className={style.item_descr}>
+                            <Link href={`/${item.LIST_PAGE_URL.split('/').slice(1,2).join()}/${item.ID}`}>
+                                <a className="title_h4 site_link" data-newssale="title">{item.NAME}</a>
+                            </Link>
+                            
+                            
+                            {stockList ?
+                                // <div className={style.validity}>
+                                //     <span className={style.validity_title}>
+                                //         {
+                                //             Object.values(item.PROPERTY_VALUES).map((item_property) => {
+                                //                 if(item_property.CODE == "VALIDITY") {
+                                //                     return item_property.NAME
+                                //                 }
+                                //             })
+                                //         }
+                                //     </span>
+                                //     <span className={style.validity_time}>
+                                //         {
+                                //             Object.values(item.PROPERTY_VALUES).map((item_property) => {
+                                //                 if(item_property.CODE == "VALIDITY") {
+                                //                     return item_property.VALUE.n0
+                                //                 }
+                                //             })
+                                //         }
+                                //     </span>
+                                // </div>
 
-                    <div className={`
-                        ${style.descr_text}
-                        ${stockList ? style.descr_text_stock : style.descr_text_news }
-                    `}>
-                        Кэрролл Шелби и Кен Майлз и их команда создали гоночный автомобиль, который впоследствии завоевал знаменитый титул Ле-Мана у Ferrari, гигант производительности, который выигрывал знаменитую гонку шесть лет подряд.
+                                <>
+                                    {
+                                        Object.values(item.PROPERTY_VALUES).map((item_property) => {
+                                            if(item_property.CODE == "VALIDITY") {
+                                                return (
+                                                    <div className={style.validity} key={item_property.ID}>
+                                                        <span className={style.validity_title}>
+                                                            {item_property.NAME}
+                                                        </span>
+                                                        <span className={style.validity_time}>
+                                                            {item_property.VALUE.n0}
+                                                        </span>
+                                                </div>
+                                                )
+                                                
+                                            }
+                                        })
+                                    }
+                                 </>
+                            : "" }
+
+                            <div className={`
+                                ${style.descr_text}
+                                ${stockList ? style.descr_text_stock : style.descr_text_news }
+                            `}>
+                                {item.PREVIEW_TEXT}
+                            </div>
+
+                            {!stockList ?
+                                <LinkIco
+                                    href={`/${item.LIST_PAGE_URL.split('/').slice(1,2).join()}/${item.ID}`}
+                                    icoName="icon-ion-chevron-right"
+                                    siteLinkTwo
+                                    classNameIco="arrow_ico"
+                                    className="site_link_arrowr"
+                                    text="Подробнее"
+                                />
+                            : "" } 
+                        </div>
+
                     </div>
-
-                    {!stockList ?
-                        <LinkIco
-                            href="/news/222/"
-                            icoName="icon-ion-chevron-right"
-                            siteLinkTwo
-                            classNameIco="arrow_ico"
-                            className="site_link_arrowr"
-                            text="Подробнее"
-                        />
-                    : "" } 
                 </div>
-
-            </div>
-        </div>
+            )}
+        </>
     );
 }
 
