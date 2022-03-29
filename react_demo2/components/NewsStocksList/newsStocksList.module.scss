@@ -1,0 +1,159 @@
+@import "../../styles/option.scss";
+
+.items {
+    padding-top: 20px;
+    & .item {
+        display: flex;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        & .item_img {
+            width: 400px;
+            margin-right: 40px;
+            &.item_img_news {
+                height: 195px;
+            }
+            &.item_img_stock {
+                height: 215px;
+            }
+            & a {
+                border-radius: $border_radius_main;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+            }
+        }
+        
+        & .item_descr {
+            width: calc(100% - 440px);
+            & a[data-newssale="title"] {
+                color: $Light_Tint;
+                transition: color $animate_site;
+                &:hover {
+                    color: $Base_Second;
+                }
+            }
+            & .validity {
+                padding-top: 12px;
+                & .validity_title {
+                    font-weight: $fw_Large_Text;
+                    font-size: 16px;
+                    margin-right: 10px;
+                }
+                & .validity_time {
+                    font-weight: $fw_Button_Link;
+                    font-size: 15px;
+                }
+            }
+            & .descr_text {
+                font-size: 16px;
+                line-height: 22px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                &.descr_text_news {
+                    height: 65px;
+                    margin-top: 28px;
+                    margin-bottom: 20px;
+                    -webkit-line-clamp: 3;
+                }
+                &.descr_text_stock {
+                    height: 90px;
+                    margin-top: 40px;
+                    -webkit-line-clamp: 4;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 1359px) {
+    .items {
+        & .item {
+            & .item_img {
+                width: 296px;
+                margin-right: 20px;
+                &.item_img_stock {
+                    height: 158px;
+                }
+            }
+            
+            & .item_descr {
+                width: calc(100% - 316px);
+                & .validity {
+                    padding-top: 12px;
+                    & .validity_title,
+                    & .validity_time {
+                        font-size: 14px;
+                    }
+                }
+                & .descr_text {
+                    font-size: 14px;
+                    line-height: 22px;
+                    &.descr_text_news {
+                        height: 65px;
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                        -webkit-line-clamp: 3;
+                    }
+                    &.descr_text_stock {
+                        height: 80px;
+                        line-height: 140%;
+                        margin-top: 20px;
+                        -webkit-line-clamp: 4;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+    .items {
+        padding-top: 10px;
+        & .item {
+            flex-wrap: wrap;
+            & .item_img {
+                max-width: 400px;
+                width: 100%;
+                margin-right: auto;
+                margin-bottom: 20px;
+                &.item_img_news,
+                &.item_img_stock {
+                    height: auto;
+                    min-height: 195px;
+                }
+            }
+            
+            & .item_descr {
+                width: 100%;
+                & a[data-newssale="title"] {
+                    font-size: 18px;
+                    font-weight: $fw_Header6;
+                }
+                & .validity {
+                    & .validity_title {
+                        font-weight: $fw_Body_Text;
+                    }
+                }
+                & .descr_text {
+                    &.descr_text_news {
+                        max-height: 65px;
+                        height: auto;
+                        -webkit-line-clamp: 3;
+                    }
+                    &.descr_text_stock {
+                        max-height: 80px;
+                        height: auto;
+                        -webkit-line-clamp: 4;
+                    }
+                }
+            }
+        }
+    }
+}

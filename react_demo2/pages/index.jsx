@@ -11,7 +11,7 @@ import linkCategories from '@public/constData/linkCategories';
 import NewsMain from "@components/News/newsMain";
 import StockMain from "@components/Stock/stockMain";
 
-import { PATH_FULL_NEWS,  PATH_FULL_STOCK } from '@public/constData/pathJson';
+import { PATH_FULL_NEWS, PATH_FULL_STOCK } from '@public/constData/pathJson';
 
 export async function getStaticProps() {
  
@@ -27,12 +27,9 @@ export async function getStaticProps() {
     }
 
     const res = await fetch(PATH_FULL_NEWS, option);
-    
     const data = await res.json();
 
     const res_stock = await fetch(PATH_FULL_STOCK, option);
-    
-    
     const data_stock = await res_stock.json();
 
     return {

@@ -42,7 +42,7 @@ function NewsMain({ newsData }) {
                             </div>
 
                             <div className={style.main_item_descr}>
-                                <Link href={`/${item.IBLOCK_TYPE_ID}/${item.CODE}`}>
+                                <Link href={`/${item.LIST_PAGE_URL.split('/').slice(1,2).join()}/${item.ID}`}>
                                     <a className="title_h5">{item.NAME}</a>
                                 </Link>
 

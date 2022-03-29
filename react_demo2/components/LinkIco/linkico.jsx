@@ -7,7 +7,10 @@ function LinkIco(props) {
             : props.href ? props.href
             : ""
         } 
-        className={`site_link ${props.className}`}>
+        className={`
+            ${!props.siteLinkTwo ? 'site_link' : 'site_link_two'} 
+            ${props.className}
+        `}>
             <span className={`
                 ${!props.classNameIco ? '' : props.classNameIco}
                 ${props.icoName}

@@ -2,8 +2,6 @@ import React from 'react';
 import Head from '@components/head';
 import BtnSite from '@components/BtnSite/btnSite';
 
-// import style from '@styles/404.scss';
-
 function Page404() {
     
     return (
@@ -38,7 +36,7 @@ function Page404() {
             </div>
         </>
 
-    )
+    );
 }
 
 export default Page404;
