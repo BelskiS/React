@@ -492,35 +492,6 @@ a.btn_site.btn_site_white:hover {
 	}
 /*END login_page*/
 
-/*discounts_sale__items*/
-
-
-
-	.detail_discounts_sale__title .validity_time {
-		color: $Dark_Second;
-	}
-	.detail_discounts_sale__title .wrap_detail_img {
-		border-radius: $border_radius_main;
-	}
-
-
-	/*news_detail*/
-		.detail_discounts_sale__title .wrap_text__title {
-			font-weight: $fw_Header6;
-		}
-		.detail_discounts_sale__title .validity_time {
-			font-weight: $fw_Button_Link;
-		}
-		.news_detail .news_detail__time_title .news_detail__time {
-			background: $Ultra_Light_Shade;
-			font-weight: $fw_Button_Link;
-		}
-		.news_detail__time .news_detail__time_day {
-			color: $Dark_Second;
-		}
-	/*END news_detail*/
-/*END discounts_sale__items*/
-
 /*personal_area*/
 	.personal_area_page__user,
 	.my_profile__user_tab_link,
