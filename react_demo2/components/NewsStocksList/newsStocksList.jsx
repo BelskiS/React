@@ -9,7 +9,7 @@ function NewsStocksList({ dataNewsStock, stockList, detailData}) {
     dataNewsStock.sort((a, b) => b.ID - a.ID );
 
     const chooseDataNewsStock = () => {
-        return detailData ? dataNewsStock.filter(item => item.ID != detailData).slice(0, 4) : dataNewsStock;
+        return detailData ? dataNewsStock.filter(item => item.ID != detailData).slice(0, 3) : dataNewsStock;
     }
 
     return (
