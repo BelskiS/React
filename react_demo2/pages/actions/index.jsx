@@ -1,6 +1,8 @@
 import React from 'react';
 
 import Head from '@components/head';
+import { useRouter } from 'next/router';
+import BreadCrumbs from '@components/Breadcrumbs/breadcrumbs';
 import StocksList from '@components/Stock/stockList';
 import { PATH_FULL_STOCK } from '@public/constData/pathJson';
 
@@ -28,12 +30,19 @@ export async function getStaticProps() {
 }
 
 function Stocks({stockData}) {
+    const { asPath } = useRouter();
+    const titlePage = "Акции";
+
     return (
         <>
-            <Head title="Скидки и акции" />
+            <Head title={titlePage} />
+            <BreadCrumbs 
+                pathLink={asPath}
+                titleLink={titlePage}
+            />
 
             <div className="site_container">
-                <h1 className="title_page">Скидки и акции</h1>
+                <h1 className="title_page">{titlePage}</h1>
 
                 <StocksList stockData={stockData} />
             </div>

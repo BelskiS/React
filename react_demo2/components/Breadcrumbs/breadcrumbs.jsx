@@ -1,39 +1,51 @@
 import React from 'react';
 
+import Link from 'next/link';
 import style from './breadcrumbs.module.scss';
 
-function BreadCrumbs() {
-    return (
-        <div className="wrap_site_breadcrumbs">
-            <div className="site_container">
-                {/* <div
-                    className="site_breadcrumbs"
-                    itemprop="http://schema.org/breadcrumb"
-                    itemscope
-                    itemtype="http://schema.org/BreadcrumbList"
-                >
-                    <div 
-                        className="bx-breadcrumb-item"
-                        itemprop="itemListElement"
-                        itemscope
-                        itemtype="http://schema.org/ListItem"
-                    >
+function BreadCrumbs(props) {
+    const arrLinkBreadcrumbs = props.pathLink.split('/');
 
-                        <a className="site_link" href="/" title="Главная страница" itemprop="item">
-                            <span className="site_breadcrumbs__item" itemprop="name"><span className="breadcrumbs__main_ico color_ico icon-ion-home-outline">Главная страница</span></span>
-                        </a>
-                        <meta itemprop="position" content="1" />
-                    </div>
-                    <div 
-                        className="bx-breadcrumb-item"
-                        itemprop="itemListElement"
-                        itemscope
-                        itemtype="http://schema.org/ListItem"
-                    >
-                        <span className="site_breadcrumbs__item" itemprop="name">Скидки и акции</span>
-                        <meta itemprop="position" content="2" />
-                    </div>
-                </div>   */}
+    return (
+        <div className={style.wrap_block}>
+            <div className="site_container">
+                <div
+                    className={style.block}
+                    itemProp="http://schema.org/breadcrumb"
+                    itemScope
+                    itemType="http://schema.org/BreadcrumbList"
+                >
+                    {arrLinkBreadcrumbs.map((item_bread, index_bread) => 
+                        <div 
+                            className={style.wrap_item}
+                            itemProp="itemListElement"
+                            itemScope
+                            itemType="http://schema.org/ListItem"
+                            key={item_bread + index_bread}
+                        >
+                            {
+                                index_bread == 0 ? 
+                                    <Link href="/">
+                                        <a className="site_link" title="Главная страница" itemProp="item">
+                                            <span className={style.item} itemProp="name"><span className={`color_ico icon-ion-home-outline ${style.main_ico}`}>Главная страница</span></span>
+                                        </a>
+                                    </Link>
+                                : index_bread == (arrLinkBreadcrumbs.length - 1) ?
+                                    <span className={style.item} itemProp="name">
+                                        {props.titleLink}
+                                    </span>
+                                : 
+                                    <Link href={`/${item_bread}/`}>
+                                        <a className="site_link" title={props.titleParent} itemProp="item">
+                                            <span className={style.item} itemProp="name">{props.titleParent}</span>
+                                        </a>
+                                    </Link>
+                            }
+                            
+                            <meta itemProp="position" content={index_bread + 1} />
+                        </div>
+                    )}
+                </div>  
             </div>
         </div>
     );

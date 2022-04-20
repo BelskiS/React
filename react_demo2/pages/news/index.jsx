@@ -1,6 +1,8 @@
 import React from 'react';
 
 import Head from '@components/head';
+import { useRouter } from 'next/router';
+import BreadCrumbs from '@components/Breadcrumbs/breadcrumbs';
 import NewsList from '@components/News/newsList';
 import { PATH_FULL_NEWS } from '@public/constData/pathJson';
 
@@ -29,12 +31,19 @@ export async function getStaticProps() {
 }
 
 function News({ newsData }) {
+    const { asPath } = useRouter();
+    const titlePage = "Новости";
+
     return (
         <>
-            <Head title="Новости" />
+            <Head title={titlePage} />
+            <BreadCrumbs 
+                pathLink={asPath}
+                titleLink={titlePage}
+            />
             
             <div className="site_container">
-                <h1 className="title_page">Новости</h1>
+                <h1 className="title_page">{titlePage}</h1>
 
                 <NewsList newsData={newsData} />
             </div>

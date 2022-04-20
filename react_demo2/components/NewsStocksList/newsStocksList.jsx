@@ -5,12 +5,16 @@ import LinkIco from '@components/LinkIco/linkico';
 import Image from 'next/image';
 import style from './newsStocksList.module.scss';
 
-function NewsStocksList({ dataNewsStock, stockList}) {
+function NewsStocksList({ dataNewsStock, stockList, detailData}) {
     dataNewsStock.sort((a, b) => b.ID - a.ID );
+
+    const chooseDataNewsStock = () => {
+        return detailData ? dataNewsStock.filter(item => item.ID != detailData).slice(0, 4) : dataNewsStock;
+    }
 
     return (
         <>
-            {dataNewsStock.map(item =>
+            {chooseDataNewsStock().map(item =>
                 <div className={style.items} key={item.ID}>
                     <div className={style.item}>
                 
@@ -36,27 +40,6 @@ function NewsStocksList({ dataNewsStock, stockList}) {
                             
                             
                             {stockList ?
-                                // <div className={style.validity}>
-                                //     <span className={style.validity_title}>
-                                //         {
-                                //             Object.values(item.PROPERTY_VALUES).map((item_property) => {
-                                //                 if(item_property.CODE == "VALIDITY") {
-                                //                     return item_property.NAME
-                                //                 }
-                                //             })
-                                //         }
-                                //     </span>
-                                //     <span className={style.validity_time}>
-                                //         {
-                                //             Object.values(item.PROPERTY_VALUES).map((item_property) => {
-                                //                 if(item_property.CODE == "VALIDITY") {
-                                //                     return item_property.VALUE.n0
-                                //                 }
-                                //             })
-                                //         }
-                                //     </span>
-                                // </div>
-
                                 <>
                                     {
                                         Object.values(item.PROPERTY_VALUES).map((item_property) => {

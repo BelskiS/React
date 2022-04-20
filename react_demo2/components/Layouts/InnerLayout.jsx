@@ -1,4 +1,3 @@
-import BreadCrumbs from '@components/Breadcrumbs/breadcrumbs';
 import React from 'react';
 
 function InnerLayout({
@@ -7,7 +6,6 @@ function InnerLayout({
     return (
         <>
             <div className="inner_page">
-                <BreadCrumbs />
                 {children}
             </div>
         </>
