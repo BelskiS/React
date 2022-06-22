@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Head from '@components/head';
 import { useRouter } from 'next/router';
 import BreadCrumbs from '@components/Breadcrumbs/breadcrumbs';
-import NewsList from '@components/News/newsList';
 import { PATH_FULL_NEWS } from '@public/constData/pathJson';
-
+import Pagination from '@components/Pagination/pagination';
 
 export async function getStaticProps() {
  
@@ -33,6 +32,8 @@ export async function getStaticProps() {
 function News({ newsData }) {
     const { asPath } = useRouter();
     const titlePage = "Новости";
+    const numItemPage = 3;
+    newsData.sort((a, b) => b.ID - a.ID );
 
     return (
         <>
@@ -45,10 +46,12 @@ function News({ newsData }) {
             <div className="site_container">
                 <h1 className="title_page">{titlePage}</h1>
 
-                <NewsList newsData={newsData} />
+                <Pagination paginationData={newsData} itemsPerPage={numItemPage} />
             </div>
         </>
     );
 }
+
+
 
 export default News;

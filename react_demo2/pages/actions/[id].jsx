@@ -82,7 +82,8 @@ function StockDetails({ stockData, stockDataFull }) {
                     dataDetail={stockData} 
                     dataDetailFull={stockDataFull}
                     titleParent={titleParent}
-                    StockDetails
+                    StockDetailsList
+                    stockList
                  />
             </div>
         </>

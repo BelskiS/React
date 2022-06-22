@@ -5,8 +5,7 @@ import LinkIco from '@components/LinkIco/linkico';
 import Image from 'next/image';
 import style from './newsStocksList.module.scss';
 
-function NewsStocksList({ dataNewsStock, stockList, detailData}) {
-    dataNewsStock.sort((a, b) => b.ID - a.ID );
+function NewsStocksList({ dataNewsStock, stockList, detailData}) { 
 
     const chooseDataNewsStock = () => {
         return detailData ? dataNewsStock.filter(item => item.ID != detailData).slice(0, 3) : dataNewsStock;
@@ -14,7 +13,7 @@ function NewsStocksList({ dataNewsStock, stockList, detailData}) {
 
     return (
         <>
-            {chooseDataNewsStock().map(item =>
+            {dataNewsStock && chooseDataNewsStock().map(item =>
                 <div className={style.items} key={item.ID}>
                     <div className={style.item}>
                 
