@@ -1,0 +1,113 @@
+@import '../../styles/option.scss';
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & .item {
+        margin-right: 14px;
+        &:last-child {
+            margin-right: 0;
+        }
+        & .item_link {
+            border-radius: $border_radius_main;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            color: $Base_Tint;
+        }
+        &.active {
+            & .item_link {
+                background: $Base_Accent;
+                color: $White;
+            }
+        }
+        &.disabled {
+            opacity: 0.6;
+            & .item_link {
+                background: $Light_Gray;
+                pointer-events: none;
+                &:hover{
+                    background: $Light_Gray !important;
+                    &:before {
+                        color: $DarkGray !important;
+                    }
+                }
+            }
+        }
+        & .item_link:before,
+        & .item_link:before {
+            font-family: 'iconewwssync' !important;
+            font-weight: normal;
+            font-size: 18px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            color: $DarkGray;
+            transition: color $animate_site;
+        }
+        &.item_prev {
+            position: relative;
+            font-size: 0;
+            & .item_link {
+                background: $Light_Gray;
+                transition: background $animate_site;
+                &:hover {
+                    background: $Base_Accent;
+                    &:before {
+                        color: $White;
+                    }
+                }
+                &:before {
+                    content: "\e923";
+                }
+            }
+        }
+        &.item_next {
+            position: relative;
+            font-size: 0;
+            & .item_link {
+                background: $Light_Gray;
+                transition: background $animate_site;
+                &:hover {
+                    background: $Base_Accent;
+                    &:before {
+                        color: $White;
+                    } 
+                }
+                &:before {
+                    content: "\e924";
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 767px) {
+    .container {
+        & .item {
+            margin-right: 5px;
+            & .item_link {
+                width: 30px;
+                height: 30px;
+            }
+            & .item_link:before,
+            & .item_link:before {
+                font-size: 17px;
+            }
+            &.item_prev {
+                margin-right: 14px;
+            }
+            &.item_next {
+                margin-left: 9px;
+            }
+        }
+    }
+}

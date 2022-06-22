@@ -1359,50 +1359,6 @@ body.modal-open .modal_site.in {
 }
 /*END slider_site*/
 
-/*pagination*/
-.pagination_block {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-.pagination_block .label_horizontal {
-	display: flex;
-	align-items: center;
-	margin-right: 40px;
-}
-.pagination_block .label_horizontal label {
-	margin-right: 15px;
-	margin-bottom: 0;
-}
-.pagination_block .pagination_list ul {
-	display: flex;
-}
-.pagination_block li {
-	margin-right: 14px;
-}
-.pagination_block li:last-child {
-	margin-right: 0;
-}
-.pagination_block .pagination_list ul li a {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 40px;
-	height: 40px;
-}
-.pagination_block .arrow_pag .pag_arrow_ico:before {
-	font-size: 18px;
-}
-.pagination_block .arrow_pag.prev {
-	margin-right: 14px;
-}
-.pagination_block .points {
-	font-size: 22px;
-	display: inline-flex;
-	align-items: center;
-}
-/*END pagination*/
-
 /*warning_block*/
 .warning_block {
 	border: 1px solid;

@@ -8,7 +8,7 @@ import BtnSite from '@components/BtnSite/btnSite';
 
 import style from './newsStockDetail.module.scss';
 
-function NewsStockDetail({dataDetail, dataDetailFull, StockDetails, titleParent}) {
+function NewsStockDetail({dataDetail, dataDetailFull, StockDetailsList, stockList, titleParent}) {
     const makeLowTiile = () => {
         return titleParent.toLowerCase();
     }
@@ -41,7 +41,7 @@ function NewsStockDetail({dataDetail, dataDetailFull, StockDetails, titleParent}
                 }
 
                 <div className={`
-                    ${!StockDetails ? 
+                    ${!StockDetailsList ? 
                         style.news_detail
                         : ""
                     }
@@ -50,7 +50,7 @@ function NewsStockDetail({dataDetail, dataDetailFull, StockDetails, titleParent}
                     <div className={style.title_text}>
                         {dataDetail[0].NAME}
                     </div>
-                    {!StockDetails ?
+                    {!StockDetailsList ?
                         <div className={style.title_news_time}>
                             <div className={style.title_news_day}>
                                 {
@@ -98,7 +98,10 @@ function NewsStockDetail({dataDetail, dataDetailFull, StockDetails, titleParent}
                 </div>
 
                 <div className={style.wrap_other_item}>
-                    <NewsStocksList dataNewsStock={dataDetailFull} detailData={dataDetail[0].ID} />
+                    <NewsStocksList 
+                        dataNewsStock={dataDetailFull}
+                        detailData={dataDetail[0].ID}
+                        stockList />
                 </div>
 
                 <div className={style.wrap_detail_link_all}>

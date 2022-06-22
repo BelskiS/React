@@ -549,34 +549,6 @@ a.btn_site.btn_site_white:hover {
 	}
 /*END personal_area*/
 
-/*pagination*/
-	.pagination_block .label_horizontal label {
-		font-weight: $fw_Body_Text;
-	}
-	.pagination_block .pagination_list ul li a {
-		border-radius: $border_radius_main;
-		color: $Base_Tint;
-	}
-	.pagination_block .pagination_list ul li.active a {
-		background: $Base_Accent;
-		color: $White;
-	}
-	.pagination_block .pagination_list ul .arrow_pag a {
-		background: $Light_Gray;
-		transition: background $animate_site;
-	}
-	.pagination_block .arrow_pag a .pag_arrow_ico:before {
-		color: $DarkGray;
-		transition: color $animate_site;
-	}
-	.pagination_block .pagination_list ul .arrow_pag a:hover {
-		background: $Base_Accent;
-	}
-	.pagination_block .arrow_pag a:hover .pag_arrow_ico:before {
-		color: $White;
-	}
-/*END pagination*/
-
 /*warning_block*/
 	.warning_block {
 		background: $Message_Light;
