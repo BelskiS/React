@@ -516,6 +516,9 @@ body.none_scroll {
 .site_field.site_field_withico.input_inn:before {
 	content: "\e942";
 }
+.site_field_bottom_text .site_field_error_text {
+	width: 100%;
+}
 
 .site_field input,
 .site_field textarea {

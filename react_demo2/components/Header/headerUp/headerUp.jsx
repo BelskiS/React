@@ -2,8 +2,11 @@ import React from 'react';
 import Filial from '@components/Filial/filial';
 import LinkPhone from '@components/LinkPhone/link';
 import Dropdown from 'react-bootstrap/Dropdown';
+import FormLoginReg from '@components/Forms/FormLoginReg/formLoginReg';
 
 import style from './headerUp.module.scss';
+
+
 
 function HeaderUp(props) {
     return (
@@ -40,7 +43,12 @@ function HeaderUp(props) {
                             </Dropdown.Toggle>
 
                             <Dropdown.Menu className={`${style.login_dropdown} dropdown_animate`} data-hlogin='login'>
-                                <div className="">место для формы авторизации</div>
+                                <div className="">
+                                <FormLoginReg 
+                                    classLink={style.link_forget_password} 
+                                    isLoginPage
+                                />
+                                </div>
                             </Dropdown.Menu>
                         </Dropdown>
                     </div>

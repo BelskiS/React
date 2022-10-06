@@ -57,6 +57,7 @@ div[data-fixhead="fixhead"] {
 .login_dropdown[data-hlogin='login'] {
     border: none;
     width: 300px;
+    font-size: 14px;
     padding: 25px 15px;
 }
 div[data-fixhead="fixhead"] {
@@ -64,6 +65,13 @@ div[data-fixhead="fixhead"] {
         right: -110px;
     }
 }
+div[data-hlogin='login'] {
+    & .link_forget_password {
+        font-size: 13px;
+        display: inline-block;
+    }
+}
+
 
 @media only screen and (max-width : 1359px) {
     .phone {
