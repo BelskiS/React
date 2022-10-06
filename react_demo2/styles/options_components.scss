@@ -140,6 +140,7 @@ a:hover,
 .selection_auto__wrap_select .btn_select_auto {
 	height: $height_selected_auto;
 }
+.site_field,
 .site_field input,
 .site_field textarea {
 	border-radius: $border_radius_main;
@@ -482,15 +483,6 @@ a.btn_site.btn_site_white:hover {
 		background: $Success;
 	}
 /*END modal_addcard2*/
-
-/*login_page*/
-	.login_reg_page__block__item .login_reg_page_wrap_form {
-		border-radius: $border_radius_main;
-	}
-	.login_reg_page__block .title_h5 {
-		font-weight: $fw_Header5;
-	}
-/*END login_page*/
 
 /*personal_area*/
 	.personal_area_page__user,
