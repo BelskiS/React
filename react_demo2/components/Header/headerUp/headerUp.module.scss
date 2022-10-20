@@ -71,6 +71,17 @@ div[data-hlogin='login'] {
         display: inline-block;
     }
 }
+div[data-hlogin='login'] {
+    & .login_wrap_btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        & button {
+            width: 160px;
+            margin-right: 25px;
+        }
+    }
+}
 
 
 @media only screen and (max-width : 1359px) {
@@ -117,7 +128,7 @@ div[data-hlogin='login'] {
             display: none;
         }
     }
-    .link[data-mobviz="inviz"] {
+    .mod_inviz {
         display: none;
     }
     .mob_headlogin {

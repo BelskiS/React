@@ -5,7 +5,14 @@ function BtnSite(props) {
     return (
         <>
             {!props.btn_link ? 
-                <button className={`btn_site ${props.className}`} type={props.type}>
+                <button 
+                    className={`
+                        ${!props.modalLink ? 'btn_site' : ''} 
+                        ${props.className ? props.className : ''}`}
+                    type={props.type}
+                    onClick={props.onClick ? props.onClick : null }
+                    disabled={props.disabled ? props.disabled : null}
+                >
                     {props.icoName ? 
                         <span className={`
                             ${!props.classNameIco ? '' : props.classNameIco}

@@ -249,6 +249,7 @@ div[data-fixhead="fixhead"] {
             cursor: pointer;
             z-index: 1020;
             & span:before {
+                color: $White;
                 font-size: 30px;
             }
         }

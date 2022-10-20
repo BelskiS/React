@@ -5,7 +5,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import FormLoginReg from '@components/Forms/FormLoginReg/formLoginReg';
 
 import style from './headerUp.module.scss';
-
+import ModalSite from '@components/Modal/modal';
 
 
 function HeaderUp(props) {
@@ -25,15 +25,32 @@ function HeaderUp(props) {
                             icoName="icon-ion-call"
                         />
                         {!props.isHeadMobShow ?
-                            <a href="#request_call" className="site_link site_link_with_borderb link_header_request_call"
-                            data-toggle="modal">Заказать звонок</a>
-                            : ""}
+                            <ModalSite
+                                className="site_link_with_borderb link_header_request_call"
+                                textBtn="Заказать звонок"
+                                modalTitle="Заказать звонок"
+                                modalBtnText="Заказать звонок"
+                                modalDescription="Оставьте свой номер телефона, и наш менеджер перезвонит вам в ближайшее время."
+                                modalLink
+                                fieldFirstName
+                                fieldPhone
+                            />
+                        : ""}
                     </span>
 
-                    <a className={`site_link ${style.link} header_link_help`} href="#help" data-toggle="modal" data-mobviz="inviz">
-                        <span className={`${style.link_ico} icon-ion-help-circle`}></span>
-                        <span className="header_link_help__title">Помощь клиенту</span>
-                    </a>                   
+                    <ModalSite
+                        className={`header_link_help ${style.mod_inviz}`}
+                        textBtn="Помощь клиенту"
+                        modalTitle="Помощь специалиста"
+                        modalBtnText="Отправить"
+                        modalDescription="Отправьте сообщение с вашим вопросом. Мы постараемся вам помочь."
+                        modalLink
+                        icoName={`${style.link_ico} icon-ion-help-circle`}
+                        fieldFirstName
+                        fieldPhone
+                        // fieldEmail
+                        // fieldTextarea
+                    />                 
                 </div>
                 <div className={`for_static_login ${style.item} ${style.mob_headlogin}`}>
                     <div className="fix_login">
@@ -47,6 +64,8 @@ function HeaderUp(props) {
                                 <FormLoginReg 
                                     classLink={style.link_forget_password} 
                                     isLoginPage
+                                    headerLogin
+                                    classLinkWrapBtn={style.login_wrap_btn}
                                 />
                                 </div>
                             </Dropdown.Menu>

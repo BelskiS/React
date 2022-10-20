@@ -1,23 +1,41 @@
 import React, { useState } from 'react';
 
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import InputMask from 'react-input-mask';
 import Link from 'next/link';
 
 
 function FormLoginReg(props) {
   const [showPass, setShowPass] = useState(false);
+  const [arrayUser, setArrayUser] = useState([]);
+  const addArrayUser = (user) => setArrayUser(arrayUser.push(user));
+  
+  //TODO arrayUser попробовать сюда передавать данные из localStorage, 
+  //TODO чтобы не перезаписывалось при обновлении
+  //TODO добавить туда проверку есть ли такой пользователь и если нет, то тогда добавлять
+  //TODO нужно добавить свойство,чтобы после добавления пользователя был текст о добавлении, а не форма
+  
+  const PhoneMask = props => (
+    <InputMask {...props} />
+  );
 
   return (
     <Formik
-      initialValues={{ email: '', password: '', rePassword: '' }}
+      initialValues={{ email: '', phone: '', password: '', rePassword: '' }}
       validate={values => {
         const errors = {};
+        const isMask = values.phone.includes('_');
+
         if (!values.email) {
           errors.email = 'Поле должно быть заполнено';
         } else if (
           !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
         ) {
           errors.email = 'Неверный email';
+        }
+
+        if (!values.phone || isMask) {
+          errors.phone = 'Поле должно быть заполнено';
         }
 
         if (!values.password) {
@@ -35,7 +53,12 @@ function FormLoginReg(props) {
         return errors;
       }}
       onSubmit={(values, { setSubmitting }) => {
+        console.log(values)
+        addArrayUser(values);
         setTimeout(() => {
+          
+            console.log(arrayUser)
+          localStorage.setItem("registrationUser", JSON.stringify(arrayUser, null, 2));
           console.log(JSON.stringify(values, null, 2));
           setSubmitting(false);
         }, 1400);
@@ -55,6 +78,19 @@ function FormLoginReg(props) {
 
           {props.isLoginPage || props.isRegistrationPage ? 
             <>
+              {props.isRegistrationPage ? 
+                <div className={`wrap_site_field site_field_with_label`}>
+                  <span className="site_field_label">Телефон:</span>
+  
+                  <div className={`site_field site_field_withico input_phone 
+                    ${errors.phone && touched.phone ? 'site_field_error' : '' }
+                  `}>
+                    <Field name="phone" as={PhoneMask} mask="+7 (999) 999-99-99" placeholder="Введите ваш номер телефона" />
+                  </div>
+                  <ErrorMessage name="phone" component="div" className="site_field_error_text" />
+                </div>
+              : ''}
+
               <div className={`wrap_site_field site_field_with_label 
                 ${props.isLoginPage ? 'site_field_bottom_text' : ''}
               `}>
@@ -98,13 +134,19 @@ function FormLoginReg(props) {
             </>
           : ""}
 
-          <div className="site_field_btn">
+          <div className={`site_field_btn 
+            ${props.headerLogin ? props.classLinkWrapBtn : ''}
+          `}>
             <button className="btn_site" type="submit" disabled={isSubmitting}>
               {props.isLoginPage ? 'Войти' 
               : props.isForgotPassword ? 'Восстановить'
               : 'Зарегистрироваться'}
-              
             </button>
+            {props.headerLogin ? 
+              <Link href="/login/registration/">
+                <a className="site_link site_link_with_borderb" rel="nofollow">Регистрация</a>
+              </Link>
+            : ""}
           </div>
         </Form>
       )}
