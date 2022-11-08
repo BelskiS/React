@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from '@components/head';
 import LoginRegistration from '@components/LoginRegistration/loginRegistration';
 

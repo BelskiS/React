@@ -60,8 +60,14 @@ div[data-fixhead="fixhead"] {
     font-size: 14px;
     padding: 25px 15px;
 }
+.login_dropdown[data-hlogin='login_user'] {
+    border: none;
+    width: 205px;
+    left: auto;
+    right: 0;
+}
 div[data-fixhead="fixhead"] {
-    & .login_dropdown[data-hlogin='login'] {
+    & .login_dropdown {
         right: -110px;
     }
 }
@@ -70,6 +76,123 @@ div[data-hlogin='login'] {
         font-size: 13px;
         display: inline-block;
     }
+}
+div[data-hlogin='login'] {
+    & .login_wrap_btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        & button {
+            width: 160px;
+            margin-right: 25px;
+        }
+    }
+}
+.btnLogPers {
+    & .login_user[data-login="head_login"] {
+        position: relative;
+        padding-right: 23px;
+        padding-left: 23px;
+        max-width: 115px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        &:before {
+            content: "\e950";
+            font-family: 'iconewwssync' !important;
+            font-size: 16px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            color: $Base_Shade;
+            font-weight: $fw_font_ico;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+        &:after {
+            content: "\e922";
+            font-family: 'iconewwssync' !important;
+            font-size: 16px;
+            border: none;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            margin: 0;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+        &[aria-expanded="true"]:after {
+            content: "\e925";
+        }
+    }
+}
+
+.login_dropdown[data-hlogin='login_user'] {
+    & .personalarea {
+        & li {
+            & a,
+            & .logout {
+                position: relative;
+                display: flex;
+                align-items: center;
+                min-height: 40px;
+                padding: 10px 15px 10px 45px;
+                &:before {
+                    content: "";
+                    font-family: 'iconewwssync' !important;
+                    font-size: 18px;
+                    font-weight: $fw_font_ico;
+                    color: $Base_Shade;
+                    position: absolute;
+                    top: 50%;
+                    left: 15px;
+                    -webkit-transform: translateY(-50%);
+                    -ms-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                }
+            }
+        }
+        & li[data-ico="bg_myprofile"] a:before {
+            content: "\e96c";
+        }
+        & li[data-ico="bg_myorders"] a:before {
+            content: "\e967";
+        }
+        & li[data-ico="bg_mygarage"] a:before {
+            content: "\e978";
+        }
+        & li[data-ico="bg_myshop"] a:before {
+            content: "\e956";
+        }
+        & li[data-ico="bg_options"] a:before {
+            content: "\e959";
+        }
+        & li[data-ico="personalarea_exit"] .logout:before {
+            content: "\e947";
+        }
+    }
+}
+
+.logout {
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    color: $Base_Tint;
+    font-weight: $fw_Link;
+}
+.login_dropdown[data-hlogin='login_user'] {
+    & .personalarea {
+        & li:hover {
+            & .logout {
+                color: $Dark_Tint;
+            }
+        }
+    }
+}
+.errorAll {
+    text-align: center;
+    margin-bottom: 5px;
 }
 
 
@@ -81,12 +204,21 @@ div[data-hlogin='login'] {
     }
     .link {
         margin-right: 30px;
+        & .order_link {
+            display: none;
+        }
     }
     div[data-fixhead="fixhead"] {
         & .link {
             margin-right: 0;
             margin-left: 17px;
         }
+    }
+    .order_link {
+        display: none;
+    }
+    .help {
+        font-size: 13px;
     }
 }
 
@@ -109,6 +241,23 @@ div[data-hlogin='login'] {
             right: -104px;
         }
     }
+
+    .btnLogPers {
+        & .login_user[data-login="head_login"] {
+            font-size: 0;
+            display: flex;
+            width: 24px;
+            height: 24px;
+            padding-right: 0;
+            padding-left: 0;
+            &:before {
+                font-size: 24px;
+            }
+            &:after {
+                display: none;
+            }
+        }
+    }    
 }
 
 @media only screen and (max-width : 767px) {
@@ -117,8 +266,10 @@ div[data-hlogin='login'] {
             display: none;
         }
     }
-    .link[data-mobviz="inviz"] {
-        display: none;
+    .container {
+        & .mod_inviz {
+            display: none;
+        }
     }
     .mob_headlogin {
         padding-right: 104px;
@@ -126,6 +277,9 @@ div[data-hlogin='login'] {
 
     .login_dropdown[data-hlogin='login'] {
         width: 290px;
+        right: -104px;
+    }
+    .login_dropdown[data-hlogin='login_user'] {
         right: -104px;
     }
 }

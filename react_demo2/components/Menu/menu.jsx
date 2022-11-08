@@ -9,6 +9,7 @@ import MenuItem from './menuItem';
 import MenuIemCatalog from './menuItemCatalog';
 
 import style from './menu.module.scss';
+import ModalSite from '@components/Modal/modal';
 
 function Menu(props) {
     const [show, setShow] = useState(false);
@@ -53,10 +54,23 @@ function Menu(props) {
                                     </Link>
                                 </div>
 
-                                <a className={`site_link ${style.mob_header__help}`} href="#help" data-toggle="modal">
+                                <ModalSite
+                                    className={`header_link_help ${style.mob_header__help}`}
+                                    textBtn="Помощь"
+                                    modalTitle="Помощь специалиста"
+                                    modalBtnText="Отправить"
+                                    modalDescription="Отправьте сообщение с вашим вопросом. Мы постараемся вам помочь."
+                                    viewLink
+                                    classNameText="mob_header__help_text"
+                                    icoName={`${style.mob_header__ico} icon-ion-help-circle`}
+                                    fieldFirstName
+                                    fieldEmail
+                                    fieldTextarea
+                                /> 
+                                {/* <a className={`site_link ${style.mob_header__help}`} href="#help" data-toggle="modal">
                                     <span className={`${style.mob_header__ico} icon-ion-help-circle`}></span>
                                     <span className={style.mob_header__help_text}>Помощь</span>
-                                </a>
+                                </a> */}
                             </div>
 
                             <div className={style.mob_title}>Каталог товаров</div>

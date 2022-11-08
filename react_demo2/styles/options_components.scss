@@ -23,14 +23,6 @@
 // 	box-shadow: 0px 4px 10px rgba(255, 197, 0, 0.3) !important;
 // } 
 
-/*ico_close_modal*/
-.icon-ion-close:before,
-.modal_site.modal_video .modal-dialog .modal-content button.close .icon-ion-close:before {
-	color: $Ultra_Light_Shade;
-}
-
-
-
 .border_site,
 .border_b,
 .wrap_site_field.site_field_border_b {
@@ -116,12 +108,8 @@ a:hover,
 }
 
 /*ico_color*/
-.color_ico:before,
-.header_login_user.site_dopdown_btn .login_user_btn:before {
+.color_ico:before {
 	color: $Base_Shade;
-}
-.header_login_user.site_dopdown_btn .login_user_btn:before {
-	font-weight: $fw_font_ico;
 }
 
 
@@ -331,20 +319,6 @@ a.btn_site.btn_site_white:hover {
 		border-radius: $border_radius_default $border_radius_main $border_radius_main $border_radius_default;
 	}
 /*END tabs_site*/
-
-/*modal*/
-	.modal_site .modal-dialog .modal-content {
-		background: $White;
-		border-radius: $border_radius_main;
-	}
-	.modal_site .modal-dialog .modal-content .modal-title {
-		color: $Base_Tint;
-		font-weight: $fw_Header3;
-	}
-	.modal_site .big_modal_descr {
-		font-weight: $fw_Header4;
-	}
-/*END modal*/
 
 /*common_list_check*/
 	ul.common_list_check li:before {
@@ -2013,10 +1987,6 @@ a.btn_site.btn_site_white:hover {
 @media only screen and (max-width : 767px) {
 
 	/*modal*/
-		.modal_site .modal-dialog .modal-content .modal-title {
-			font-weight: $fw_Header4;
-		}
-
 		/*modal_add_product*/
 			.modal_add_product .add_product__item__title {
 				font-weight: $fw_Header4;

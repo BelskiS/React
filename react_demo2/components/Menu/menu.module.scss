@@ -249,6 +249,7 @@ div[data-fixhead="fixhead"] {
             cursor: pointer;
             z-index: 1020;
             & span:before {
+                color: $White;
                 font-size: 30px;
             }
         }
@@ -315,6 +316,7 @@ div[data-fixhead="fixhead"] {
         & .mob_header__help {
             display: flex;
             align-items: center;
+            font-size: 14px;
             & .mob_header__help_text {
                 font-size: 14px;   
             }

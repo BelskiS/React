@@ -1,0 +1,122 @@
+@import '../../styles/option.scss';
+
+.mdl {
+	& .title {
+		font-size: 26px;
+		font-weight: $fw_Header3;
+		line-height: 31px;
+		width: 100%;
+		padding-bottom: 30px;
+		text-align: center;
+		color: $Base_Tint;
+	}
+}
+.body {
+	& .description {
+		margin-bottom: 30px;
+		padding-bottom: 0;
+	}
+}
+.btnLink {
+    background: transparent;
+    border: none;
+	display: inline-flex;
+	align-items: center;
+    width: auto;
+    height: auto;
+    padding: 0;
+    box-shadow: none !important;
+    outline: none !important;
+    &:hover {
+        background: transparent;
+    }
+}
+div.agreement_checkbox {
+	margin-top: 20px;
+	& label {
+		font-weight: $fw_Link;
+		cursor: pointer;
+	}
+}
+
+
+@media only screen and (max-width : 767px) {
+	.mdl {
+		& .title {
+			font-size: 21px;
+			line-height: 27px;
+			font-weight: $fw_Header4;
+			padding-bottom: 30px;
+		}
+	}
+}
+
+
+
+.modal_site.modal_site_help .site_field textarea {
+	height: 202px;
+}
+/*modal*/
+// .modal_site.modal_video .modal-dialog .modal-content button.close .icon-ion-close:before {
+// 	color: $Ultra_Light_Shade;
+// }
+// .modal_site .big_modal_descr {
+//     font-weight: $fw_Header4;
+// 	font-size: 20px;
+// 	margin-bottom: 30px;
+// }
+// .modal_site.modal_big .modal-dialog .modal-content.request_to .modal-title {
+// 	text-align: left;
+// }
+// .modal_site .checkbox .bx-authform-starrequired {
+// 	display: none;
+// }
+
+// .modal_site.modal_popup_center .modal-dialog .modal-content .modal-title,
+// .modal_site.modal_big .modal-dialog .modal-content.request_to__sent .modal-title {
+// 	padding-bottom: 30px;
+// }
+// .modal_popup_center .modal-body p,
+// .modal_site.modal_big .modal-dialog .modal-content.request_to__sent .modal-body p ,
+// .request_to__sent p {
+// 	text-align: center;
+// 	font-size: 16px;
+// }
+// .modal.modal_site .modal-dialog .modal-content .modal-body .request_to__sent p {
+// 	margin-bottom: 35px;
+// }
+// .modal_site.modal_big .modal-dialog .modal-content.request_to__sent .btn_site,
+// .request_to__sent .btn_site {
+// 	width: 100%;
+// }
+// .modal_cancel_order.modal_site .modal-dialog .modal-content {
+// 	background: #fff;
+// }
+// .modal_cancel_order.modal_site .modal-dialog .modal-content .modal-body p {
+// 	margin-bottom: 20px;
+// }
+// .modal_cancel_order .textarea_other {
+// 	display: none;
+// }
+// .modal_manager_phone {
+// 	font-size: 20px;
+// 	margin-bottom: 25px;
+// }
+// .modal_manager_phone .modal_manager_phone__ico:before {
+// 	font-size: 20px;
+// 	margin-right: 5px;
+// }
+// .modal_site.modal_big .modal-dialog .modal-content.request_to .site_field_btn,
+// .modal_site.modal_edit_car .site_field_btn {
+// 	width: calc(100% - 190px);
+// 	margin-left: auto;
+// }
+// .modal_site.modal_edit_car .site_field_btn {
+// 	display: flex;
+// 	align-items: center;
+// }
+// .modal_site.modal_edit_car .site_field_btn .btn_site {
+// 	width: 180px;
+// 	margin-right: 30px;
+// }
+/*END modal*/
