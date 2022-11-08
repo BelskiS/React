@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-
+import React, { useState, useEffect } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import InputMask from 'react-input-mask';
 import Link from 'next/link';
@@ -7,21 +6,28 @@ import Link from 'next/link';
 
 function FormLoginReg(props) {
   const [showPass, setShowPass] = useState(false);
-  const [arrayUser, setArrayUser] = useState([]);
-  const addArrayUser = (user) => setArrayUser(arrayUser.push(user));
+  const [arrayUsers, setArrayUser] = useState([]);
+  const [isUser, setIsUser] = useState(false);
+  const [isCorrectValue, setIsCorrectValue] = useState(false);
+
+  const addArrayUser = (user) => arrayUsers.push(user) && setArrayUser(arrayUsers);
   
-  //TODO arrayUser попробовать сюда передавать данные из localStorage, 
-  //TODO чтобы не перезаписывалось при обновлении
-  //TODO добавить туда проверку есть ли такой пользователь и если нет, то тогда добавлять
-  //TODO нужно добавить свойство,чтобы после добавления пользователя был текст о добавлении, а не форма
+  useEffect(() => {
+    const getUsers = JSON.parse(localStorage.getItem('registrationUser'));
+ 
+    setArrayUser(getUsers || []);
+  }, []);
   
+
   const PhoneMask = props => (
     <InputMask {...props} />
   );
 
+  const setUserlogin = () => props.isRegistrationPage ? true : false;
+
   return (
     <Formik
-      initialValues={{ email: '', phone: '', password: '', rePassword: '' }}
+      initialValues={{ email: '', phone: '', password: '', rePassword: '', isUserLogin: setUserlogin() }}
       validate={values => {
         const errors = {};
         const isMask = values.phone.includes('_');
@@ -34,38 +40,78 @@ function FormLoginReg(props) {
           errors.email = 'Неверный email';
         }
 
-        if (!values.phone || isMask) {
-          errors.phone = 'Поле должно быть заполнено';
+        if(props.isRegistrationPage) {
+          if (!values.phone || isMask) {
+            errors.phone = 'Поле должно быть заполнено';
+          }
         }
 
-        if (!values.password) {
-          errors.password = 'Поле должно быть заполнено';
-        } else if (values.password.length < 6) {
-          errors.password = 'Пароль не менее 6 символов';
+        if(props.isLoginPage || props.isRegistrationPage) {
+          if (!values.password) {
+            errors.password = 'Поле должно быть заполнено';
+          } else if (values.password.length < 6) {
+            errors.password = 'Пароль не менее 6 символов';
+          }
         }
 
-        if(!values.rePassword) {
-          errors.rePassword = 'Поле должно быть заполнено';
-        } else if (values.rePassword != values.password) {
-          errors.rePassword = 'Неверное подтверждение пароля';
+        if(props.isRegistrationPage) {
+          if(!values.rePassword) {
+            errors.rePassword = 'Поле должно быть заполнено';
+          } else if (values.rePassword != values.password) {
+            errors.rePassword = 'Неверное подтверждение пароля';
+          }
         }
+
 
         return errors;
       }}
-      onSubmit={(values, { setSubmitting }) => {
-        console.log(values)
-        addArrayUser(values);
+      onSubmit={(values, { setSubmitting }) => {       
         setTimeout(() => {
-          
-            console.log(arrayUser)
-          localStorage.setItem("registrationUser", JSON.stringify(arrayUser, null, 2));
-          console.log(JSON.stringify(values, null, 2));
+
+          if(props.isRegistrationPage) {
+            if(arrayUsers.find(item => item.email == values.email)) {
+              setIsUser(true);
+            } else {
+              setIsUser(false);
+              addArrayUser(values);
+              localStorage.setItem("registrationUser", JSON.stringify(arrayUsers, null, 2));
+              window.location.reload(true);
+            }
+          } else if(props.isLoginPage) {
+            if(arrayUsers.find(item => item.email == values.email && item.password == values.password)) {
+              arrayUsers.forEach(item => {
+                if(item.isUserLogin == false) {
+                  item.isUserLogin = true;
+                }
+                window.location.assign('/');
+              });
+              localStorage.setItem("registrationUser", JSON.stringify(arrayUsers, null, 2));
+            } else {
+              setIsCorrectValue(true);
+              
+            }
+          } else {
+            console.log(JSON.stringify(values, null, 2));
+          }
+        
           setSubmitting(false);
         }, 1400);
       }}
     >
       {({ isSubmitting, errors, touched }) => (
         <Form>
+          {isUser || isCorrectValue ? 
+            <div className={`site_field_error_text
+              ${props.headerLogin ? props.classErrorAll : ''}
+            `}>
+              {isUser ? 
+                'Данный email уже существует' 
+              : 
+                'Неверно введен логин или пароль'
+              }
+            </div>
+          : ''}
+
           <div className="wrap_site_field site_field_with_label">
             <span className="site_field_label">E-mail:*</span>
             <div className={`site_field site_field_withico input_email 

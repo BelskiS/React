@@ -7,7 +7,7 @@ function BtnSite(props) {
             {!props.btn_link ? 
                 <button 
                     className={`
-                        ${!props.modalLink ? 'btn_site' : ''} 
+                        ${!props.viewLink ? 'btn_site' : ''} 
                         ${props.className ? props.className : ''}`}
                     type={props.type}
                     onClick={props.onClick ? props.onClick : null }

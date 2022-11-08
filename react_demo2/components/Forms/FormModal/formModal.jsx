@@ -13,17 +13,35 @@ function FormModal(props) {
     
     return (
         <Formik
-            initialValues={{ firstName: '', phone: '', agrCheck: true}}
+            initialValues={{ firstName: '', 
+            email: '', 
+            phone: '', 
+            message: '', 
+            agrCheck: true }}
             validate={values => {
                 const errors = {};
                 const isMask = values.phone.includes('_');
 
-                if (!values.firstName) {
-                errors.firstName = 'Поле должно быть заполнено';
+                if(props.fieldFirstName) {
+                    if (!values.firstName) {
+                        errors.firstName = 'Поле должно быть заполнено';
+                    }
                 }
 
-                if (!values.phone || isMask) {
-                errors.phone = 'Поле должно быть заполнено';
+                if(props.fieldPhone) {
+                    if (!values.phone || isMask) {
+                        errors.phone = 'Поле должно быть заполнено';
+                    }
+                }
+                
+                if(props.fieldEmail) {
+                    if (!values.email) {
+                        errors.email = 'Поле должно быть заполнено';
+                      } else if (
+                        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+                      ) {
+                        errors.email = 'Неверный email';
+                    }
                 }
 
                 return errors;
@@ -57,6 +75,25 @@ function FormModal(props) {
                         <Field name="phone" as={PhoneMask} mask="+7 (999) 999-99-99" placeholder="Введите ваш номер телефона" />
                         </div>
                         <ErrorMessage name="phone" component="div" className="site_field_error_text" />
+                    </div>
+                : ''}
+
+                {props.fieldEmail ?
+                    <div className={`wrap_site_field ${props.fieldModal ? props.fieldModal : ''}`}>
+                        <div className={`site_field site_field_withico input_email 
+                        ${errors.email && touched.email ? 'site_field_error' : '' }
+                        `}>
+                        <Field type="email" name="email" placeholder="Введите ваш e-mail" />
+                        </div>
+                        <ErrorMessage name="email" component="div" className="site_field_error_text" />
+                    </div>
+                : ''}
+
+                {props.fieldTextarea ? 
+                    <div className={`wrap_site_field ${props.fieldModal ? props.fieldModal : ''}`}>
+                        <div className={`site_field`}>
+                        <Field as="textarea" placeholder="Введите ваше сообщение" name="message" />
+                        </div>
                     </div>
                 : ''}
 

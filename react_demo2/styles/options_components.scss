@@ -108,12 +108,8 @@ a:hover,
 }
 
 /*ico_color*/
-.color_ico:before,
-.header_login_user.site_dopdown_btn .login_user_btn:before {
+.color_ico:before {
 	color: $Base_Shade;
-}
-.header_login_user.site_dopdown_btn .login_user_btn:before {
-	font-weight: $fw_font_ico;
 }
 
 

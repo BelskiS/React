@@ -21,7 +21,8 @@ function ModalSite(props) {
             onClick={handleShow}
             type="button"
             icoName={props.icoName}
-            modalLink={props.modalLink ? true : false}
+            viewLink={props.viewLink ? true : false}
+            classNameText={props.classNameText}
         />
 
         <Modal className={`modal_site ${style.mdl} ${props.mdlBigSize ? 'modal_bigS' : ''}`}
