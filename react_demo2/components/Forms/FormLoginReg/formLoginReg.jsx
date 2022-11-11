@@ -27,7 +27,14 @@ function FormLoginReg(props) {
 
   return (
     <Formik
-      initialValues={{ email: '', phone: '', password: '', rePassword: '', isUserLogin: setUserlogin() }}
+      initialValues={{ 
+        firstName: '',
+        email: '',
+        phone: '',
+        password: '',
+        rePassword: '',
+        isUserLogin: setUserlogin() 
+      }}
       validate={values => {
         const errors = {};
         const isMask = values.phone.includes('_');
@@ -41,6 +48,10 @@ function FormLoginReg(props) {
         }
 
         if(props.isRegistrationPage) {
+          if (!values.firstName) {
+            errors.firstName = 'Поле должно быть заполнено';
+          }
+
           if (!values.phone || isMask) {
             errors.phone = 'Поле должно быть заполнено';
           }
@@ -109,6 +120,18 @@ function FormLoginReg(props) {
               : 
                 'Неверно введен логин или пароль'
               }
+            </div>
+          : ''}
+
+          {props.isRegistrationPage ? 
+            <div className="wrap_site_field site_field_with_label">
+              <span className="site_field_label">Имя:*</span>
+              <div className={`site_field site_field_withico input_name 
+                ${errors.firstName && touched.firstName ? 'site_field_error' : '' }
+              `}>
+                <Field type="text" name="firstName" placeholder="Введите ваше имя" />
+              </div>
+              <ErrorMessage name="firstName" component="div" className="site_field_error_text" />
             </div>
           : ''}
 

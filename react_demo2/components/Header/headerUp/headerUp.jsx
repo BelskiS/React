@@ -29,12 +29,29 @@ function HeaderUp(props) {
             window.location.reload(true);
         }
     }
+
+    const getUserName = () => {
+        const getUsers = JSON.parse(localStorage.getItem('registrationUser'));
+        const isUserLogin = getUsers && getUsers.find(item => item.isUserLogin == true);
+        let userName;
+
+        if(isUserLogin) {
+            getUsers.forEach(item => {
+                if(item.isUserLogin == true) {
+                    userName = item.firstName
+                }
+            });
+        }
+        return userName;
+    }
+
     useEffect(() => {
         const getUsers = JSON.parse(localStorage.getItem('registrationUser'));
         const isUserLogin = getUsers && getUsers.find(item => item.isUserLogin == true);
 
         if(isUserLogin) {
-            setIsLoginUser(true)
+            setIsLoginUser(true);
+
         } else {
             setIsLoginUser(false)
         }
@@ -92,7 +109,7 @@ function HeaderUp(props) {
                                 className={`${isLoginUser ? style.login_user : style.login}  site_link btn_none_backgr`} data-login="head_login"
                             >
                                 {isLoginUser ? 
-                                    'test@tes.ru'
+                                    getUserName()
                                 :
                                     <>
                                         <span className={`${style.link_ico} color_ico icon-ion-enter-outline`}></span>Вход
