@@ -12,15 +12,13 @@ function Basket(props) {
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
         >
-            <Link href="/auto/cart/">
-                <a className={`site_link ${style.link_header}`}>
-                    <span className={`${style.number_product} basket-count-update`}>
-                        0
-                    </span>
+            <Link href="/auto/cart/" className={`site_link ${style.link_header}`}>
+                <span className={`${style.number_product} basket-count-update`}>
+                    0
+                </span>
 
-                    <span className={`${style.header_ico} color_ico icon-ion-cart`}></span>
-                    Корзина
-                </a>
+                <span className={`${style.header_ico} color_ico icon-ion-cart`}></span>
+                Корзина
             </Link>
 
             {!props.isHeadMobShow ?

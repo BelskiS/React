@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Head from '@components/head';
 import Header from '@components/Header/header';
 import Footer from '@components/Footer/footer';
 

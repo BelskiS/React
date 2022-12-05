@@ -22,19 +22,22 @@ function NewsStocksList({ dataNewsStock, stockList, detailData}) {
                             ${stockList ? style.item_img_stock : style.item_img_news }
                         `}>
                             <Link href={`/${item.LIST_PAGE_URL.split('/').slice(1,2).join()}/${item.ID}`}>
-                                <a>
-                                    <Image 
-                                        src={item.PREVIEW_PICTURE}
-                                        alt=""
-                                        layout="fill"
-                                        objectFit="contain"
-                                    />
-                                </a>
+                                <Image 
+                                    src={item.PREVIEW_PICTURE}
+                                    alt=""
+                                    sizes="(max-width: 768px) 100vw,
+                                    (max-width: 1200px) 50vw,
+                                    33vw"
+                                    fill
+                                />
                             </Link>
                         </div>
                         <div className={style.item_descr}>
-                            <Link href={`/${item.LIST_PAGE_URL.split('/').slice(1,2).join()}/${item.ID}`}>
-                                <a className="title_h4 site_link" data-newssale="title">{item.NAME}</a>
+                            <Link 
+                                href={`/${item.LIST_PAGE_URL.split('/').slice(1,2).join()}/${item.ID}`}
+                                className="title_h4 site_link" data-newssale="title"
+                            >
+                                {item.NAME}
                             </Link>
                             
                             

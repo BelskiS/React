@@ -6,8 +6,8 @@ function MenuItem(props) {
         <>
         {props.linkItem.map((link) =>
             <li key={link.id}>
-                <Link href={link.url}>
-                    <a className={`site_link site_link_hover_other`}>{link.title}</a>
+                <Link href={link.url} className={`site_link site_link_hover_other`}>
+                    {link.title}
                 </Link>
             </li>
         )}

@@ -1,28 +1,28 @@
 import React from 'react';
-import { useRouter } from 'next/router';
 import Head from '@components/head';
 import BreadCrumbs from '@components/Breadcrumbs/breadcrumbs';
 import PersonalFilling from '@components/PersonalFilling/personalFilling';
+import { useRouter } from 'next/router';
 
-
-
-function Personal() {
+function MyProfile() {
     const { asPath } = useRouter();
-    const titlePage = "Личный кабинет";
+    const titleParent = "Личный кабинет";
+    const titlePage = "Мой профиль";
 
-    return(
+    return (
         <>
-            <Head title={titlePage} />
+            <Head title={titlePage}/>
             <BreadCrumbs 
                 pathLink={asPath}
                 titleLink={titlePage}
+                titleParent={titleParent}
             />
 
             <div className="site_container">
-                <PersonalFilling />
+                <PersonalFilling isMyprofile />
             </div>
         </>
     );
 }
 
-export default Personal;
+export default MyProfile;

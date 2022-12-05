@@ -9,11 +9,13 @@
                 background-position: center left;
                 background-size: cover;
                 border-radius: $border_radius_main;
+                position: relative;
                 display: flex;
                 height: 350px;
                 & .slider_img {
                     object-fit: cover;
                     object-position: left 50%;
+                    max-height: 100%;
                 }
             }
         }

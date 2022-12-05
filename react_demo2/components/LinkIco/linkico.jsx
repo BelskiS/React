@@ -1,16 +1,19 @@
 import React from 'react';
+import Link from 'next/link';
 
 function LinkIco(props) {   
     return (
-        <a href={
-            props.mailto ? `mailto:${props.mailto}`
-            : props.href ? props.href
-            : ""
-        } 
-        className={`
-            ${!props.siteLinkTwo ? 'site_link' : 'site_link_two'} 
-            ${props.className}
-        `}>
+        <Link
+            href={
+                props.mailto ? `mailto:${props.mailto}`
+                : props.href ? props.href
+                : ""
+            } 
+            className={`
+                ${!props.siteLinkTwo ? 'site_link' : 'site_link_two'} 
+                ${props.className}
+            `}
+        >
             <span className={`
                 ${!props.classNameIco ? '' : props.classNameIco}
                 ${props.icoName}
@@ -22,7 +25,7 @@ function LinkIco(props) {
                 : props.text ? props.text
                 : ""}
             </span>
-        </a>
+        </Link>
     );
 }
 

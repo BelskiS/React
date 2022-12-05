@@ -458,63 +458,6 @@ a.btn_site.btn_site_white:hover {
 	}
 /*END modal_addcard2*/
 
-/*personal_area*/
-	.personal_area_page__user,
-	.my_profile__user_tab_link,
-	.personal_area_page__user_content .user_content__left {
-		border-color: $Light_Gray;
-	}
-	.my_profile__user_tab_link {
-		transition: all $animate_site;
-	}
-	.my_profile__user_tab_link:hover {
-		border-color: $Ultra_Light_Accent;
-	}
-	.personal_area_page__user,
-	.personal_area_page__user_content .user_content__left,
-	.my_profile__user_tab_link,
-	.user_content__filled__saved p {
-        border-radius: $border_radius_main;
-	}
-	.user_content__filled__saved p {
-        background: $Success_Light;
-	}
-	.user_content__filled__saved p .notetext,
-	.user_content__filled__saved p:before {
-		color: $Success_Text;
-	}
-	.user_content__filled__saved p:before {
-		font-weight: $fw_font_ico;
-	}
-	.my_profile__user_tab_link__descr .title_h5 {
-		font-weight: $fw_Large_Text;
-	}
-	.my_profile__user_tab_link__descr .user_tab_link__text {
-		font-weight: $fw_Small_Text;
-	}
-	.my_profile__user_tab_link .my_profile__user_tab_link__descr .title_h5,
-	.my_profile__user_tab_link:hover .my_profile__user_tab_link__descr .title_h5 {
-		color: $Base_Tint;
-	}
-	.my_profile__user_tab_link .my_profile__user_tab_link__descr .user_tab_link__text,
-	.my_profile__user_tab_link:hover .my_profile__user_tab_link__descr .user_tab_link__text {
-		color: $Light_Tint;
-	}
-	.user_content__info__item .user_info__descr {
-		font-weight: $fw_Button_Link;
-	}
-    .user_content__info__item .user_info__descr.not_specified  {
-        font-weight: $fw_Link;
-    }
-	.personal_area_page__user .user_descr .user_descr__text,
-	.user_content__info__item .user_info__descr.not_specified {
-		color: $Ultra_Light_Tint;
-	}
-	.user_content__edit__edit_password:after {
-		background: $Light_Gray;
-	}
-/*END personal_area*/
-
 /*warning_block*/
 	.warning_block {
 		background: $Message_Light;

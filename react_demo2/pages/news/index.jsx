@@ -43,7 +43,7 @@ function News({ newsData }) {
                 titleLink={titlePage}
             />
             
-            <div className="site_container">
+            <div className="site_container aa">
                 <h1 className="title_page">{titlePage}</h1>
 
                 <Pagination paginationData={newsData} itemsPerPage={numItemPage} />

@@ -16,10 +16,8 @@ function FooterUp(props) {
                 <div className={style.soc_title}>Присоединяйтесь к нам</div>
                 <div className={style.soc}>
                     {linksoc.map((item) => 
-                        <Link href={item.url} key={item.id}>
-                            <a target="_blank" rel="nofollow noopener">
-                                <span className={`${style.soc_ico} ${item.ico}`}></span>
-                            </a>
+                        <Link href={item.url} key={item.id} target="_blank" rel="nofollow noopener">
+                            <span className={`${style.soc_ico} ${item.ico}`}></span>
                         </Link>
                     )}
                 </div>
