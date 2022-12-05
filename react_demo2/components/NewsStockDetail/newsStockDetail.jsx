@@ -34,7 +34,10 @@ function NewsStockDetail({dataDetail, dataDetailFull, StockDetailsList, stockLis
                             <Image
                                 src={dataDetail[0].DETAIL_PICTURE}
                                 alt=""
-                                layout="fill"
+                                sizes="(max-width: 768px) 100vw,
+                                (max-width: 1200px) 50vw,
+                                33vw"
+                                fill
                             />
                         </div>
                     : ""

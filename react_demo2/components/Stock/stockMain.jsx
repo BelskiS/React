@@ -27,17 +27,15 @@ function StockMain({stockData}) {
                     {stockData.slice(0,3).map(item => 
                         <SwiperSlide className={style.slider_item} key={item.ID}>
                             <Link href={`/${item.LIST_PAGE_URL.split('/').slice(1,2).join()}/`}>
-                                <a>
-                                    {item.DETAIL_PICTURE ?
-                                        <Image 
-                                            src={item.DETAIL_PICTURE}
-                                            className={style.slider_img}
-                                            alt=""
-                                            width={1300}
-                                            height={300}
-                                        />
-                                    : ''}
-                                </a>
+                                {item.DETAIL_PICTURE ?
+                                    <Image 
+                                        src={item.DETAIL_PICTURE}
+                                        className={style.slider_img}
+                                        alt=""
+                                        width={1300}
+                                        height={300}
+                                    />
+                                : ''}
                             </Link>
                         </SwiperSlide>
                     )}

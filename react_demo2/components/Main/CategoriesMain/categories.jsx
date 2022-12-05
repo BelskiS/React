@@ -16,17 +16,18 @@ function Categories(props) {
             <div className="site_container">
                 <div className={style.main_content}>
                     {props.linkCategories[0].itemsLink.map((item) => 
-                        <Link href={item.url} key={item.id}>
-                            <a className={style.main_item} data-categories={item.class}>
-                                <span className={style.main_item__img}>
-                                    <Image 
-                                        src={item.img}
-                                        alt=""
-                                        layout="fill"
-                                    />
-                                </span>
-                                <span className={style.main_item__title}>{item.title}</span>
-                            </a>
+                        <Link href={item.url} key={item.id} className={style.main_item} data-categories={item.class}>
+                            <span className={style.main_item__img}>
+                                <Image 
+                                    src={item.img}
+                                    alt=""
+                                    sizes="(max-width: 768px) 100vw,
+                                    (max-width: 1200px) 50vw,
+                                    33vw"
+                                    fill
+                                />
+                            </span>
+                            <span className={style.main_item__title}>{item.title}</span>
                         </Link>
                     )}
 
@@ -38,8 +39,8 @@ function Categories(props) {
                             <SearchOrigionCatalog />
                         : ""}
                         
-                        <Link href="/">
-                            <a className={`site_link site_link_with_borderb ${style.origin_c_btn}`}>Перейти в каталог</a>
+                        <Link href="/" className={`site_link site_link_with_borderb ${style.origin_c_btn}`}>
+                            Перейти в каталог
                         </Link>
                     </div>
                 </div>

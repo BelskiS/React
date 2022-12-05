@@ -123,7 +123,7 @@ function HeaderUp(props) {
                                         {menuPersonal.map((link) => 
                                             <li data-ico={link.ico} key={link.id}>
                                                 <Link href={link.url} >
-                                                    <a>{link.title}</a>
+                                                    {link.title}
                                                 </Link>
                                             </li>
                                         )}

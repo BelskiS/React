@@ -5,6 +5,7 @@ import style from './breadcrumbs.module.scss';
 
 function BreadCrumbs(props) {
     const arrLinkBreadcrumbs = props.pathLink.split('/');
+    // console.log(arrLinkBreadcrumbs)
 
     return (
         <div className={style.wrap_block}>
@@ -25,20 +26,16 @@ function BreadCrumbs(props) {
                         >
                             {
                                 index_bread == 0 ? 
-                                    <Link href="/">
-                                        <a className="site_link" title="Главная страница" itemProp="item">
-                                            <span className={style.item} itemProp="name"><span className={`color_ico icon-ion-home-outline ${style.main_ico}`}>Главная страница</span></span>
-                                        </a>
+                                    <Link href="/" className="site_link" title="Главная страница" itemProp="item">
+                                        <span className={style.item} itemProp="name"><span className={`color_ico icon-ion-home-outline ${style.main_ico}`}>Главная страница</span></span>
                                     </Link>
                                 : index_bread == (arrLinkBreadcrumbs.length - 1) ?
                                     <span className={style.item} itemProp="name">
                                         {props.titleLink}
                                     </span>
                                 : 
-                                    <Link href={`/${item_bread}/`}>
-                                        <a className="site_link" title={props.titleParent} itemProp="item">
-                                            <span className={style.item} itemProp="name">{props.titleParent}</span>
-                                        </a>
+                                    <Link href={`/${item_bread}/`} className="site_link" title={props.titleParent} itemProp="item">
+                                        <span className={style.item} itemProp="name">{props.titleParent}</span>
                                     </Link>
                             }
                             

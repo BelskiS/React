@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { useRouter } from 'next/router';
 import InputMask from 'react-input-mask';
 import Link from 'next/link';
 
@@ -9,6 +10,7 @@ function FormLoginReg(props) {
   const [arrayUsers, setArrayUser] = useState([]);
   const [isUser, setIsUser] = useState(false);
   const [isCorrectValue, setIsCorrectValue] = useState(false);
+  const router = useRouter();
 
   const addArrayUser = (user) => arrayUsers.push(user) && setArrayUser(arrayUsers);
   
@@ -27,7 +29,8 @@ function FormLoginReg(props) {
 
   return (
     <Formik
-      initialValues={{ 
+      initialValues={{
+        lastName: '',
         firstName: '',
         email: '',
         phone: '',
@@ -94,7 +97,11 @@ function FormLoginReg(props) {
                 if(item.isUserLogin == false) {
                   item.isUserLogin = true;
                 }
-                window.location.assign('/');
+                if(router.pathname == "/login" || router.pathname == "/login/forgotPassword") {
+                  window.location.assign('/');
+                } else {
+                  window.location.reload(true);
+                }
               });
               localStorage.setItem("registrationUser", JSON.stringify(arrayUsers, null, 2));
             } else {
@@ -124,15 +131,24 @@ function FormLoginReg(props) {
           : ''}
 
           {props.isRegistrationPage ? 
-            <div className="wrap_site_field site_field_with_label">
-              <span className="site_field_label">Имя:*</span>
-              <div className={`site_field site_field_withico input_name 
-                ${errors.firstName && touched.firstName ? 'site_field_error' : '' }
-              `}>
-                <Field type="text" name="firstName" placeholder="Введите ваше имя" />
+            <>
+              <div className="wrap_site_field site_field_with_label">
+                <span className="site_field_label">Фамилия:</span>
+                <div className={`site_field site_field_withico input_name`}>
+                  <Field type="text" name="lastName" placeholder="Введите вашу фамилию" />
+                </div>
               </div>
-              <ErrorMessage name="firstName" component="div" className="site_field_error_text" />
-            </div>
+
+              <div className="wrap_site_field site_field_with_label">
+                <span className="site_field_label">Имя:*</span>
+                <div className={`site_field site_field_withico input_name 
+                  ${errors.firstName && touched.firstName ? 'site_field_error' : '' }
+                `}>
+                  <Field type="text" name="firstName" placeholder="Введите ваше имя" />
+                </div>
+                <ErrorMessage name="firstName" component="div" className="site_field_error_text" />
+              </div>
+            </>
           : ''}
 
           <div className="wrap_site_field site_field_with_label">
@@ -149,7 +165,7 @@ function FormLoginReg(props) {
             <>
               {props.isRegistrationPage ? 
                 <div className={`wrap_site_field site_field_with_label`}>
-                  <span className="site_field_label">Телефон:</span>
+                  <span className="site_field_label">Телефон:*</span>
   
                   <div className={`site_field site_field_withico input_phone 
                     ${errors.phone && touched.phone ? 'site_field_error' : '' }
@@ -178,10 +194,8 @@ function FormLoginReg(props) {
                 <ErrorMessage name="password" component="div" className="site_field_error_text" />
 
                 {props.isLoginPage ? 
-                  <Link href="/login/forgotPassword/">
-                    <a className={`site_link site_link_with_borderb ${props.classLink}`} rel="nofollow">
-                      Забыли свой пароль?
-                    </a>
+                  <Link href="/login/forgotPassword/" className={`site_link site_link_with_borderb ${props.classLink}`} rel="nofollow">
+                    Забыли свой пароль?
                   </Link>
                 : ""}
               </div>
@@ -212,8 +226,8 @@ function FormLoginReg(props) {
               : 'Зарегистрироваться'}
             </button>
             {props.headerLogin ? 
-              <Link href="/login/registration/">
-                <a className="site_link site_link_with_borderb" rel="nofollow">Регистрация</a>
+              <Link href="/login/registration/" className="site_link site_link_with_borderb" rel="nofollow">
+                Регистрация
               </Link>
             : ""}
           </div>

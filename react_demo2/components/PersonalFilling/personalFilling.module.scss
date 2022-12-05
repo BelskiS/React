@@ -1,5 +1,138 @@
 @import "../../styles/option.scss";
 
-.test {
-    color: red;
+.block {
+    height: 115px;
+    padding: 30px;
+    & .ico {
+        margin-right: 25px;
+        & span[data-ico="ico_profile"] {
+            background-image: url('../../public/static/personal/personal_ico.svg');
+            background-repeat: no-repeat;
+            width: 55px;
+            min-width: 55px;
+            height: 55px;
+        }
+    }
+    & .classWrapTitleDescr {
+        width: calc(100% - 80px);
+        & .descr {
+            font-size: 14px;
+            line-height: normal;
+        }
+    }
+}
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding-top: 30px;
+    & .cont_left {
+        border: 1px solid $Light_Gray;
+        border-radius: $border_radius_main;
+        width: calc(100% - 410px);
+        min-height: 570px;
+        padding: 30px 30px 35px;
+        box-shadow: 0px 4px 10px rgba(201, 190, 190, 0.3);
+    }
+    & .cont_right {
+        width: 380px;
+        margin-left: 30px;
+        & .block {
+            margin: 0 0 15px;
+        } 
+    }
+}
+.list_block {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+    & .block {
+        max-width: 420px;
+        height: auto;
+        margin: 0 10px 20px;
+        padding: 20px;
+        & .ico {
+            margin-right: 22px;
+        }
+        & .classWrapTitleDescr {
+            width: calc(100% - 72px);
+            & .title {
+                font-size: 16px;
+                font-weight: $fw_Large_Text;
+                margin-bottom: 8px;
+            }
+            & .descr {
+                font-size: 13px;
+                line-height: 130%;
+            }
+        }
+    }
+}
+.list_block {
+    & span[data-ico="my_profile"] {
+        background-image: url('../../public/static/personal/my_profile.svg');
+    }
+    & span[data-ico="my_orders"] {
+        background-image: url('../../public/static/personal/my_orders.svg');
+    }
+    & span[data-ico="my_garage"] {
+        background-image: url('../../public/static/personal/my_garage.svg');
+    }
+}
+
+@media only screen and (max-width: 1359px) {
+    .content {
+        & .cont_left {
+            width: 100%;
+            min-height: 0;
+            height: auto;
+        }
+        & .cont_right {
+            width: calc(100% + 20px);
+            margin: 40px -10px 0;
+            & .block {
+                margin: 0 10px 15px;
+                max-width: none;
+            } 
+        }
+    }
+    .list_block {
+        & a.block {
+            width: calc(50% - 20px); 
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .content {
+        & .cont_left {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    .block {
+        height: auto;
+        padding: 20px 15px;
+        & .ico {
+            margin-right: 8px;
+        }
+        & .classWrapTitleDescr {
+            & .title {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .list_block {
+        & .block {
+            padding: 20px 15px;
+            & .ico {
+                margin-right: 15px;
+            }
+        }
+        & a.block {
+            width: 100%;
+            align-items: center;
+            padding: 22px 15px;
+        }
+    }
 }

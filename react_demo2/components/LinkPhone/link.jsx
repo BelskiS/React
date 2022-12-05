@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 function LinkPhone(props) {
     const cleanPhone = () => {
@@ -8,7 +9,7 @@ function LinkPhone(props) {
     }
     
     return (
-        <a href={`tel:${cleanPhone()}`} className={`site_link ${props.className}`}>
+        <Link href={`tel:${cleanPhone()}`} className={`site_link ${props.className}`} >
             <span className={`
                 ${!props.classNameIco ? '' : props.classNameIco}
                 ${props.icoName}
@@ -16,7 +17,7 @@ function LinkPhone(props) {
             <span>
                 {props.tel}
             </span>
-        </a>
+        </Link>
     );
 }
 

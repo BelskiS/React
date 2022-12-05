@@ -12,7 +12,7 @@ function ScrollUp() {
     const handleScroll = () => {
         let windowPos = window.pageYOffset;
 
-        if(windowPos > 180 && window.innerWidth > 767) {
+        if(windowPos > 300 && window.innerWidth > 767) {
             setShowScroll(true)
         } else {
             setShowScroll(false)

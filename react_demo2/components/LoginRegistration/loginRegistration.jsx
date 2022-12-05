@@ -54,16 +54,16 @@ function LoginRegistration(props) {
                                         : 'Вспомнили пароль?'
                                     }
                                     </span>
-                                <Link href={props.loginPage ? '/login/registration/' : '/login/'}>
-                                    <a className="site_link site_link_with_borderb" rel="nofollow">
-                                        { props.loginPage ? 
-                                            'Зарегистрироваться'
-                                            : props.registrationPage ? 
-                                            'Войти' 
-                                            : 'Авторизоваться'
-                                        }
-                                        
-                                    </a>
+                                <Link 
+                                    href={props.loginPage ? '/login/registration/' : '/login/'} 
+                                    className="site_link site_link_with_borderb" rel="nofollow"
+                                >
+                                    { props.loginPage ? 
+                                        'Зарегистрироваться'
+                                        : props.registrationPage ? 
+                                        'Войти' 
+                                        : 'Авторизоваться'
+                                    }
                                 </Link>
                             </div>
                         </div>

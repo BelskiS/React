@@ -3,16 +3,14 @@
 .wrap {
     & .title_img {
         display: flex;
+        position: relative;
         margin-bottom: 50px;
-        & span {
+        & img {
             border-radius: $border_radius_main;
-            position: static !important;
             display: inline-block !important;
-            & img {
-                position: static !important;
-                width: auto !important;
-                height: auto !important;
-            }
+            position: static !important;
+            width: auto !important;
+            height: auto !important;
         }
     }
     & .wrap_title_text {

@@ -41,16 +41,14 @@ function Header({widthDevice}) {
         forfixHeaderLinkRef.current = document.querySelector('.for_fix_header_link');
         forStaticHeaderLinkRef.current = document.querySelector('.for_static_header_link');
         
-        if(windowpos > posSiteContent && window.innerWidth > 767) {
+        if(windowpos > posSiteContent + 1  && window.innerWidth > 767) {
             setIsShow(true);
-            siteContentPosRef.current.style.marginTop = '134px';
 
             forFixMenuRef.current.prepend(fixMenuRef.current);
-            forFixLoginRef.current.prepend(fixLoginRef.current);
             forfixHeaderLinkRef.current.append(fixHeaderLinkRef.current);
+            forFixLoginRef.current.prepend(fixLoginRef.current);
         } else {
             setIsShow(false);
-            siteContentPosRef.current.style.marginTop = '0';
 
             forStaticMenuRef.current.prepend(fixMenuRef.current);
             forStaticLoginRef.current.prepend(fixLoginRef.current);
@@ -59,13 +57,12 @@ function Header({widthDevice}) {
     };
 
     useEffect(() => {
-        handleScroll();
+        // handleScroll();
         ["load", "resize", "scroll"].forEach(function (e) {
             window.addEventListener(e, handleScroll);
             return() => window.removeEventListener(e, handleScroll);
         });
     }, []);
-
 
     return (
         <header className={`site_header ${isShow ? style.site_head : ''}`}>

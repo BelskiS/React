@@ -43,14 +43,12 @@ function Menu(props) {
                         <> 
                             <div className={style.mob_header}>
                                 <div className={style.mob_header_item}>
-                                    <Link href="/contacts/">
-                                        <a className={style.mob_header_adress}>
-                                            <span className={`${style.mob_header__ico} icon-ion-location-sharp`}></span>
-                                            <span className={`site_link site_link_with_borderb
-                                                ${style.mob_header__text} ${style.mob_header_adress__text}`}>
-                                                    Россия, Москва, Нагорный пр-д, 12 корпус 3
-                                            </span>
-                                        </a>
+                                    <Link href="/contacts/" className={style.mob_header_adress}>
+                                        <span className={`${style.mob_header__ico} icon-ion-location-sharp`}></span>
+                                        <span className={`site_link site_link_with_borderb
+                                            ${style.mob_header__text} ${style.mob_header_adress__text}`}>
+                                                Россия, Москва, Нагорный пр-д, 12 корпус 3
+                                        </span>
                                     </Link>
                                 </div>
 
