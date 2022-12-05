@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import BlockIcoTitleDescr from '@components/BlockIcoTitleDescr/blockIcoTitleDescr';
+// import BlockIcoTitleDescr from '@components/BlockIcoTitleDescr/blockIcoTitleDescr';
 import personalLink from '@public/constData/personalLink';
 import FormPersonal from '@components/Forms/FormPersonal/formPersonal';
 
@@ -43,7 +43,7 @@ function PersonalFilling(props) {
                <div className="">Авторизуйтесь или зарегистрируйтесь</div> 
             : 
                 <>
-                    <BlockIcoTitleDescr
+                    {/* <BlockIcoTitleDescr
                         classBlock={style.block}
                         classIco={style.ico}
                         data_ico={"ico_profile"}
@@ -52,7 +52,7 @@ function PersonalFilling(props) {
                         classDescr={style.descr}
                         textTitle={getUserName()}
                         textDescr="Lorem ipsum."
-                    />
+                    /> */}
 
                     <div className={style.content}>
                         {props.isMyprofile ? 
@@ -61,7 +61,7 @@ function PersonalFilling(props) {
                             </div>
                         : ''}
 
-                        <div className={`${props.isMyprofile ? style.cont_right : ''} ${style.list_block}`}>
+                        {/* <div className={`${props.isMyprofile ? style.cont_right : ''} ${style.list_block}`}>
                             {personalLink.map(item =>
                                 <BlockIcoTitleDescr
                                     key={item.id}
@@ -77,7 +77,7 @@ function PersonalFilling(props) {
                                     linkUrl={item.url}
                                 />
                             )}
-                        </div>
+                        </div> */}
                     </div>  
                 </>
             }
