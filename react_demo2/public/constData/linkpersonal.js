@@ -2,7 +2,7 @@ const menuPersonal = [
     {
         id: 1,
         title: "Мой профиль",
-        url: "/",
+        url: "/personal/profile",
         ico: "bg_myprofile",
     },
     {
