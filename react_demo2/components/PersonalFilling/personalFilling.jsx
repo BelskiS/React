@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import personalLink from '@public/constData/personalLink';
-import BlockIcoTitleDescr from '@components/BlockIcoTitleDescr/blockIcoTitleDescr1';
+import BlockIcoTitleDescr from '@components/BlockIcoTitleDescr/blockIcoTitleDescr';
 import FormPersonal from '@components/Forms/FormPersonal/formPersonal';
 
 import style from './personalFilling.module.scss'
